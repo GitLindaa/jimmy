@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jimmy's Kompas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260508-overzicht-weg" />
+</head>
+<body>
+  <!-- LOGIN -->
+  <div id="gate" class="gate">
+    <div class="gate-art" aria-hidden="true">
+      <img src="jimmys-kompas-login-poster.svg" alt="" />
+    </div>
+    <form class="gate-card gate-card--grass" autocomplete="off">
+      <h1>Inloggen</h1>
+      <label for="pw">Wachtwoord</label>
+      <input id="pw" type="password" inputmode="text" />
+      <button id="gate-submit" class="btn btn-primary" type="button">Open kompas</button>
+      <p id="pw-error" class="error" role="alert">Niet de juiste code.</p>
+    </form>
+  </div>
+
+  <main id="content">
+    <!-- HERO -->
+    <section class="hero theme-hero" id="top">
+      <nav class="topnav" aria-label="Hoofdnavigatie">
+        <div class="navlinks" aria-label="Desktop navigatie">
+          <a href="#start">Start</a>
+          <a href="#brein">Jouw brein</a>
+          <a href="#week">Deze week</a>
+          <a href="#routes">Routes</a>
+          <a href="#beroepen">Beroepen</a>
+          <a href="#scholen">Scholen</a>
+          <a href="#oefenen">Oefenen</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu openen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" id="primary-nav">
+          <button class="nav-close" type="button" aria-label="Menu sluiten">&#10005;</button>
+          <a href="#start">Start</a>
+          <a href="#brein">Jouw brein</a>
+          <a href="#week">Deze week</a>
+          <a href="#routes">Routes</a>
+          <a href="#beroepen">Beroepen</a>
+          <a href="#scholen">Scholen</a>
+          <a href="#oefenen">Oefenen</a>
+        </div>
+      </div>
+
+      <div class="hero-grid hero-grid--title-only">
+        <h1 class="hero-title">Jimmy's<br>Kompas</h1>
+        <a class="scroll-hint" href="#start">↓ scroll</a>
+      </div>
+    </section>
+
+
+    <!-- START -->
+    <section class="section section-intro intro-option intro-start" id="start">
+      <div class="section-head">
+        <p class="eyebrow">Start</p>
+        <h2>Wat je hier vindt</h2>
+        <p>Hier vind je scholen, een plan om sterker te worden op school en beroepen om te ontdekken wat je interessant vindt.</p>
+        <p>Omdat het nu meivakantie is, gebruiken we dit ook om rustig vooruit te kijken naar het nieuwe schooljaar.</p>
+        <div class="intro-start-steps">
+          <p>Voor nu; niet alles tegelijk.</p>
+          <ul class="intro-start-list">
+            <li>School kiezen<br>Scholen bekijken, bewaren en vergelijken.</li>
+            <li>Deze week<br>Kijken wat openstaat en wat eraan komt.</li>
+            <li>Vragen opschrijven<br>Wat onduidelijk is, hoeft niet in je hoofd te blijven.</li>
+          </ul>
+        </div>
+        <figure class="intro-art">
+          <img src="wat-je-hier-vindt-art.svg" alt="" />
+        </figure>
+      </div>
+    </section>
+
+<!-- ══════════════════════════════════════════════════════
+     BREIN + SCHOOL — samengevoegd
+     Vervangt: <section id="brein"> én <section id="school">
+     ══════════════════════════════════════════════════════ -->
+<section class="section theme-brein" id="brein">
+
+  <!-- 1 ── HEADER ───────────────────────────────────────── -->
+  <div class="section-head">
+    <p class="eyebrow">Jouw brein</p>
+    <h2>Wat de tests laten zien</h2>
+    <p>Drie tests, op drie verschillende momenten. Ze meten niet hetzelfde, en dat is precies waarom ze samen pas echt iets zeggen.</p>
+  </div>
+
+
+  <!-- 2 ── DRIE TESTKAARTEN ─────────────────────────────── -->
+  <div class="grid cards-3">
+
+    <article class="card">
+      <p class="eyebrow">5 jaar · WPPSI-III</p>
+      <h3>Patronen zien</h3>
+      <p>Op alles wat je zelf moet doen: patronen naleggen, blokken rangschikken,
+         redeneren. Je scoorde zeer begaafd. Taal was gemiddeld.
+         Die kloof zat er al vroeg in.</p>
+    </article>
+
+    <article class="card">
+      <p class="eyebrow">6 jaar · SON-R · Hoogst meetbaar</p>
+      <h3>Redeneren zonder woorden</h3>
+      <p>Een volledig non-verbale test: geen taal, alleen denken.
+         Score: 145+, het maximum dat de test kan meten.
+         Analogieën: 19 van 19. Toen taal wegviel, zat je tegen het plafond.</p>
+    </article>
+
+    <article class="card">
+      <p class="eyebrow">13 jaar · NIO · Groepstest op school</p>
+      <h3>Schoolvaardigheid meten</h3>
+      <p>Veel taal, klassikaal, één ochtend in Vleuten.
+         Rekenen: 119. Dat is hoog. Taal: 95. Gemiddeld.
+         Dit meet niet hoe slim je bent, maar hoe school nu aanvoelt.</p>
+    </article>
+
+  </div>
+
+
+  <!-- 3 ── WAT DIT ZEGT ─────────────────────────────────── -->
+  <div class="section-subhead" style="margin-top: clamp(38px,5vw,64px);">
+    <h3>Wat dit samen zegt</h3>
+    <p>In het onderzoek op je 6e merkten de onderzoekers iets op:
+       terwijl je elke opdracht goed maakte, zei je de hele tijd dat je het niet kon.
+       Je pakte de puzzels op, je loste ze op,
+       en ondertussen geloofde je dat je faalde.
+       Dat verschil tussen wat je doet en wat je denkt dat je doet:
+       dat is het belangrijkste om over jezelf te weten.<br><br>
+       Nu op school zie je dat ook terug.
+       Sommige vakken gaan min of meer vanzelf.
+       Maar andere vragen iets wat lastiger is dan het werk zelf:
+       eerder beginnen, vaker proberen, ook als je niet zeker weet of het goed wordt.
+       Wiskunde de dag voor een toets leren werkt soms,
+       maar het gaat beter met kleine stukjes, eerder in de week.<br><br>
+       Niet omdat je meer nodig hebt dan je hebt.
+       Maar omdat wat je erin stopt, ook echt bepaalt wat je eruit haalt.</p>
+  </div>
+
+
+  <!-- 4 ── ZO LEER JIJ ─────────────────────────────────── -->
+  <div class="school-block">
+    <div class="school-subhead">
+      <h3>Zo leer jij</h3>
+      <p>Niet iedereen leert op dezelfde manier.
+         Dit is wat bij jou past, niet als verplichting maar als informatie.</p>
+    </div>
+
+    <div class="grid cards-2">
+
+      <article class="card">
+        <h3>Als iets logisch in elkaar zit</h3>
+        <p>Technische dingen, systemen, verbanden: die pik je snel op.
+           Je hebt geen lange uitleg nodig. Je ziet hoe iets werkt
+           en dan klopt het gewoon.</p>
+      </article>
+
+      <article class="card">
+        <h3>Via verhalen en context</h3>
+        <p>Losse feiten onthoud je minder goed. Maar als er een verhaal omheen zit,
+           wie, waarom en wat er daarna gebeurde, blijft het hangen.
+           Geschiedenis werkt daarom zo goed.</p>
+      </article>
+
+      <article class="card">
+        <h3>Stukje voor stukje beginnen</h3>
+        <p>Beginnen is soms het zwaarste deel, niet het werk zelf.
+           Kleine stapjes helpen meer dan wachten tot je er klaar voor bent.
+           Als je eenmaal bezig bent, gaat het vaak vanzelf.</p>
+      </article>
+
+      <article class="card">
+        <h3>Met ruimte om te proberen</h3>
+        <p>Engels zit er al in, omdat het nooit als leren voelde.
+           Via games, video's, interest. Dat principe werkt overal:
+           als mogen proberen veiliger voelt dan moeten slagen,
+           leer je sneller.</p>
+      </article>
+
+    </div>
+  </div>
+
+
+  <!-- 5 ── WAAR ENERGIE ZIT (cijfers) ──────────────────── -->
+  <div class="school-block school-block--energy">
+    <div class="school-subhead">
+      <h3>Waar je het ziet</h3>
+      <p>Hier krijgt jouw manier van leren ruimte.
+         Niet toevallig: dit zijn precies de vakken die bij jou passen.</p>
+    </div>
+
+    <div class="school-card-grid school-card-grid--energy">
+
+      <article class="card school-card school-card--energy">
+        <div class="school-card-head">
+          <h4>Tech &amp; informatica</h4>
+          <span class="school-grade">9,0</span>
+        </div>
+        <p>Logica en systemen, precies hoe jij denkt.
+           Geen wonder dat dit vanzelf gaat.</p>
+      </article>
+
+      <article class="card school-card school-card--energy">
+        <div class="school-card-head">
+          <h4>Engels</h4>
+          <span class="school-grade">8,8</span>
+        </div>
+        <p>Binnengekomen via games en interesse.
+           Nooit als leren gevoeld, en toch perfect geleerd.</p>
+      </article>
+
+      <article class="card school-card school-card--energy">
+        <div class="school-card-head">
+          <h4>Geschiedenis</h4>
+          <span class="school-grade">10</span>
+        </div>
+        <p>Verhalen onthouden is jouw ding.
+           Dit vak speelt het spel op jouw manier.</p>
+      </article>
+
+    </div>
+  </div>
+
+
+  <!-- 6 ── OVER TAAL ───────────────────────────────────── -->
+  <div class="school-block">
+    <div class="school-subhead">
+      <h3>Over taal leren</h3>
+      <p>Engels is er al in, via de manier die voor jou werkt.
+         Frans en Duits kunnen ook, maar vragen een andere aanpak.</p>
+    </div>
+
+    <div class="grid cards-2">
+
+      <article class="card">
+        <h3>Passief werkt bij jou goed</h3>
+        <p>Engels zat er in zonder dat je het merkte.
+           Dat is hoe jij taal oppikt: via series, games, muziek.
+           Frans met Nederlandse ondertitels kijken werkt.
+           Duits ook. Niet als huiswerk, gewoon af en toe.</p>
+      </article>
+
+      <article class="card">
+        <h3>Lezen wat jij kiest</h3>
+        <p>Schoolteksten voelen anders dan iets dat je zelf wil lezen.
+           Een kort artikel over iets wat je echt interesseert,
+           in het Frans, Duits of Nederlands, werkt beter
+           dan een bladzijde die je moét lezen.</p>
+      </article>
+
+      <article class="card">
+        <h3>Korte stukjes, niet alles tegelijk</h3>
+        <p>Tien minuten per dag werkt beter dan één uur per week.
+           Klein en regelmatig: dat past bij hoe jij dingen opslaat.
+           Geen grote sessies, geen druk van perfectie.</p>
+      </article>
+
+      <article class="card">
+        <h3>Proberen zonder gevolgen</h3>
+        <p>Als het goed moet zijn vóór je begint, begin je nooit.
+           De reden dat Engels werkte is dat een fout in een game
+           geen cijfer opleverde. Die ruimte mag je ook bij andere talen nemen.</p>
+      </article>
+
+    </div>
+  </div>
+
+
+  <!-- 7 ── WAT MEER TIJD VRAAGT ────────────────────────── -->
+  <div class="school-block">
+    <div class="school-subhead">
+      <h3>Wat meer tijd vraagt</h3>
+      <p>Niet omdat je het niet kunt, maar omdat het een andere aanpak nodig heeft.</p>
+    </div>
+
+    <div class="school-card-grid school-card-grid--support">
+
+      <article class="card school-card school-card--support">
+        <div class="school-card-head">
+          <h4>Starten</h4>
+        </div>
+        <p>Beginnen kost meer energie dan het werk zelf.
+           Dat is geen luiheid, het is hoe jouw motor werkt.
+           Kleine eerste stap helpt: één zin, één som, één minuut.</p>
+      </article>
+
+      <article class="card school-card school-card--support">
+        <div class="school-card-head">
+          <h4>Laten zien wat je weet</h4>
+        </div>
+        <p>Wat in je hoofd zit, komt er niet altijd vanzelf uit.
+           Bij een toets of gesprek is dat soms moeilijker
+           dan het denken zelf. Dat is te oefenen, rustig en stap voor stap.</p>
+      </article>
+
+      <article class="card school-card school-card--support">
+        <div class="school-card-head">
+          <h4>Wiskunde</h4>
+        </div>
+        <p>Abstract oefenen kost nu meer energie.
+           Met uitleg en stap voor stap werken lukt het vaak beter.
+           Jouw rekenkundig inzicht is hoog, maar de weg erheen vraagt structuur.</p>
+      </article>
+
+      <article class="card school-card school-card--support">
+        <div class="school-card-head">
+          <h4>Frans en Duits op school</h4>
+        </div>
+        <p>In een lokaal voelt taal anders dan via een scherm.
+           Herhaling helpt, niet per se langer werken,
+           maar vaker en kleiner. Tien minuten telt.</p>
+      </article>
+
+    </div>
+  </div>
+
+</section>
+<!-- ══ einde sectie #brein ══ -->
+
+
+        <!-- DEZE WEEK -->
+    <section class="section theme-week" id="week">
+      <div class="section-head">
+        <h2>Deze week</h2>
+        <p>Huiswerk en toetsen uit Magister. Kijk wat openstaat en wanneer iemand meekijkt.</p>
+      </div>
+      <div class="tabs">
+        <button class="tab is-active" type="button" data-week-show="week-1">11 – 17 mei</button>
+        <button class="tab" type="button" data-week-show="week-2">18 – 24 mei</button>
+      </div>
+      <div class="stack" data-week-panel="week-1">
+
+        <div class="wa-today card" id="wa-today">
+          <div class="wa-today-left">
+            <p class="eyebrow" id="wa-today-label">Vandaag</p>
+            <h3 class="wa-day-name" id="wa-day-name">—</h3>
+            <p class="wa-date" id="wa-date"></p>
+          </div>
+          <div class="wa-today-right" id="wa-today-content">
+            <p class="wa-routine-line"><strong>Vandaag geen huiswerk of toetsen.</strong></p>
+            <p class="wa-routine-line">Even vrijhouden. Alleen Magister kort checken.</p>
+          </div>
+        </div>
+
+        <!-- Ma 11 mei -->
+        <article class="card work-card" data-week-date="2026-05-11" data-week-type="huiswerk" data-week-subject="Economie" data-week-summary="Economie opgaven paragraaf 1" data-week-action-label="Nakijken" data-week-action="zondagavond met papa">
+          <div class="card-row"><p class="eyebrow">Economie · ma 11 mei</p><span class="pill">Huiswerk</span></div>
+          <h3>Opgaven paragraaf 1 — hoofdstuk 5</h3>
+          <p>Afmaken: opgaven van paragraaf 1 van hoofdstuk 5 (B. Burggraaf, lokaal 125).</p>
+          <div class="info-grid">
+            <p><strong>Les</strong><span>maandag 11 mei · les 4 (13:25) · lokaal 125</span></p>
+            <p><strong>Nakijken</strong><span>zondagavond · papa</span></p>
+            <p><strong>Notitie</strong><span>Markeer sommen waar je vastloopt zodat papa ze kan doornemen.</span></p>
+          </div>
+        </article>
+
+        <!-- Di 12 mei -->
+        <article class="card work-card" data-week-date="2026-05-12" data-week-type="opdracht" data-week-subject="Frans" data-week-summary="vlog inleveren voor Frans" data-week-action-label="Check" data-week-action="staat hij klaar en kun je hem openen?">
+          <div class="card-row"><p class="eyebrow">Frans · di 12 mei</p><span class="pill accent">Opdracht</span></div>
+          <h3>Vlog inleveren</h3>
+          <p>Vlog klaar hebben en inleveren bij de les Frans (E. Dupont, lokaal 320, 2e uur).</p>
+          <div class="info-grid">
+            <p><strong>Deadline</strong><span>dinsdag 12 mei · les 2 (10:05) · lokaal 320</span></p>
+            <p><strong>Checken</strong><span>maandag avond · mama</span></p>
+            <p><strong>Notitie</strong><span>Zorg dat de vlog klaarstaat en bereikbaar is.</span></p>
+          </div>
+        </article>
+
+        <!-- Wo 13 mei -->
+        <article class="card work-card" data-week-date="2026-05-13" data-week-type="opdracht" data-week-subject="Engels" data-week-summary="Jack the Ripper presentatie" data-week-action-label="Check" data-week-action="staat de presentatie klaar en kun je hem openen?">
+          <div class="card-row"><p class="eyebrow">Engels · wo 13 mei</p><span class="pill accent">Opdracht</span></div>
+          <h3>Jack the Ripper — presentatie</h3>
+          <p>PowerPoint van 5 slides inleveren. Kijk in Magister of er nog extra eisen bij staan.</p>
+          <div class="info-grid">
+            <p><strong>Deadline</strong><span>woensdag 13 mei · les 2 (10:15) · lokaal 125</span></p>
+            <p><strong>Overhoren</strong><span>dinsdag avond · mama</span></p>
+            <p><strong>Notitie</strong><span>PPT opslaan vóór je vertrekt. Check of hij opent.</span></p>
+          </div>
+        </article>
+
+        <article class="card work-card" data-week-date="2026-05-13" data-week-type="meenemen" data-week-subject="Duits" data-week-summary="laptop, Neue Kontakte en schrift" data-week-action-label="Check" data-week-action="Check vanavond of alles in je tas zit.">
+          <div class="card-row"><p class="eyebrow">Duits · wo 13 mei</p><span class="pill">Meenemen</span></div>
+          <h3>Laptop + Neue Kontakte + schrift</h3>
+          <p>Neem je laptop, Neue Kontakte Flex-boek B en je schrift mee naar school.</p>
+          <div class="info-grid">
+            <p><strong>Les</strong><span>woensdag 13 mei · les 3 (11:35) · lokaal 329 · L. Zenkic</span></p>
+            <p><strong>Check</strong><span>dinsdagavond: liggen alle drie klaar in je tas?</span></p>
+            <p><strong>Notitie</strong><span>Laptop hoeft niet opgeladen te zijn — wel mee.</span></p>
+          </div>
+        </article>
+
+      </div>
+      <div class="stack" data-week-panel="week-2" hidden>
+        <article class="card work-card">
+          <div class="card-row"><p class="eyebrow">Week van 18 mei</p><span class="pill">Checken</span></div>
+          <h3>Toetsen en huiswerk komen eraan</h3>
+          <p>Zodra er nieuwe toetsen of huiswerk in Magister staan, worden ze hier gezet.</p>
+          <div class="info-grid">
+            <p><strong>Check Magister</strong><span>vrijdag na school</span></p>
+            <p><strong>Notitie</strong><span>Maak een foto van de toetsstof zodra die erin staat.</span></p>
+          </div>
+        </article>
+      </div>
+
+      <aside class="card week-method" aria-labelledby="week-method-title">
+        <p class="eyebrow" id="week-method-title">Werkwijze</p>
+        <div class="week-method-grid">
+          <article class="week-method-item">
+            <svg class="week-method-icon week-method-icon--purple" viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="8" y="10" width="32" height="30" rx="6"></rect>
+              <path d="M16 6v8M32 6v8M8 18h32M17 29l5 5 10-12"></path>
+            </svg>
+            <h3>Overhoren</h3>
+            <p>Wiskunde: 3 dagen van tevoren.<br>Andere toetsen: 2 dagen van tevoren.</p>
+          </article>
+          <article class="week-method-item">
+            <svg class="week-method-icon week-method-icon--green" viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="24" r="17"></circle>
+              <path d="M16 25l6 6 12-14"></path>
+            </svg>
+            <h3>Nakijken</h3>
+            <p>Eén keer nakijken.<br>Alleen bij vragen kijken we verder.</p>
+          </article>
+          <article class="week-method-item">
+            <svg class="week-method-icon week-method-icon--blue" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M24 7v34M24 7l-6 6M24 7l6 6M24 41l-6-6M24 41l6-6M7 24h34M7 24l6-6M7 24l6 6M41 24l-6-6M41 24l-6 6"></path>
+            </svg>
+            <h3>Daarna</h3>
+            <p>Jij kiest wat je aanpast.<br>Niet alles hoeft opnieuw.</p>
+          </article>
+          <article class="week-method-item">
+            <svg class="week-method-icon week-method-icon--gold" viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="24" r="9"></circle>
+              <path d="M24 5v6M24 37v6M5 24h6M37 24h6M10.6 10.6l4.2 4.2M33.2 33.2l4.2 4.2M37.4 10.6l-4.2 4.2M14.8 33.2l-4.2 4.2"></path>
+            </svg>
+            <h3>Weekend</h3>
+            <p>Zo veel mogelijk vrij.<br>Maandagwerk liefst vrijdag klaar.<br>Moet er toch iets? Dan kies jij wat nodig is.</p>
+          </article>
+        </div>
+      </aside>
+    </section>
+
+    <!-- OEFENEN -->
+    <section class="section theme-practice" id="oefenen">
+      <div class="section-head">
+        <p class="eyebrow">Oefenen</p>
+        <h2>Flipcards</h2>
+        <p>Kies een vak en draai de kaart om. Markeer wat je al kent — de rest komt vanzelf terug.</p>
+      </div>
+
+      <div class="practice-layout">
+
+        <aside class="card side-card practice-panel">
+          <h3>Voortgang</h3>
+          <div class="panel-score">
+            <span class="panel-score-num" data-flip-mastered>0</span>
+            <span class="panel-score-sep">/</span>
+            <span class="panel-score-total" data-flip-total>0</span>
+          </div>
+          <p class="panel-score-label">kaarten beheerst</p>
+          <div class="panel-bar" aria-hidden="true">
+            <div class="panel-bar-fill" data-panel-bar-fill></div>
+          </div>
+          <div class="reward-box" data-reward-box hidden>
+            <strong data-reward-title>Klaar! 🎉</strong>
+            <p data-reward-text>Alle kaarten van dit deck beheerst.</p>
+          </div>
+          <p class="flip-keys-hint" aria-hidden="true">
+            <kbd>Spatie</kbd> draaien<br>
+            <kbd>→</kbd> Goed &nbsp; <kbd>↓</kbd> Oefenen
+          </p>
+        </aside>
+
+        <div class="practice-main">
+          <div class="deck-block">
+            <h3>Kies een vak</h3>
+            <div class="deck-grid" data-deck-grid="active">
+              <button class="card deck-card is-active" type="button" data-flip-set="frans">
+                <span>Frans</span>
+                <small data-deck-count="frans">0 kaarten</small>
+              </button>
+              <button class="card deck-card" type="button" data-flip-set="duits">
+                <span>Duits</span>
+                <small data-deck-count="duits">0 kaarten</small>
+              </button>
+              <button class="card deck-card" type="button" data-flip-set="wiskunde">
+                <span>Wiskunde</span>
+                <small data-deck-count="wiskunde">0 kaarten</small>
+              </button>
+              <button class="card deck-card" type="button" data-flip-set="natuurkunde">
+                <span>Natuurkunde</span>
+                <small data-deck-count="natuurkunde">0 kaarten</small>
+              </button>
+              <button class="card deck-card" type="button" data-flip-set="nederlands">
+                <span>Nederlands</span>
+                <small data-deck-count="nederlands">0 kaarten</small>
+              </button>
+            </div>
+          </div>
+
+          <article class="card flip-card" data-flip-card>
+            <div class="card-row">
+              <p class="eyebrow" data-flip-subject>Frans</p>
+              <span class="pill" data-flip-progress>1 / 5</span>
+            </div>
+
+            <div class="flip-scene" data-flip-scene>
+              <div class="flip-inner" data-flip-inner>
+                <div class="flip-front" data-flip-face-front>
+                  <span data-flip-front>regarder</span>
+                  <small><span class="flip-icon" aria-hidden="true">↻</span> Tik om te draaien</small>
+                </div>
+                <div class="flip-back" data-flip-face-back>
+                  <p class="flip-back-label">Antwoord</p>
+                  <strong data-flip-back>kijken</strong>
+                  <p data-flip-example class="flip-example">Je regarde une vidéo.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-empty" data-flip-empty hidden>
+              <strong>Nog geen kaarten</strong>
+              <p>Als er input is voor dit vak, kan hier een deck komen. Bijvoorbeeld woorden, begrippen, formules of voorbeeldstappen.</p>
+            </div>
+
+            <div class="actions flip-actions">
+              <button class="btn btn-ghost flip-btn-unknown" type="button" data-flip-unknown>↩ Nog oefenen</button>
+              <button class="btn btn-primary flip-btn-known" type="button" data-flip-known>✓ Goed</button>
+              <button class="btn btn-soft flip-btn-shuffle" type="button" data-flip-shuffle title="Schud de volgorde door elkaar">⇄</button>
+            </div>
+          </article>
+
+          <details class="card deck-later">
+            <summary>Later</summary>
+            <p>Deze vakken staan alvast klaar. Je hoeft er niets mee als er nog geen kaarten zijn.</p>
+            <div class="deck-grid" data-deck-grid="later">
+              <button class="card deck-card" type="button" data-flip-set="scheikunde">
+                <span>Scheikunde</span>
+                <small data-deck-count="scheikunde">0 kaarten</small>
+              </button>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEROEPEN -->
+    <section class="section theme-beroepen" id="beroepen">
+
+      <div class="layout-split-head">
+        <div class="section-head">
+          <p class="eyebrow">Beroepen</p>
+          <h2>Later begint<br>met proberen</h2>
+          <p>Door dingen uit te proberen ontdek je wat bij je past. Gitaar, schrijven, schaken, koken, tekenen of sporten: zo merk je wat je energie geeft.</p>
+        </div>
+        <figure class="card card-photo card-photo--hero">
+          <img src="jimmy-hero.jpg" alt="" />
+        </figure>
+      </div>
+
+      <div class="module-layout">
+
+        <aside class="card side-card" id="beroepen-selectie" aria-label="Bewaarde beroepen">
+          <h3><span>Dit vind ik</span><span>interessant</span></h3>
+          <span class="count" data-job-count>0</span>
+          <div class="saved-list" data-job-list>
+            <p>Bewaar wat nieuwsgierigheid oproept.</p>
+          </div>
+        </aside>
+
+        <div>
+          <div class="grid cards-3">
+
+            <!-- 01 --> <article class="card item-card" data-job-id="ai-engineer"><p class="eyebrow">Tech</p><h3 class="card-title">AI Engineer</h3><p class="card-text">Slimme systemen bouwen met code, data en logica.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 02 --> <article class="card item-card" data-job-id="animator"><p class="eyebrow">Animatie</p><h3 class="card-title">Animator</h3><p class="card-text">Beweging, fantasie en verhalen tot leven brengen.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 03 --> <article class="card item-card" data-job-id="architect"><p class="eyebrow">Ruimte</p><h3 class="card-title">Architect</h3><p class="card-text">Gebouwen en ruimtes bedenken die mensen gebruiken.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <article class="card item-card card-photo card-photo--borderless">
+              <img src="jimmy-5.jpg" alt="" loading="lazy" />
+              <div class="photo-caption">
+                <p class="eyebrow">STEDEN BEKIJKEN</p>
+              </div>
+            </article>
+
+            <!-- 04 --> <article class="card item-card" data-job-id="bioloog"><p class="eyebrow">Natuur</p><h3 class="card-title">Bioloog</h3><p class="card-text">Natuur, dieren en leven observeren en begrijpen.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+
+
+            <!-- 07 --> <article class="card item-card" data-job-id="content-creator"><p class="eyebrow">Media</p><h3 class="card-title">Content Creator</h3><p class="card-text">Video's, ideeën en verhalen maken voor online platforms.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 08 --> <article class="card item-card" data-job-id="data-analist"><p class="eyebrow">Data</p><h3 class="card-title">Data Analist</h3><p class="card-text">Patronen vinden in cijfers, gedrag en informatie.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+
+
+            <!-- 09 --> <article class="card item-card" data-job-id="dierenverzorger"><p class="eyebrow">Natuur</p><h3 class="card-title">Dierenverzorger</h3><p class="card-text">Zorgen voor dieren, gedrag begrijpen en observeren.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 11 --> <article class="card item-card beroep-hidden" data-job-id="docent"><p class="eyebrow">Onderwijs</p><h3 class="card-title">Docent</h3><p class="card-text">Iets uitleggen zodat anderen het begrijpen en groeien.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 12 --> <article class="card item-card beroep-hidden" data-job-id="acteur"><p class="eyebrow">THEATER</p><h3 class="card-title">Acteur</h3><p class="card-text">In een rol stappen en een verhaal tot leven brengen.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <article class="card item-card card-photo card-photo--borderless beroep-hidden">
+              <img src="jimmy-3.jpg" alt="" loading="lazy" />
+              <div class="photo-caption">
+                <p class="eyebrow">EEN VERHAAL SPELEN</p>
+              </div>
+            </article>
+
+            <!-- 13 --> <article class="card item-card beroep-hidden" data-job-id="ethical-hacker"><p class="eyebrow">Security</p><h3 class="card-title">Ethical Hacker</h3><p class="card-text">Fouten vinden voordat anderen dat doen.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 14 --> <article class="card item-card beroep-hidden" data-job-id="filmmaker"><p class="eyebrow">Film</p><h3 class="card-title">Filmmaker</h3><p class="card-text">Beelden, geluid en verhalen combineren tot een ervaring.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 15 --> <article class="card item-card beroep-hidden" data-job-id="filosoof"><p class="eyebrow">Denken</p><h3 class="card-title">Filosoof</h3><p class="card-text">Vragen stellen over mensen, keuzes, waarheid en hoe de wereld werkt.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <article class="card item-card card-photo card-photo--borderless beroep-hidden">
+              <img src="jimmy-4.jpg" alt="" loading="lazy" />
+              <div class="photo-caption">
+                <p class="eyebrow">GOED KIJKEN</p>
+              </div>
+            </article>
+
+            <!-- 16 --> <article class="card item-card beroep-hidden" data-job-id="fotograaf"><p class="eyebrow">Beeld</p><h3 class="card-title">Fotograaf</h3><p class="card-text">Kijken, timing voelen en verhalen vangen in beeld.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 17 --> <article class="card item-card beroep-hidden" data-job-id="front-end-developer"><p class="eyebrow">Code</p><h3 class="card-title">Front-end Developer</h3><p class="card-text">Websites en apps bouwen die mensen gebruiken.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 18 --> <article class="card item-card beroep-hidden" data-job-id="game-developer"><p class="eyebrow">Game</p><h3 class="card-title">Game Developer</h3><p class="card-text">Werelden, regels en interactie maken.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <article class="card item-card card-photo card-photo--borderless beroep-hidden">
+              <img src="jimmy-6.jpg" alt="" loading="lazy" />
+              <div class="photo-caption">
+                <p class="eyebrow">SNEL KIEZEN</p>
+              </div>
+            </article>
+
+            <!-- 19 --> <article class="card item-card beroep-hidden" data-job-id="geoloog"><p class="eyebrow">Aarde</p><h3 class="card-title">Geoloog</h3><p class="card-text">Ontdekken hoe de aarde, stenen, bergen en natuur zijn ontstaan.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 21 --> <article class="card item-card beroep-hidden" data-job-id="grafisch-ontwerper"><p class="eyebrow">Design</p><h3 class="card-title">Grafisch Ontwerper</h3><p class="card-text">Vorm, kleur en beeld gebruiken om iets duidelijk te maken.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 22 --> <article class="card item-card beroep-hidden" data-job-id="industrieel-ontwerper"><p class="eyebrow">Product</p><h3 class="card-title">Industrieel Ontwerper</h3><p class="card-text">Producten slimmer, mooier en handiger maken.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 23 --> <article class="card item-card beroep-hidden" data-job-id="journalist"><p class="eyebrow">Media</p><h3 class="card-title">Journalist</h3><p class="card-text">Vragen stellen, onderzoeken en verhalen vertellen.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 24 --> <article class="card item-card beroep-hidden" data-job-id="kindercoach"><p class="eyebrow">Mens</p><h3 class="card-title">Kindercoach</h3><p class="card-text">Kinderen helpen groeien, begrijpen en sterker worden.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 25 --> <article class="card item-card beroep-hidden" data-job-id="chef-kok"><p class="eyebrow">Eten</p><h3 class="card-title">Kok / Food Creator</h3><p class="card-text">Smaak, creativiteit en timing combineren in gerechten.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 26 --> <article class="card item-card beroep-hidden" data-job-id="kunstenaar"><p class="eyebrow">Kunst</p><h3 class="card-title">Kunstenaar</h3><p class="card-text">Ideeën, gevoel en verbeelding omzetten in beeld, vorm of sfeer.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 28 --> <article class="card item-card beroep-hidden" data-job-id="marien-bioloog"><p class="eyebrow">Zee</p><h3 class="card-title">Marien Bioloog</h3><p class="card-text">Onderzoeken hoe dieren en leven in zee samenwerken en overleven.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 29 --> <article class="card item-card beroep-hidden" data-job-id="ondernemer"><p class="eyebrow">Eigen ding</p><h3 class="card-title">Ondernemer</h3><p class="card-text">Een idee starten en kijken of het werkt.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 30 --> <article class="card item-card beroep-hidden" data-job-id="onderzoeker"><p class="eyebrow">Onderzoek</p><h3 class="card-title">Onderzoeker</h3><p class="card-text">Nieuwsgierig zoeken naar hoe iets echt zit.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 32 --> <article class="card item-card beroep-hidden" data-job-id="product-designer"><p class="eyebrow">Design</p><h3 class="card-title">Product Designer</h3><p class="card-text">Producten bedenken die logisch, bruikbaar en mooi zijn.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 33 --> <article class="card item-card beroep-hidden" data-job-id="psycholoog"><p class="eyebrow">Mens</p><h3 class="card-title">Psycholoog</h3><p class="card-text">Mensen begrijpen, luisteren en gedrag leren herkennen.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 34 --> <article class="card item-card beroep-hidden" data-job-id="rechercheur"><p class="eyebrow">Puzzel</p><h3 class="card-title">Rechercheur</h3><p class="card-text">Patronen zoeken, puzzels oplossen en verbanden ontdekken.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 35 --> <article class="card item-card beroep-hidden" data-job-id="regisseur"><p class="eyebrow">Regie</p><h3 class="card-title">Regisseur</h3><p class="card-text">Verhalen, mensen en sfeer samenbrengen tot één geheel.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 36 --> <article class="card item-card beroep-hidden" data-job-id="robotics-engineer"><p class="eyebrow">Robotica</p><h3 class="card-title">Robotics Engineer</h3><p class="card-text">Machines laten bewegen, reageren en taken uitvoeren.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <article class="card item-card beroep-hidden" data-job-id="schrijver"><p class="eyebrow">Verhaal</p><h3 class="card-title">Schrijver</h3><p class="card-text">Verhalen, ideeën en fantasie omzetten in woorden.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 38 --> <article class="card item-card beroep-hidden" data-job-id="sportcoach"><p class="eyebrow">Sport</p><h3 class="card-title">Sportcoach</h3><p class="card-text">Motiveren, begeleiden en samen beter worden.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 39 --> <article class="card item-card beroep-hidden" data-job-id="strateeg"><p class="eyebrow">STRATEGIE</p><h3 class="card-title">Strateeg</h3><p class="card-text">Vooruitdenken, patronen zien en slimme keuzes maken.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <article class="card item-card card-photo card-photo--borderless beroep-hidden">
+              <img src="jimmy-1.jpg" alt="" loading="lazy" />
+              <div class="photo-caption">
+                <p class="eyebrow">VOORUITDENKEN</p>
+              </div>
+            </article>
+
+            <!-- 40 --> <article class="card item-card beroep-hidden" data-job-id="technisch-maker"><p class="eyebrow">Techniek</p><h3 class="card-title">Technisch Maker</h3><p class="job-subtitle">(Mechanical Engineer)</p><p class="card-text">Dingen bouwen, testen en verbeteren.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <article class="card item-card card-photo card-photo--borderless beroep-hidden">
+              <img src="jimmy-2.jpg" alt="" loading="lazy" />
+              <div class="photo-caption">
+                <p class="eyebrow">BOUWEN</p>
+              </div>
+            </article>
+
+            <!-- 41 --> <article class="card item-card beroep-hidden" data-job-id="uitvinder"><p class="eyebrow">Maken</p><h3 class="card-title">Uitvinder</h3><p class="card-text">Experimenteren, bouwen en nieuwe ideeën uitproberen.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 43 --> <article class="card item-card beroep-hidden" data-job-id="ux-designer"><p class="eyebrow">Mens + tech</p><h3 class="card-title">UX Designer</h3><p class="card-text">Snappen hoe mensen denken en digitale ervaringen verbeteren.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+            <!-- 44 --> <article class="card item-card beroep-hidden" data-job-id="wetenschapper"><p class="eyebrow">Wetenschap</p><h3 class="card-title">Wetenschapper</h3><p class="card-text">Testen, onderzoeken en ontdekken hoe dingen werken.</p><div class="actions"><button class="btn btn-primary" type="button" data-open-job>Lees meer</button><button class="btn btn-soft" type="button" data-save-job>Bewaar</button></div></article>
+
+          </div>
+
+          <div class="load-more-wrap">
+            <button class="btn btn-ghost" id="load-more-jobs" type="button" aria-expanded="false">↓ Meer beroepen laden</button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCHOLEN -->
+    <section class="section theme-warm" id="over-de-scholen">
+      <div class="section-head">
+        <p class="eyebrow">Voor Jimmy</p>
+        <h2>Kijken naar<br>scholen</h2>
+        <p>Dit is wat we denken over de scholen, wat goed kan passen bij jou en waar je op kunt letten.</p>
+      </div>
+
+      <div class="editorial">
+        <p class="editorial-lead">Niet alleen kijken naar cijfers of niveau, maar ook naar wat een school met je doet als je er elke dag rondloopt.</p>
+
+        <ul class="clean-list">
+          <li>hoe leerlingen met elkaar omgaan;</li>
+          <li>hoe rustig of druk een school voelt;</li>
+          <li>of leraren duidelijk en eerlijk zijn;</li>
+          <li>of je jezelf veilig voelt;</li>
+          <li>en of je daar weer vertrouwen kunt krijgen.</li>
+        </ul>
+
+        <blockquote class="pull-quote">
+          “De beste school is niet automatisch de school met het hoogste niveau. Het is de plek waar je weer rustig kunt leren en jezelf kunt zijn.”
+        </blockquote>
+
+        <div class="ornament" aria-hidden="true">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+        <!-- De Apollo -->
+        <div class="editorial-school">
+          <span class="count">1</span>
+          <div>
+            <h3>De Apollo</h3>
+            <p>Kleine school in Amsterdam-Buitenveldert. Docenten kennen je bij naam — dat is geen marketingpraatje maar een structurele eigenschap van een school die bewust klein blijft. Vmbo-t en havo zitten op dezelfde locatie, dus doorstromen betekent niet opnieuw wennen aan een compleet nieuwe plek. Je kunt er niet anoniem worden, wat nu juist een voordeel is.</p>
+            <div class="school-meta">
+              <span class="pill match">Sfeer: warm en rustig</span>
+              <span class="pill match">Havo-kans: goed</span>
+              <span class="pill risk">Let op: kleine groep — pech met klasgenoten telt zwaarder</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CSB -->
+        <div class="editorial-school">
+          <span class="count">2</span>
+          <div>
+            <h3>CSB Amsterdam</h3>
+            <p>De dichtste van de vijf — 25 tot 40 minuten met de tram. Gemengde school met vmbo-t, havo en vwo onder één dak. Groot genoeg dat je mensen kunt vinden die op je lijken. Klein genoeg dat je niet verdwijnt. Die reistijd is een echt voordeel: meer energie voor jezelf als je thuiskomt.</p>
+            <div class="school-meta">
+              <span class="pill match">Sfeer: persoonlijk en gemengd</span>
+              <span class="pill match">Havo-kans: goed</span>
+              <span class="pill note">Vraag op de open dag hoe mentoraanpak werkt</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Geert Groote -->
+        <div class="editorial-school">
+          <span class="count">3</span>
+          <div>
+            <h3>Geert Groote College</h3>
+            <p>Vrijeschool — maar niet zoals je misschien denkt. Geen zweverigheid. Wel een ander ritme: periodeonderwijs. Dat betekent dat je drie weken lang écht in één onderwerp duikt in plaats van elke dag zes vakken die net niet diep genoeg gaan. Als je snel verbanden legt, is dat een kans. En dit: van alle vijf scholen stroomt hier de meeste mavo door naar havo — de helft van de leerlingen. Dat zegt iets over hoe de school haar leerlingen ziet.</p>
+            <div class="school-meta">
+              <span class="pill match">Sfeer: creatief en zacht</span>
+              <span class="pill match">Havo-doorstroom: hoogste van de vijf (50%)</span>
+              <span class="pill risk">Let op: je stapt in een groep die elkaar soms al kent</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spinoza20first -->
+        <div class="editorial-school">
+          <span class="count">4</span>
+          <div>
+            <h3>Spinoza20first</h3>
+            <p>Conceptueel spannend — je leert hier op je eigen manier, onderzoekend en projectmatig. Dat klinkt perfect voor iemand die slim is maar vastgelopen. Maar zelfgestuurd leren werkt alleen als je al weet wie je bent. En 46 minuten reistijd kost iedere dag meer energie dan het op papier klinkt. Dit is een interessantere optie als je meer in jezelf gelooft dan nu.</p>
+            <div class="school-meta">
+              <span class="pill note">Sfeer: modern en vrij</span>
+              <span class="pill risk">Vraagt veel zelfredzaamheid — nu waarschijnlijk te vroeg</span>
+              <span class="pill risk">Reistijd: ± 40–50 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Berlage -->
+        <div class="editorial-school">
+          <span class="count">5</span>
+          <div>
+            <h3>Berlage Lyceum</h3>
+            <p>Intellectueel interessant, tweetalig en ambitieus. De school trekt scherpe mensen aan. Maar 43 minuten reistijd is veel als je nu energie nodig hebt voor andere dingen. De selectieve zij-instroomprocedure voegt prestatiedruk toe op precies het moment dat je die het minste kunt gebruiken. Over twee jaar, als je meer zelfvertrouwen hebt opgebouwd, is dit een interessantere optie.</p>
+            <div class="school-meta">
+              <span class="pill note">Sfeer: ambitieus en stads</span>
+              <span class="pill risk">Prestatiecultuur — verkeerde timing</span>
+              <span class="pill risk">Reistijd: ± 42–43 min + selectieprocedure</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ornament" aria-hidden="true">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+      </div>
+    </section>
+
+    <section class="section theme-school" id="scholen">
+      <div class="section-head">
+        <h2>Scholen</h2>
+        <p>Welke school past bij jou? We kijken naar niveau, sfeer, begeleiding en reistijd.</p>
+        <p><strong>Het doel:</strong> vmbo-t starten, havo openhouden, liefst op dezelfde school, max. 45 min reizen.</p>
+      </div>
+      <div class="filters" data-school-filters>
+        <button class="tab is-active" data-filter="all" type="button">Alle</button>
+        <button class="tab" data-filter="logical" type="button">Dichtbij & logisch</button>
+        <button class="tab" data-filter="alternative" type="button">Andere route</button>
+        <button class="tab" data-filter="strong" type="button">Sterke match</button>
+        <button class="tab" data-filter="small" type="button">Kleinere school</button>
+        <button class="tab" data-filter="both" type="button">vmbo-t + havo</button>
+      </div>
+      <div class="module-layout">
+        <aside class="card side-card">
+          <h3>Mijn selectie</h3>
+          <span class="count" data-school-count>0</span>
+          <div class="saved-list" data-school-list><p>Bewaar scholen die je interessant vindt.</p></div>
+          <button class="btn btn-primary" type="button" data-open-compare disabled>Vergelijk mijn selectie</button>
+        </aside>
+        <div class="stack">
+          <div class="group" data-school-group="Dichtbij &amp; logisch">
+            <h3 class="group-title">Dichtbij &amp; logisch</h3>
+            <p class="group-text">De meest praktische opties: dichtbij, vmbo-t mogelijk en havo blijft open. Goed vertrekpunt — bekijk ook de groepen eronder.</p>
+            <div class="stack">
+            <article class="card item-card" data-school-id="amstelveen-college" data-group="Dichtbij &amp; logisch" data-match="sterk" data-size="Groot" data-vmbo="Ja" data-havo="Ja">
+              <h3 class="card-title">Amstelveen College</h3>
+              <p class="card-text">± 20–30 min · vmbo-t/mavo, havo, vwo</p>
+              <p class="card-text">Dichtbij en breed. Je kunt vmbo-t starten en havo openhouden zonder meteen opnieuw van school te wisselen.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+            <article class="card item-card" data-school-id="hwc" data-group="Dichtbij &amp; logisch" data-match="sterk" data-size="Groot" data-vmbo="Ja" data-havo="Ja">
+              <h3 class="card-title">Hermann Wesselink College</h3>
+              <p class="card-text">± 20–35 min · vmbo-t, havo, vwo</p>
+              <p class="card-text">Dichtbij en bekend. Als blijven realistisch is, hoef je niet opnieuw te wennen.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+            <article class="card item-card" data-school-id="csb" data-group="Dichtbij &amp; logisch" data-match="sterk" data-size="Middelgroot" data-vmbo="Ja" data-havo="Ja">
+              <h3 class="card-title">CSB</h3>
+              <p class="card-text">± 25–40 min · mavo, havo, vwo</p>
+              <p class="card-text">Goede Amsterdam-optie binnen reistijd. Mavo en havo zitten op één school.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article></div>
+          </div>
+        
+          <div class="group" data-school-group="Andere route">
+            <h3 class="group-title">Andere route</h3>
+            <p class="group-text">Iets verder, maar de moeite waard om serieus te bekijken. De Apollo en Geert Groote College zijn hier allebei sterke opties — alleen verder weg.</p>
+            <div class="stack">
+            <article class="card item-card" data-school-id="futuris" data-group="Andere route" data-match="kan" data-size="Kleiner" data-vmbo="Ja" data-havo="Via overstap">
+              <h3 class="card-title">Futuris</h3>
+              <p class="card-text">± 20–35 min · vmbo-b/k/t, mavo-havo route</p>
+              <p class="card-text">Kan rust geven als een praktischere omgeving beter past. Profielen zoals game &amp; technologie kunnen energie geven.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+            <article class="card item-card" data-school-id="apollo" data-group="Andere route" data-match="specifiek" data-size="Klein" data-vmbo="Ja" data-havo="Ja">
+              <h3 class="card-title">De Apollo</h3>
+              <p class="card-text">± 30–45 min · vmbo-t, havo</p>
+              <p class="card-text">Kleinere school met vmbo-t en havo. Interessant als rust en begeleiding belangrijk zijn.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+            <article class="card item-card" data-school-id="spinoza20first" data-group="Andere route" data-match="sterk" data-size="Relatief kleiner" data-vmbo="Ja" data-havo="Ja">
+              <h3 class="card-title">Spinoza20first</h3>
+              <p class="card-text">± 40–50 min · mavo, havo, vwo</p>
+              <p class="card-text">Inhoudelijk interessant door dalton, onderzoeken en ontwerpen. Kan goed passen bij zelfstandig denken.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+            <article class="card item-card" data-school-id="geert-groote" data-group="Andere route" data-match="kan" data-size="Middelgroot" data-vmbo="Ja" data-havo="Ja">
+              <h3 class="card-title">Geert Groote College</h3>
+              <p class="card-text">± 35–50 min · mavo, havo, vwo</p>
+              <p class="card-text">Kan rustiger en menselijker voelen dan een strak schoolsysteem.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+
+            <article class="card item-card" data-school-id="ir-lely-lyceum" data-group="Andere route" data-match="kan" data-size="Groot" data-vmbo="Ja" data-havo="Ja">
+              <h3 class="card-title">Ir. Lely Lyceum</h3>
+              <p class="card-text">± 45–55 min · mavo, havo, vwo, technasium</p>
+              <p class="card-text">Grote school met duidelijke structuur en relatief veel richtingen. Technisch, praktisch en sportief profiel komt hier meer terug dan op veel andere scholen.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+            <article class="card item-card" data-school-id="aics-sandcastle" data-group="Andere route" data-match="kan" data-size="Middelgroot" data-vmbo="Nee" data-havo="Nee">
+              <h3 class="card-title">AICS (Sandcastle)</h3>
+              <p class="card-text">± 30–35 min · internationaal onderwijs · Engels</p>
+              <p class="card-text">Internationale school met veel verschillende nationaliteiten. Onderwijs draait meer om projecten, onderzoeken en zelfstandig denken.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+            <article class="card item-card" data-school-id="isa" data-group="Andere route" data-match="kan" data-size="Klein" data-vmbo="Nee" data-havo="Nee">
+              <h3 class="card-title">ISA</h3>
+              <p class="card-text">± 15–20 min · internationaal onderwijs · Engels</p>
+              <p class="card-text">Kleine internationale school dichtbij huis. Sterk gericht op community, internationale doorstroom en persoonlijke begeleiding.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article></div>
+          </div>
+        
+          <div class="group" data-school-group="Niet eerste keuze">
+            <h3 class="group-title">Niet voor dit doel</h3>
+            <p class="group-text">Deze scholen hebben geen vmbo-t. Ze staan hier voor de volledigheid, waarom ze buiten de lijst vallen, niet omdat we ze afwijzen.</p>
+            <div class="stack">
+            <article class="card item-card" data-school-id="keizer-karel" data-group="Niet eerste keuze" data-match="risico" data-size="Groot" data-vmbo="Nee" data-havo="Ja">
+              <h3 class="card-title">Keizer Karel College</h3>
+              <p class="card-text">± 20–35 min · havo, vwo, gymnasium</p>
+              <p class="card-text">Alleen interessant als havo-instroom echt haalbaar is.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article>
+
+            <article class="card item-card" data-school-id="alkwin" data-group="Niet eerste keuze" data-match="risico" data-size="Groot" data-vmbo="Nee" data-havo="Ja">
+              <h3 class="card-title">Alkwin Kollege</h3>
+              <p class="card-text">± 40–55 min · havo, vwo, gymnasium</p>
+              <p class="card-text">Alleen interessant als havo direct kan en reistijd geen probleem is.</p>
+              <div class="actions">
+                <button class="btn btn-soft" type="button" data-save-school>☆ Bewaar</button>
+                <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+              </div>
+            </article></div>
+          </div>
+        </div>
+      </div>
+      <div class="compare card" data-compare hidden>
+        <div class="card-row"><h3>Vergelijking</h3><button class="btn btn-soft" type="button" data-close-compare>Sluit</button></div>
+        <div class="compare-table" data-compare-table></div>
+      </div>
+    </section>
+
+    <section class="section theme-route" id="routes">
+      <div class="section-head">
+        <p class="eyebrow">Routes</p>
+        <h2>Alternatieve routes</h2>
+        <p>Niet alles hoeft in één rechte lijn te gaan. Er zijn meerdere manieren om verder te bouwen.</p>
+      </div>
+      <div class="accordion">
+        <details class="accordion-item">
+          <summary>Staatsexamen + online onderwijs</summary>
+          <div class="accordion-body">
+            <p>Via LOI of NHA kun je online studeren en per vak staatsexamen doen bij DUO. Exact hetzelfde diploma als op een reguliere school. Je hoeft niet alle vakken in één jaar te halen — je kunt ze spreiden en binnen 10 jaar bundelen. Kosten: ~€144 per vak, €720 voor het volledige examen. Let op: onder 18 ben je leerplichtig — je moet ergens ingeschreven staan, of vrijstelling hebben van de leerplichtambtenaar.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary>Vrijstelling leerplicht + eigen programma</summary>
+          <div class="accordion-body">
+            <p>Met een diagnose (bv. ADD/ASS) kun je bij de leerplichtambtenaar Amstelveen vrijstelling aanvragen op psychische gronden. Dan mag je thuis leren met online begeleiding + staatsexamen. De gemeente moet meewerken aan passend onderwijs — dat is wettelijk verplicht. De leerplichtambtenaar is je eerste aanspreekpunt. Dit is ook de route die een buitenland-optie mogelijk maakt.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary>Londen-uitwisseling (3-6 maanden)</summary>
+          <div class="accordion-body">
+            <p>De Wereldschool (wereldschool.nl) biedt Nederlands online curriculum met docenten voor kinderen in het buitenland. Je kunt 3-6 maanden in Londen wonen, naar een Britse school voor Engels en sociale ervaring, en tegelijk via de Wereldschool je Nederlandse vakken bijhouden. Brits onderwijs is creatiever en minder rigide. Past bij je Engels 8,8 en je internationale potentie. Vereist: uitschrijving gemeente of tijdelijke verhuizing + goede afspraken met leerplichtambtenaar.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary>Democratische scholen</summary>
+          <div class="accordion-body">
+            <p><strong>Guus Kieft School</strong> (Amsterdam-Sloten) — Democratisch, PO + VO, goedgekeurd door inspectie. Geen cijfers, geen niveaus. Staatsexamen als je klaar bent. Zit in Amsterdam.</p>
+            <p><strong>De Vrije Ruimte</strong> (Soest) — Democratisch, mavo/havo/vwo, zelfgestuurd leren.</p>
+            <p><strong>Novi Mundi</strong> (Leersum) — In een bos, natuur-gebaseerd, VO met staatsexamen.</p>
+            <p>Geen van deze scholen ontvangt overheidssubsidie — ouderbijdrage is hoger. Maar de vrijheid is totaal.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary>VAVO (volwassenenonderwijs)</summary>
+          <div class="accordion-body">
+            <p>Vanaf 16 jaar (soms eerder via de Rutte-regeling) kun je naar het VAVO op een ROC. Daar kun je vmbo-t, havo of vwo vakken doen in je eigen tempo. Combineerbaar met een reguliere inschrijving. Veel leerlingen die van school moeten wisselen gebruiken VAVO als tussenoplossing.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary>Particulier onderwijs (B2/B3)</summary>
+          <div class="accordion-body">
+            <p>Privéscholen die opleiden voor staatsexamen. Eigen tempo, eigen aanpak, kleine groepen. B3-scholen zijn goedgekeurd door de inspectie en je voldoet aan de leerplichtwet. Kost geld (geen subsidie) maar volledige vrijheid in hoe je leert. Check de lijst op de website van de onderwijsinspectie.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary>Combinatie-route</summary>
+          <div class="accordion-body">
+            <p>Reguliere inschrijving op HWC of Futuris als vangnet. Aangevuld met online vakken via LOI voor sterke vakken (Engels, Tech). In de zomer of een semester naar Londen met de Wereldschool als basis. Extra examenvak online erbij voor doorstroomrecht havo. Dit is maatwerk — precies wat jij nodig hebt.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+    <footer class="section theme-night">
+      <div class="section-head">
+        <h2>Even pauze</h2>
+        <p>Niet alles hoeft nu.<br>Eerst overzicht, dan pas actie.</p>
+      </div>
+      <img class="footer-art" src="jimmys-kompas-poppetjes-2.svg" alt="" loading="lazy" />
+    </footer>
+
+
+    <button class="back-top" type="button" data-back-top>↑</button>
+  </main>
+
+  <!-- MODALS -->
+  <div class="modal" data-modal hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-card card" role="dialog" aria-modal="true">
+      <button class="btn btn-soft modal-close" type="button" data-close-modal aria-label="Sluit venster">Sluit ×</button>
+      <p class="eyebrow" data-modal-kicker></p>
+      <h2 data-modal-title></h2>
+      <p class="modal-subtitle" data-modal-subtitle hidden></p>
+      <p data-modal-short></p>
+      <div class="modal-block"><h3 data-modal-label-1>Wat is dit?</h3><p data-modal-body-1></p></div>
+      <div class="modal-block"><h3 data-modal-label-2>Waarom misschien interessant?</h3><p data-modal-body-2></p></div>
+      <div class="modal-block" data-modal-school-extra><h3 data-modal-label-4>Sfeer</h3><p data-modal-body-4></p></div>
+      <div class="modal-block"><h3 data-modal-label-3>Hoe kom je er?</h3><p data-modal-body-3></p></div>
+      <div class="actions"><button class="btn btn-primary" type="button" data-modal-save>☆ Bewaar</button></div>
+    </article>
+  </div>
+  <!-- DATA -->
+  <script type="application/json" id="jobs-data">[{"id": "ai-engineer", "nr": "01", "title": "AI Engineer", "short": "Slimme systemen bouwen met code, data en logica.", "what": "Je bouwt systemen die kunnen leren, voorspellen of helpen beslissen.", "why": "Past bij denken in patronen, techniek en toekomst.", "route": "vmbo-t → havo → hbo ICT / software engineering → AI of machine learning"}, {"id": "animator", "nr": "33", "title": "Animator", "short": "Beweging, fantasie en verhalen tot leven brengen.", "what": "Je maakt personages, werelden en ideeën bewegend via 2D, 3D of stop-motion.", "why": "Past bij tekenen, fantasie, geduld en verhalen visueel maken.", "route": "vmbo-t → havo/mbo media → hbo animatie, game art of creative media"}, {"id": "architect", "nr": "02", "title": "Architect", "short": "Gebouwen en ruimtes bedenken die mensen gebruiken.", "what": "Je ontwerpt gebouwen, woningen of publieke ruimtes. Schoonheid en functie komen samen.", "why": "Past bij jou als je ruimte voelt, graag tekent en nadenkt over hoe mensen leven.", "route": "vmbo-t → havo → hbo of universiteit architectuur / bouwkunde"}, {"id": "bioloog", "nr": "35", "title": "Bioloog", "short": "Natuur, dieren en leven observeren en begrijpen.", "what": "Je onderzoekt planten, dieren, mensen of ecosystemen en hoe leven werkt.", "why": "Past bij goed kijken, natuur, details en levende systemen willen begrijpen.", "route": "vmbo-t → havo → biologie, ecologie, dierwetenschappen of laboratoriumonderzoek"}, {"id": "content-creator", "nr": "04", "title": "Content Creator", "short": "Video's, ideeën en verhalen maken voor online platforms.", "what": "Je bedenkt, maakt en deelt content: video, foto, tekst of audio.", "why": "Past bij jou als je een eigen stem hebt en dingen wilt laten zien.", "route": "vmbo-t → havo/mbo media → hbo media of zelfstandig opbouwen"}, {"id": "data-analist", "nr": "05", "title": "Data Analist", "short": "Patronen vinden in cijfers, gedrag en informatie.", "what": "Je kijkt naar gegevens en zoekt wat er verborgen in zit.", "why": "Past bij jou als je verbanden ziet en wil weten waarom iets gebeurt.", "route": "vmbo-t → havo → hbo ICT / data / business analytics"}, {"id": "dierenverzorger", "nr": "06", "title": "Dierenverzorger", "short": "Zorgen voor dieren, gedrag begrijpen en observeren.", "what": "Je verzorgt dieren, leert hun gedrag kennen en zorgt voor een veilige omgeving.", "why": "Past bij jou als je rustig bent, goed kunt observeren en aandacht wilt geven.", "route": "vmbo-t → mbo dierenhouderij / dierverzorging → hbo zoötechniek"}, {"id": "docent", "nr": "07", "title": "Docent", "short": "Iets uitleggen zodat anderen het begrijpen en groeien.", "what": "Je geeft les, begeleidt leerlingen en brengt kennis over.", "why": "Past bij jou als je geduldig bent en anderen wilt helpen groeien.", "route": "vmbo-t → havo → hbo lerarenopleiding of pabo"}, {"id": "ethical-hacker", "nr": "08", "title": "Ethical Hacker", "short": "Fouten vinden voordat anderen dat doen.", "what": "Je zoekt zwakke plekken in systemen zodat ze veiliger worden.", "why": "Past bij jou als je graag uitzoekt waar iets niet klopt.", "route": "vmbo-t → havo/mbo ICT → cybersecurity → ethical hacking"}, {"id": "filmmaker", "nr": "09", "title": "Filmmaker", "short": "Beelden, geluid en verhalen combineren tot een ervaring.", "what": "Je maakt films, documentaires of korte video's.", "why": "Past bij jou als je verhalen voelt en dingen wilt laten zien.", "route": "vmbo-t → havo → hbo film / ArtEZ / regie"}, {"id": "acteur", "nr": "38", "title": "Acteur", "short": "In een rol stappen en een verhaal tot leven brengen.", "what": "Je speelt een personage in theater, film of serie. Met stem, houding en timing laat je zien wat iemand denkt of voelt.", "why": "Past bij verhalen, fantasie, samenwerken en durven spelen voor publiek. Tekst kun je leren door te lezen, hardop te oefenen of te luisteren. Op het podium hoeft niet elke zin precies hetzelfde te klinken. Als de scène klopt, werkt het.", "route": "vmbo-t → havo/mbo theater, film of media → hbo theater, drama of film/media", "personal": "Je deed het sterk in de groep 8-musical. Je stond er echt, kende je rol en bracht iets over. Toneel was ook een vak dat je leuk vond."}, {"id": "filosoof", "nr": "21", "title": "Filosoof", "short": "Vragen stellen over mensen, keuzes, waarheid en hoe de wereld werkt.", "what": "Je onderzoekt grote vragen waar niet meteen één antwoord op is.", "why": "Past bij diep nadenken, verbanden zien en niet tevreden zijn met simpele antwoorden.", "route": "vmbo-t → havo → filosofie, geesteswetenschappen of een richting met ethiek en onderzoek"}, {"id": "fotograaf", "nr": "32", "title": "Fotograaf", "short": "Kijken, timing voelen en verhalen vangen in beeld.", "what": "Je maakt foto's die sfeer, mensen, momenten of ideeën laten zien.", "why": "Past bij observeren, gevoel voor compositie en het juiste moment zien.", "route": "vmbo-t → havo/mbo fotografie/media → hbo fotografie, kunst of beeldcommunicatie"}, {"id": "front-end-developer", "nr": "10", "title": "Front-end Developer", "short": "Websites en apps bouwen die mensen gebruiken.", "what": "Je bouwt wat mensen zien en gebruiken: schermen, knoppen en interacties.", "why": "Past bij techniek én gevoel voor hoe iets eruitziet.", "route": "vmbo-t → havo/mbo software → hbo ICT / CMD"}, {"id": "game-developer", "nr": "11", "title": "Game Developer", "short": "Werelden, regels en interactie maken.", "what": "Je maakt games: regels, levels, interacties, techniek en gevoel.", "why": "Past bij maken, testen en opnieuw proberen.", "route": "vmbo-t → havo/mbo game development → hbo creative media / ICT"}, {"id": "geoloog", "nr": "25", "title": "Geoloog", "short": "Ontdekken hoe de aarde, stenen, bergen en natuur zijn ontstaan.", "what": "Je onderzoekt gesteenten, landschappen, bodem en de geschiedenis van de aarde.", "why": "Past bij natuur, ontdekken, verzamelen en willen weten hoe iets is ontstaan.", "route": "vmbo-t → havo → aardwetenschappen, geologie, geo-informatie of milieu"}, {"id": "grafisch-ontwerper", "nr": "12", "title": "Grafisch Ontwerper", "short": "Vorm, kleur en beeld gebruiken om iets duidelijk te maken.", "what": "Je maakt logo's, posters, boeken of digitale designs.", "why": "Past bij jou als je denkt in beelden en patronen.", "route": "vmbo-t → havo/mbo grafisch → hbo communicatie / design"}, {"id": "industrieel-ontwerper", "nr": "34", "title": "Industrieel Ontwerper", "short": "Producten slimmer, mooier en handiger maken.", "what": "Je ontwerpt spullen die mensen gebruiken: logisch, stevig, mooi en praktisch.", "why": "Past bij techniek, vormgevoel en oplossingen bedenken die echt bruikbaar zijn.", "route": "vmbo-t → havo → hbo industrial design / product design / engineering"}, {"id": "journalist", "nr": "13", "title": "Journalist", "short": "Vragen stellen, onderzoeken en verhalen vertellen.", "what": "Je schrijft artikelen, maakt reportages of interviewt mensen.", "why": "Past bij jou als je nieuwsgierig bent en dingen wilt snappen en delen.", "route": "vmbo-t → havo → hbo journalistiek"}, {"id": "kindercoach", "nr": "27", "title": "Kindercoach", "short": "Kinderen helpen groeien, begrijpen en sterker worden.", "what": "Je helpt kinderen woorden geven aan wat ze voelen, kunnen en nodig hebben.", "why": "Past bij jou als je goed aanvoelt, luistert en mensen rustig verder wilt helpen.", "route": "vmbo-t → havo/mbo zorg & welzijn → hbo pedagogiek / coaching / social work"}, {"id": "chef-kok", "nr": "03", "title": "Kok / Food Creator", "short": "Smaak, creativiteit en timing combineren in gerechten.", "what": "Je werkt met ingrediënten, smaak, timing, techniek en presentatie.", "why": "Past bij maken, proeven, snel schakelen en creativiteit met je handen.", "route": "vmbo-t → mbo horeca / kok → steeds specialistischer"}, {"id": "kunstenaar", "nr": "20", "title": "Kunstenaar", "short": "Ideeën, gevoel en verbeelding omzetten in beeld, vorm of sfeer.", "what": "Je maakt beeld, vorm, installaties of sfeer vanuit wat je ziet, voelt en bedenkt.", "why": "Past bij verbeelding, eigenheid en kijken naar de wereld op een andere manier.", "route": "vmbo-t → havo/mbo kunst → hbo kunstacademie / autonome kunst / design"}, {"id": "marien-bioloog", "nr": "26", "title": "Marien Bioloog", "short": "Onderzoeken hoe dieren en leven in zee samenwerken en overleven.", "what": "Je bestudeert zeeleven, ecosystemen en hoe dieren in water leven.", "why": "Past bij natuur, dieren, onderzoek en verwondering over de oceaan.", "route": "vmbo-t → havo → biologie, mariene biologie, ecologie of dierwetenschappen"}, {"id": "ondernemer", "nr": "14", "title": "Ondernemer", "short": "Een idee starten en kijken of het werkt.", "what": "Je bedenkt iets, maakt het echt en test of mensen het willen.", "why": "Past bij jou als je niet altijd in bestaande hokjes denkt.", "route": "vmbo-t → havo/mbo/hbo → eigen project naast school starten"}, {"id": "onderzoeker", "nr": "22", "title": "Onderzoeker", "short": "Nieuwsgierig zoeken naar hoe iets echt zit.", "what": "Je stelt vragen, verzamelt informatie en probeert patronen of oorzaken te vinden.", "why": "Past bij nieuwsgierigheid, precies kijken en doorvragen tot iets klopt.", "route": "vmbo-t → havo → hbo/universiteit richting onderzoek, data, mens, natuur of techniek"}, {"id": "product-designer", "nr": "15", "title": "Product Designer", "short": "Producten bedenken die logisch, bruikbaar en mooi zijn.", "what": "Je ontwerpt fysieke of digitale producten die werken voor mensen.", "why": "Past bij jou als je techniek, gevoel en logica combineert.", "route": "vmbo-t → havo → hbo industrial design / product design"}, {"id": "psycholoog", "nr": "28", "title": "Psycholoog", "short": "Mensen begrijpen, luisteren en gedrag leren herkennen.", "what": "Je onderzoekt gedrag, gedachten en gevoelens en helpt mensen zichzelf beter begrijpen.", "why": "Past bij luisteren, patronen herkennen en willen snappen waarom mensen doen wat ze doen.", "route": "vmbo-t → havo → psychologie of toegepaste psychologie"}, {"id": "rechercheur", "nr": "29", "title": "Rechercheur", "short": "Patronen zoeken, puzzels oplossen en verbanden ontdekken.", "what": "Je onderzoekt wat er gebeurd is door feiten, verklaringen en sporen te combineren.", "why": "Past bij scherp kijken, niet opgeven en details aan elkaar koppelen.", "route": "vmbo-t → havo/mbo → politieopleiding / veiligheid / criminologie"}, {"id": "regisseur", "nr": "36", "title": "Regisseur", "short": "Verhalen, mensen en sfeer samenbrengen tot één geheel.", "what": "Je stuurt beeld, spel, timing en sfeer zodat een verhaal klopt.", "why": "Past bij overzicht houden, gevoel voor verhaal en mensen meenemen in een idee.", "route": "vmbo-t → havo/mbo media → hbo film, theater, regie of creative media"}, {"id": "robotics-engineer", "nr": "16", "title": "Robotics Engineer", "short": "Machines laten bewegen, reageren en taken uitvoeren.", "what": "Je ontwerpt en bouwt robots of systemen die bewegen en reageren.", "why": "Past bij jou als je techniek en logica combineert.", "route": "vmbo-t → havo → hbo technische informatica / mechatronica / robotica"}, {"id": "schrijver", "nr": "17", "title": "Schrijver", "short": "Verhalen, ideeën en fantasie omzetten in woorden.", "what": "Je schrijft verhalen, scripts, games of teksten waarin ideeën vorm krijgen.", "why": "Past bij jou als je een rijke binnenwereld hebt en graag taal gebruikt.", "route": "vmbo-t → havo → hbo schrijven / journalistiek / creatieve academie"}, {"id": "sportcoach", "nr": "37", "title": "Sportcoach", "short": "Motiveren, begeleiden en samen beter worden.", "what": "Je helpt mensen trainen, groeien en vertrouwen krijgen in wat ze kunnen.", "why": "Past bij energie, begeleiden, doelen stellen en samen vooruitgaan.", "route": "vmbo-t → havo/mbo sport → hbo sportkunde / coaching / bewegingsonderwijs"}, {"id": "strateeg", "nr": "23", "title": "Strateeg", "short": "Vooruitdenken, patronen zien en slimme keuzes maken.", "what": "Een strateeg kijkt naar wat er gebeurt, ziet opties en bedenkt welke stap waarschijnlijk het beste werkt.", "why": "Past bij schaken, plannen, verbanden zien en rustig nadenken voordat je kiest.", "route": "vmbo-t → havo/mbo business, media of ICT → hbo communicatie, bedrijfskunde, UX, data of strategie"}, {"id": "technisch-maker", "nr": "18", "title": "Technisch Maker", "short": "Dingen bouwen, testen en verbeteren.", "what": "Je maakt dingen met techniek: digitaal, fysiek of allebei.", "why": "Past bij leren door doen.", "route": "vmbo-t → mbo/havo → techniek, ICT, engineering of maker-opleiding", "subtitle": "Mechanical Engineer"}, {"id": "uitvinder", "nr": "31", "title": "Uitvinder", "short": "Experimenteren, bouwen en nieuwe ideeën uitproberen.", "what": "Je bedenkt oplossingen, maakt prototypes en test of iets werkt.", "why": "Past bij maken, proberen, fouten gebruiken en opnieuw bouwen.", "route": "vmbo-t → havo/mbo techniek → engineering, product design of ondernemerschap"}, {"id": "ux-designer", "nr": "19", "title": "UX Designer", "short": "Snappen hoe mensen denken en digitale ervaringen verbeteren.", "what": "Je onderzoekt hoe mensen denken, klikken, zoeken en vastlopen.", "why": "Past bij voelen én denken.", "route": "vmbo-t → havo → hbo CMD / Communication & Multimedia Design"}, {"id": "wetenschapper", "nr": "30", "title": "Wetenschapper", "short": "Testen, onderzoeken en ontdekken hoe dingen werken.", "what": "Je bedenkt vragen, test ideeën en zoekt bewijs voor hoe iets werkt.", "why": "Past bij nieuwsgierigheid, experimenteren en precies willen weten wat klopt.", "route": "vmbo-t → havo → natuur, techniek, menswetenschap of dataonderzoek"}]</script>
+  <script type="application/json" id="schools-data">[{"id": "amstelveen-college", "name": "Amstelveen College", "group": "Dichtbij & logisch", "location": "Amstelveen · Sportlaan 27", "travel": "± 20–30 min", "route": "Bus 171/178/357 richting Sportlaan, daarna ± 5 min lopen.", "students": "± 1.750", "size": "Groot", "levels": "vmbo-t/mavo, havo, vwo", "vmbo": "Ja", "havo": "Ja", "havoSame": "Ja", "guidance": "Normaal + navragen wat extra mogelijk is", "vibe": "Breed, dichtbij, regulier. Let op of de klas en mentor rustig genoeg voelen.", "match": "sterk", "tag": "Sterke match", "why": "Dichtbij en breed. Je kunt vmbo-t starten en havo openhouden zonder van school te wisselen. Groot, maar de mentorstructuur vraagt aandacht.", "watch": "Grote school — vraag specifiek hoe de mentor werkt en of er echt ruimte is voor persoonlijk contact."}, {"id": "hwc", "name": "Hermann Wesselink College", "group": "Dichtbij & logisch", "location": "Amstelveen · Startbaan 3", "travel": "± 20–35 min", "route": "Binnen Amstelveen. Praktisch dichtbij; route exact checken vanaf huis.", "students": "± 1.885", "size": "Groot", "levels": "vmbo-t, havo, vwo", "vmbo": "Ja", "havo": "Ja", "havoSame": "Ja", "guidance": "Bekend dossier, BPO/OPP aanwezig", "vibe": "Bekend. Vraag of de school je ziet als wie je nu bent, niet wie je was.", "match": "sterk", "tag": "Sterke match", "why": "Dichtbij en bekend terrein. Als de school écht ruimte geeft voor een eerlijk plan, hoef je niet opnieuw te wennen.", "watch": "Alleen sterk als de school een helder plan maakt voor havo-doorstroom. Vraag dit concreet na."}, {"id": "csb", "name": "CSB", "group": "Dichtbij & logisch", "location": "Amsterdam-Buitenveldert · De Cuserstraat 3", "travel": "± 25–40 min", "route": "Tram 5 of Amstelveenlijn 25 richting Buitenveldert/Zuid.", "students": "± 930", "size": "Middelgroot", "levels": "mavo, havo, vwo", "vmbo": "Ja", "havo": "Ja", "havoSame": "Ja", "guidance": "Navragen hoe mavo → havo begeleid wordt", "vibe": "Amsterdam, maar bereikbaar. Gemengd publiek, persoonlijke sfeer als het goed is.", "match": "sterk", "tag": "Sterke match", "why": "Goede optie: dichtbij, gemengd (mavo/havo/vwo) en klein genoeg dat je niet verdwijnt. Mavo en havo op één school — doorstromen zonder opnieuw wennen.", "watch": "Vraag hoe de mentoraanpak werkt. Dat verschilt per mentor en maakt hier het verschil."}, {"id": "futuris", "name": "Futuris", "group": "Andere route", "location": "Amstelveen · Pandora 1-2", "travel": "± 20–35 min", "route": "Binnen Amstelveen. Route exact checken vanaf huis.", "students": "Kleinschaliger", "size": "Kleiner", "levels": "vmbo-b/k/t, mavo-havo route", "vmbo": "Ja", "havo": "Via overstap", "havoSame": "Nee", "guidance": "Praktischer / profielgericht", "vibe": "Rustiger en praktischer dan veel reguliere scholen.", "match": "kan", "tag": "Kan werken", "why": "Kan rust geven als een praktischere omgeving beter past. Profielen zoals game en technologie kunnen energie geven voor jou als je graag maakt.", "watch": "Havo zit niet op dezelfde school. Doorstroom vraagt later opnieuw een overstap — hou dat in gedachten."}, {"id": "apollo", "name": "De Apollo", "group": "Andere route", "location": "Amsterdam-Buitenveldert · Oudaen 6", "travel": "± 30–45 min", "route": "Richting Buitenveldert/Zuid. Exacte route vanaf huis checken.", "students": "Klein", "size": "Klein", "levels": "vmbo-t, havo", "vmbo": "Ja", "havo": "Ja", "havoSame": "Ja", "guidance": "Veel ondersteuning / kleine setting", "vibe": "Kleinschalig, rustig, beschermd. Leerlingen worden gezien.", "match": "sterk", "tag": "Beste match", "why": "De sterkste optie voor rust, herstel en groei. Klein, warm en betrokken. Docenten kennen je bij naam — dat is hier geen uitzondering maar de norm. Vmbo-t en havo op dezelfde locatie.", "watch": "De groep is klein. Als de klik er niet is met je klas, is er minder uitwijkruimte. Kijk op de open dag goed naar de sfeer in de pauze."}, {"id": "spinoza20first", "name": "Spinoza20first", "group": "Andere route", "location": "Amsterdam-Oost · H.J.E. Wenckebachweg 44", "travel": "± 40–50 min", "route": "Naar metro Spaklerweg; school ligt enkele minuten lopen vanaf metrostation Spaklerweg.", "students": "± 500–985", "size": "Relatief kleiner", "levels": "mavo, havo, vwo", "vmbo": "Ja", "havo": "Ja", "havoSame": "Ja", "guidance": "Dalton / eigen regie", "vibe": "Modern, vrij, onderzoekend. Vraagt meer dan het lijkt.", "match": "kan", "tag": "Interessant, maar later", "why": "Inhoudelijk interessant: onderzoekend leren, dalton, eigen tempo. Maar zelfgestuurd leren werkt alleen als je al weet wie je bent — en dat is nu nog niet het geval.", "watch": "Reistijd (40-50 min) en de eis van zelfredzaamheid zijn nu te zwaar. Beter als optie als je meer zelfvertrouwen hebt."}, {"id": "geert-groote", "name": "Geert Groote College", "group": "Andere route", "location": "Amsterdam-Zuid · Fred. Roeskestraat 84", "travel": "± 35–50 min", "route": "Richting Amsterdam Zuid/De Boelelaan, daarna lopen/fiets/OV. Exact checken.", "students": "± 903", "size": "Middelgroot", "levels": "mavo, havo, vwo", "vmbo": "Ja", "havo": "Ja", "havoSame": "Ja", "guidance": "Mentor en ontwikkeling centraal", "vibe": "Creatief, zacht, eigen ritme. Minder status, meer mens.", "match": "sterk", "tag": "Sterk: hoge havo-doorstroom", "why": "Vrijeschool met periodeonderwijs: drie weken diep in één onderwerp. Van alle scholen stroomt hier de meeste mavo door naar havo — 50%. De school ziet leerlingen als een traject, niet als een niveau.", "watch": "Je stapt in een groep die elkaar soms al jaren kent. Dat vraagt iets. Maar als je er eenmaal in zit, word je goed gezien."}, {"id": "keizer-karel", "name": "Keizer Karel College", "group": "Niet eerste keuze", "location": "Amstelveen · Elegast 5", "travel": "± 20–35 min", "route": "Vanaf Amstelveen busstation bus 174 of 186 richting Hueseplein, daarna ± 10 min lopen.", "students": "± 1.900", "size": "Groot", "levels": "havo, vwo, gymnasium", "vmbo": "Nee", "havo": "Ja", "havoSame": "n.v.t.", "guidance": "Regulier", "vibe": "Havo/vwo, technasium", "match": "risico", "tag": "Geen vmbo-t", "why": "Alleen interessant als havo-instroom echt haalbaar is.", "watch": "Past niet bij het doel vmbo-t starten."}, {"id": "alkwin", "name": "Alkwin Kollege", "group": "Niet eerste keuze", "location": "Uithoorn · Weegbree 55", "travel": "± 40–55 min", "route": "Tram 25 naar Uithoorn Busstation, daarna ± 9–12 min lopen.", "students": "± 1.538", "size": "Groot", "levels": "havo, vwo, gymnasium", "vmbo": "Nee", "havo": "Ja", "havoSame": "n.v.t.", "guidance": "Regulier", "vibe": "Havo/vwo", "match": "risico", "tag": "Randgeval", "why": "Alleen interessant als havo direct kan en reistijd geen probleem is.", "watch": "Geen vmbo-t start en waarschijnlijk rond/boven 45 minuten."}, {"id": "ir-lely-lyceum", "name": "Ir. Lely Lyceum", "group": "Andere route", "location": "Amsterdam-Zuidoost", "travel": "± 45–55 min", "route": "Via Bijlmer Arena en metro richting Gein/Reigersbos. Reken ongeveer 45–55 minuten deur tot deur.", "students": "Groot", "size": "Groot", "levels": "mavo, havo, vwo, technasium", "vmbo": "Ja", "havo": "Ja", "havoSame": "Ja", "guidance": "Duidelijke structuur", "vibe": "Directer, stadser, minder klein en beschermd. Meer “middelbare school-gevoel”.", "match": "kan", "tag": "Kan werken", "why": "Veel verschillende routes binnen één school. Technasium, mavo, havo en vwo zitten allemaal in het systeem. Kan prettig zijn als interesses nog veranderen.", "watch": "Vrij grote school. Sommige leerlingen vinden dat fijn omdat je meer vrijheid hebt, anderen raken juist sneller uit beeld."}, {"id": "aics-sandcastle", "name": "AICS (Sandcastle)", "group": "Andere route", "location": "Amsterdam-Zuidoost", "travel": "± 30–35 min", "route": "Bus richting Bijlmer Arena, daarna kort lopen. Ongeveer 30–35 minuten.", "practical": "Les in het Engels. Jaarlijkse kosten liggen rond €7.000+ voor secondary onderwijs.", "students": "Internationaal", "size": "Middelgroot", "levels": "internationaal onderwijs · Engels", "vmbo": "Nee", "havo": "Nee", "havoSame": "Nee", "guidance": "Projectmatig / zelfstandig", "vibe": "Open, internationaal, volwassen. Minder hiërarchie, vaak rustiger contact tussen leerlingen en docenten.", "match": "kan", "tag": "Internationale route", "why": "Veel ruimte voor nieuwsgierigheid, onderzoek en eigen ideeën. Minder gericht op “in één hokje passen”. Sterk in Engels en internationale sfeer.", "watch": "Geen gewone Nederlandse middelbare school. Andere structuur, andere cultuur en hoge kosten. Zelfstandig werken wordt verwacht."}, {"id": "isa", "name": "ISA", "group": "Andere route", "location": "Amstelveen", "travel": "± 15–20 min", "route": "Vanaf huis zelfs te lopen of te fietsen. Groot voordeel op lange termijn.", "practical": "Volledig Engelstalig onderwijs. Internationale diploma-routes richting buitenland.", "students": "Klein / internationaal", "size": "Klein", "levels": "internationaal onderwijs · Engels", "vmbo": "Nee", "havo": "Nee", "havoSame": "Nee", "guidance": "Community / persoonlijke begeleiding", "vibe": "Rustiger, netter en meer “campusgevoel”. Minder harde schoolcultuur dan op sommige grote scholen.", "match": "kan", "tag": "Internationale route", "why": "Kleine afstand, internationale omgeving en vaak veel aandacht voor welzijn en begeleiding. Kan goed passen bij leerlingen die opbloeien in een rustigere setting.", "watch": "Ook dit is geen reguliere Nederlandse school. Instroom, niveau-opbouw en kosten werken anders dan bij Nederlandse scholen."}]</script>
+  <script type="application/json" id="flipcards-data">[{"id":"frans","subject":"Frans","week":"deze week","active":true,"cards":[{"front":"regarder","back":"kijken","example":"Je regarde une vidéo."},{"front":"un exercice","back":"een oefening","example":"Je fais un exercice."},{"front":"un livre","back":"een boek","example":"Le livre est sur la table."},{"front":"apprendre","back":"leren","example":"J'apprends les mots."},{"front":"écrire","back":"schrijven","example":"J'écris dans mon cahier."}]},{"id":"duits","subject":"Duits","week":"deze week","active":true,"cards":[{"front":"das Buch","back":"het boek","example":"Ich nehme das Buch mit."},{"front":"der Laptop","back":"de laptop","example":"Ich brauche meinen Laptop."},{"front":"das Heft","back":"het schrift","example":"Das Heft ist in meiner Tasche."},{"front":"lernen","back":"leren","example":"Ich lerne die Wörter."},{"front":"fragen","back":"vragen","example":"Ich frage den Lehrer."}]},{"id":"wiskunde","subject":"Wiskunde","week":"deze week","active":true,"cards":[{"front":"oppervlakte rechthoek","back":"lengte × breedte","example":"A = l × b"},{"front":"omtrek rechthoek","back":"2 × lengte + 2 × breedte","example":"O = 2l + 2b"},{"front":"eerste stap bij een som","back":"schrijf op wat je weet","example":"Gegeven → gevraagd → formule → uitrekenen"}]},{"id":"natuurkunde","subject":"Natuurkunde","week":"deze week","active":true,"cards":[{"front":"snelheid","back":"afstand ÷ tijd","example":"v = s / t"},{"front":"kracht","back":"massa × versnelling","example":"F = m × a"},{"front":"eenheid van kracht","back":"newton","example":"N"}]},{"id":"nederlands","subject":"Nederlands","week":"deze week","active":true,"cards":[{"front":"persoonsvorm","back":"het werkwoord dat verandert met de tijd","example":"Ik loop -> gisteren liep ik."},{"front":"onderwerp","back":"wie of wat iets doet","example":"Jimmy leest. Wie leest? Jimmy."},{"front":"bijvoeglijk naamwoord","back":"zegt iets over een zelfstandig naamwoord","example":"de snelle fiets"},{"front":"hoofdgedachte","back":"waar de tekst vooral over gaat","example":"Vat het samen in één zin."}]},{"id":"scheikunde","subject":"Scheikunde","week":"later","active":false,"cards":[]}]</script>
+  <script src="script.js?v=20260508-overzicht-weg"></script>
+</body>
+</html>

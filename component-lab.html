@@ -1,0 +1,2018 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Component Lab &mdash; Jimmy's Kompas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Gedeeld design system (zelfde als index.html) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Component Lab chrome -->
+  <link rel="stylesheet" href="component-lab.css" />
+</head>
+<body>
+<div class="sg" id="sg-root">
+
+<!-- SIDEBAR -->
+<nav class="sg-nav" id="sg-nav">
+  <div class="sg-nav-logo"><small>Component Lab</small>Jimmy's<br>Kompas</div>
+  <div class="sg-version" id="sg-version">styles.css</div>
+
+  <button class="sg-seen-btn" id="sg-seen-btn" type="button">
+    &#10003;&nbsp; Nieuwe items gezien
+  </button>
+
+  <p class="sg-nav-group">Tokens</p>
+  <ul>
+    <li><a href="#tok-kl">Kleuren</a></li>
+    <li><a href="#tok-ty">Typografie</a></li>
+    <li><a href="#tok-rx">Radius &amp; shadow</a></li>
+  </ul>
+  <p class="sg-nav-group">Sectie-composities</p>
+  <ul>
+    <li><a href="#sc-paper" data-sg-id="sc-paper">Paper</a></li>
+    <li><a href="#sc-milk" data-sg-id="sc-milk">Milk</a></li>
+    <li><a href="#sc-warm" data-sg-id="sc-warm">Warm</a></li>
+    <li><a href="#sc-mint" data-sg-id="sc-mint">Mint</a></li>
+    <li><a href="#sc-sky" data-sg-id="sc-sky">Sky</a></li>
+    <li><a href="#sc-route" data-sg-id="sc-route">Route</a></li>
+    <li><a href="#sc-school" data-sg-id="sc-school">School</a></li>
+    <li><a href="#sc-beroepen" data-sg-id="sc-beroepen">Beroepen</a></li>
+    <li><a href="#sc-week" data-sg-id="sc-week">Week</a></li>
+    <li><a href="#sc-night" data-sg-id="sc-night">Night</a></li>
+    <li><a href="#sc-practice" data-sg-id="sc-practice">Practice</a></li>
+    <li><a href="#sc-new" data-sg-id="sc-new">+ Nieuwe sectie</a></li>
+  </ul>
+  <p class="sg-nav-group">Paletten</p>
+  <ul>
+    <li><a href="#sc-paletten">Kleurpaletten</a></li>
+  </ul>
+  <p class="sg-nav-group">Componenten</p>
+  <ul>
+    <li><a href="#comp-canon" data-sg-id="comp-canon">Card-canon</a></li>
+    <li><a href="#comp-cards" data-sg-id="comp-cards">Card-staten</a></li>
+    <li><a href="#comp-btns" data-sg-id="comp-btns">Knoppen &amp; tabs</a></li>
+    <li><a href="#comp-typo" data-sg-id="comp-typo">Typografie-staten</a></li>
+    <li><a href="#comp-modal" data-sg-id="comp-modal">Modal / overlay</a></li>
+    <li><a href="#comp-pills" data-sg-id="comp-pills">Pills &amp; eyebrows</a></li>
+    <li><a href="#comp-form" data-sg-id="comp-form">Formulier (login)</a></li>
+    <li><a href="#comp-responsive" data-sg-id="comp-responsive">Responsive preview</a></li>
+    <li><a href="#comp-breaks" data-sg-id="comp-breaks">Breakpoints &amp; checks</a></li>
+    <li><a href="#comp-live-preview" data-sg-id="comp-live-preview">Styles.css preview</a></li>
+    <li><a href="#comp-real" data-sg-id="comp-real">Real components</a></li>
+    <li><a href="#comp-typo-levels" data-sg-id="comp-typo-levels">Typografie niveaus</a></li>
+  </ul>
+  <p class="sg-nav-group">Regels</p>
+  <ul>
+    <li><a href="#reg-hier">Hi&euml;rarchie</a></li>
+    <li><a href="#reg-check">Checklist</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN -->
+<main class="sg-main">
+
+<!-- TOKENS -->
+<section class="sg-sec" id="tok-kl">
+  <p class="sg-lbl">01 &mdash; Tokens</p>
+  <h2 class="sg-h">Kleuren</h2>
+  <p class="sg-sub">Vaste kernkleuren als CSS-variabelen in <code>styles.css :root</code>. Nooit hardcoded hex buiten dat bestand.</p>
+  <p class="sg-lbl">Kern</p>
+  <div class="sg-g4" style="margin-bottom:20px;">
+    <div><div class="sg-sw" style="background:#1a1a2e;"></div><div class="sg-sw-i"><strong>--ink</strong>#1a1a2e</div></div>
+    <div><div class="sg-sw" style="background:rgba(26,26,46,.68);border:1px solid #ccc;"></div><div class="sg-sw-i"><strong>--muted</strong>ink 68%</div></div>
+    <div><div class="sg-sw" style="background:rgba(255,255,255,.72);border:1px solid #ccc;"></div><div class="sg-sw-i"><strong>--paper</strong>white 72%</div></div>
+    <div><div class="sg-sw" style="background:#f7f3ea;border:1px solid #e0d8ca;"></div><div class="sg-sw-i"><strong>--theme-bg</strong>#f7f3ea</div></div>
+  </div>
+  <p class="sg-lbl">Accentkleuren per thema</p>
+  <div class="sg-g4" style="margin-bottom:20px;">
+    <div><div class="sg-sw" style="background:#6e2be8;"></div><div class="sg-sw-i"><strong>#6e2be8</strong>hero, paper, route</div></div>
+    <div><div class="sg-sw" style="background:#327273;"></div><div class="sg-sw-i"><strong>#327273</strong>mint, practice</div></div>
+    <div><div class="sg-sw" style="background:#C9A954;"></div><div class="sg-sw-i"><strong>#C9A954</strong>week (goud)</div></div>
+    <div><div class="sg-sw" style="background:#2d73c9;"></div><div class="sg-sw-i"><strong>#2d73c9</strong>sky (blauw)</div></div>
+    <div><div class="sg-sw" style="background:#9b4d2e;"></div><div class="sg-sw-i"><strong>#9b4d2e</strong>warm</div></div>
+    <div><div class="sg-sw" style="background:#b16825;"></div><div class="sg-sw-i"><strong>#b16825</strong>milk</div></div>
+    <div><div class="sg-sw" style="background:#c6b5ff;"></div><div class="sg-sw-i"><strong>#c6b5ff</strong>night</div></div>
+    <div><div class="sg-sw" style="background:#1a1a2e;"></div><div class="sg-sw-i"><strong>#1a1a2e</strong>school</div></div>
+  </div>
+  <p class="sg-lbl">Semantisch gebruik</p>
+  <div class="sg-g3">
+    <div style="padding:12px;background:rgba(255,255,255,.6);border-radius:10px;font-family:var(--font-body);font-size:.8rem;"><strong style="display:block;margin-bottom:4px;">Bewaard &#10003;</strong><div style="display:flex;gap:6px;align-items:center;"><div style="width:15px;height:15px;border-radius:4px;background:#499463;"></div><code>#499463</code></div></div>
+    <div style="padding:12px;background:rgba(255,255,255,.6);border-radius:10px;font-family:var(--font-body);font-size:.8rem;"><strong style="display:block;margin-bottom:4px;">Actief filter</strong><div style="display:flex;gap:6px;align-items:center;"><div style="width:15px;height:15px;border-radius:4px;background:#5c39a4;"></div><code>#5c39a4</code></div></div>
+    <div style="padding:12px;background:rgba(255,255,255,.6);border-radius:10px;font-family:var(--font-body);font-size:.8rem;"><strong style="display:block;margin-bottom:4px;">Fout</strong><div style="display:flex;gap:6px;align-items:center;"><div style="width:15px;height:15px;border-radius:4px;background:#8b1e2d;"></div><code>#8b1e2d</code></div></div>
+  </div>
+</section>
+
+<section class="sg-sec" id="tok-ty">
+  <p class="sg-lbl">02 &mdash; Tokens</p>
+  <h2 class="sg-h">Typografie</h2>
+  <p class="sg-sub">Drie rollen, gedefinieerd in <code>styles.css</code>. Strikt verdeeld &mdash; nooit mengen.</p>
+  <div class="sg-ts"><p class="sg-tm">Logo / hero &mdash; Instrument Serif 700</p><div style="font-family:var(--font-logo);font-weight:700;font-size:2.8rem;line-height:.95;letter-spacing:-.025em;">Jimmy's Kompas</div><p style="font-size:.72rem;color:var(--muted);margin-top:4px;font-family:var(--font-body);">Alleen: <code>.hero-title</code></p></div>
+  <div class="sg-ts"><p class="sg-tm">Sectietitels &mdash; Playfair Display 400</p><div style="font-family:var(--font-display);font-weight:400;font-size:2.3rem;line-height:.95;letter-spacing:-.055em;">Scholen &amp; beroepen</div><p style="font-size:.72rem;color:var(--muted);margin-top:4px;font-family:var(--font-body);"><code>h2</code>, <code>.section-head h2</code></p></div>
+  <div class="sg-ts"><p class="sg-tm">Eyebrow &mdash; Karla 700, uppercase, muted donkergrijs</p><p class="eyebrow" style="margin:0;">01 &mdash; Sectienaam</p></div>
+  <div class="sg-ts"><p class="sg-tm">Cardtitels &mdash; Karla 500</p><div style="font-family:var(--font-body);font-weight:500;font-size:1.2rem;letter-spacing:-.025em;">Amstelveen College</div><p style="font-size:.72rem;color:var(--muted);margin-top:4px;font-family:var(--font-body);"><code>.card h3</code></p></div>
+  <div class="sg-ts"><p class="sg-tm">Bodytekst &mdash; Karla 400, kleur --theme-muted</p><p style="font-size:.93rem;line-height:1.65;color:var(--muted);margin:0;">Kleine stappen. Niet alles tegelijk. Kijk wat er nu openstaat.</p></div>
+</section>
+
+<section class="sg-sec" id="tok-rx">
+  <p class="sg-lbl">03 &mdash; Tokens</p>
+  <h2 class="sg-h">Radius &amp; Shadow</h2>
+  <p class="sg-sub">Alle waarden via tokens in <code>styles.css :root</code>. Nooit hardcoden.</p>
+  <div class="sg-g3">
+    <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;">
+      <p class="sg-lbl">Border radius</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;font-family:var(--font-body);">
+        <div style="height:34px;background:#e0d8f0;border-radius:28px;display:flex;align-items:center;padding:0 11px;font-weight:700;font-size:.77rem;">--radius: 28px &mdash; cards</div>
+        <div style="height:34px;background:#e0d8f0;border-radius:18px;display:flex;align-items:center;padding:0 11px;font-weight:700;font-size:.77rem;">--radius-sm: 18px &mdash; inner</div>
+        <div style="height:34px;background:#e0d8f0;border-radius:999px;display:flex;align-items:center;padding:0 11px;font-weight:700;font-size:.77rem;">--pill: 999px &mdash; knoppen</div>
+      </div>
+    </div>
+    <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;">
+      <p class="sg-lbl">Schaduwen</p>
+      <div style="display:flex;flex-direction:column;gap:11px;margin-top:8px;font-family:var(--font-body);">
+        <div style="height:34px;background:#fff;border-radius:9px;box-shadow:0 16px 44px rgba(26,26,46,.08);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.77rem;">--shadow</div>
+        <div style="height:34px;background:#fff;border-radius:9px;box-shadow:0 24px 76px rgba(0,0,0,.24);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.77rem;">--shadow-strong</div>
+      </div>
+    </div>
+    <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;">
+      <p class="sg-lbl">Sectie-dividers</p>
+      <div style="margin-top:8px;font-family:var(--font-body);font-size:.8rem;line-height:2;color:var(--muted);">
+        <code>.section</code><br><strong style="color:var(--ink);">border-top: 8px solid #fff</strong>
+        <div style="margin-top:7px;"><code>.hero</code><br><strong style="color:var(--ink);">border-top: 0<br>border-bottom: 8px solid #fff</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTIE-COMPOSITIES -->
+
+<section class="sg-sec" id="sc-paper">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Intro, Wat past bij jou, Routes</p>
+  <span class="sg-new-banner" data-new-id="sc-paper" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Paper <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; licht cr&egrave;me</span></h2>
+  <p class="sg-sub">Standaardvorm. Cr&egrave;me achtergrond, paarse accenten. Tot 3 cards per rij.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-paper"><p class="eyebrow">Label</p><h2 class="sc-h2">Sectietitel</h2><p class="sc-p">Leadtekst.</p></div>
+  <div class="sc-g3 theme-paper"><article class="card"><p class="eyebrow">Label</p><h3 class="sc-card-h">Cardtitel</h3><p class="sc-card-p">Bodytekst.</p></article><article class="card"><p class="eyebrow">Label</p><h3 class="sc-card-h">Cardtitel</h3><p class="sc-card-p">Bodytekst.</p></article><article class="card"><p class="eyebrow">Label</p><h3 class="sc-card-h">Cardtitel</h3><p class="sc-card-p">Bodytekst.</p></article></div></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v"><span class="sc-d" style="background:#f7f3ea;"></span>#f7f3ea</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v"><span class="sc-d" style="background:#1a1a2e;"></span>#1a1a2e</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">ink 68%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v">white 74%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#6e2be8;"></span>#6e2be8</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#fff</span></div>
+
+      <div class="sc-cards"><strong>Cards/rij:</strong><div class="sc-cd on">1</div><div class="sc-cd on">2</div><div class="sc-cd on">3</div><div class="sc-cd">4</div></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-paper"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;p</span> <span class="sg-ca">class</span>=<span class="sg-cv">"eyebrow"</span><span class="sg-ct">&gt;</span><span class="sg-cx">Label</span><span class="sg-ct">&lt;/p&gt;</span>  <span class="sg-cc">&#8592; optioneel</span>
+    <span class="sg-ct">&lt;h2&gt;</span><span class="sg-cx">Titel</span><span class="sg-ct">&lt;/h2&gt;</span>
+    <span class="sg-ct">&lt;p&gt;</span><span class="sg-cx">Leadtekst</span><span class="sg-ct">&lt;/p&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"grid cards-3"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;article</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/article&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-milk">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Testuitslagen</p>
+  <span class="sg-new-banner" data-new-id="sc-milk" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Milk <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; warm cr&egrave;me</span></h2>
+  <p class="sg-sub">Zachte oranje tint. Voor persoonlijke of introductieve secties. Bruine accent.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-milk"><p class="eyebrow">Testuitslagen</p><h2 class="sc-h2">Allemaal over jou</h2><p class="sc-p">Ze meten iets anders.</p></div>
+  <div class="sc-g3 theme-milk"><article class="card"><p class="eyebrow">5 jaar</p><h3 class="sc-card-h">139 IQ</h3><p class="sc-card-p">Zeer begaafd.</p></article><article class="card"><p class="eyebrow">6 jaar</p><h3 class="sc-card-h">145+ non-verbaal</h3><p class="sc-card-p">Tegen het plafond.</p></article><article class="card"><p class="eyebrow">13 jaar</p><h3 class="sc-card-h">100 schoolvaardigheid</h3><p class="sc-card-p">Momentopname.</p></article></div></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">gradient #fff8ef &rarr; #f4eadf</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v"><span class="sc-d" style="background:#1a1a2e;"></span>#1a1a2e</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">ink 68%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v">white 72%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#b16825;"></span>#b16825</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#fff</span></div>
+
+      <div class="sc-cards"><strong>Cards/rij:</strong><div class="sc-cd on">1</div><div class="sc-cd on">2</div><div class="sc-cd on">3</div><div class="sc-cd">4</div></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-milk"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;p</span> <span class="sg-ca">class</span>=<span class="sg-cv">"eyebrow"</span><span class="sg-ct">&gt;</span><span class="sg-cx">Label</span><span class="sg-ct">&lt;/p&gt;</span>  <span class="sg-cc">&#8592; optioneel</span>
+    <span class="sg-ct">&lt;h2&gt;</span><span class="sg-cx">Titel</span><span class="sg-ct">&lt;/h2&gt;</span>
+    <span class="sg-ct">&lt;p&gt;</span><span class="sg-cx">Leadtekst</span><span class="sg-ct">&lt;/p&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"grid cards-3"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;article</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/article&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-warm">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Nu op school</p>
+  <span class="sg-new-banner" data-new-id="sc-warm" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Warm <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; terracotta</span></h2>
+  <p class="sg-sub">Oranje-bruine gradient. Voor gevoelige of persoonlijke informatie. Werkt best met <code>.cards-2</code>.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-warm"><p class="eyebrow">Nu op school</p><h2 class="sc-h2">Wat je dit jaar haalt</h2><p class="sc-p">Het patroon is belangrijker.</p></div>
+  <div class="sc-g2 theme-warm">
+    <article class="card"><p class="eyebrow">Wat lukt</p><h3 class="sc-card-h">Hier groeit iets</h3><ul class="clean-list" style="font-size:.82rem;"><li>Tech &mdash; 9,0</li><li>Geschiedenis &mdash; 10</li><li>Engels &mdash; 8,8</li></ul></article>
+    <article class="card"><p class="eyebrow">Wat schuurt</p><h3 class="sc-card-h">Systeem in de weg</h3><ul class="clean-list" style="font-size:.82rem;"><li>Duits &mdash; 3,7</li><li>Frans &mdash; 4,1</li><li>Wiskunde &mdash; 4,5</li></ul></article>
+  </div></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">gradient #fff3e8 &rarr; #f8dfcf</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v"><span class="sc-d" style="background:#1a1a2e;"></span>#1a1a2e</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">ink 68%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v">white 72%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#9b4d2e;"></span>#9b4d2e</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#fff</span></div>
+
+      <div class="sc-cards"><strong>Aanbevolen:</strong><div class="sc-cd on">1</div><div class="sc-cd on">2</div><div class="sc-cd">3</div><div class="sc-cd">4</div><span style="color:rgba(255,255,255,.4);">.cards-2 best</span></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-warm"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;p</span> <span class="sg-ca">class</span>=<span class="sg-cv">"eyebrow"</span><span class="sg-ct">&gt;</span><span class="sg-cx">Label</span><span class="sg-ct">&lt;/p&gt;</span>  <span class="sg-cc">&#8592; optioneel</span>
+    <span class="sg-ct">&lt;h2&gt;</span><span class="sg-cx">Titel</span><span class="sg-ct">&lt;/h2&gt;</span>
+    <span class="sg-ct">&lt;p&gt;</span><span class="sg-cx">Leadtekst</span><span class="sg-ct">&lt;/p&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"grid cards-2"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;article</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/article&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-mint">
+  <p class="sg-lbl">Sectie-compositie &mdash; generiek groen</p>
+  <span class="sg-new-banner" data-new-id="sc-mint" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Mint <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; mintgroen</span></h2>
+  <p class="sg-sub">Frisse gradient. Teal accent. Positieve of neutrale informatie. Alle cardrijen werken.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-mint"><p class="eyebrow">Sectienaam</p><h2 class="sc-h2">Sectietitel</h2><p class="sc-p">Mint past bij positieve onderwerpen.</p></div>
+  <div class="sc-g3 theme-mint"><article class="card"><h3 class="sc-card-h">Zonder eyebrow</h3><p class="sc-card-p">Simpele content.</p></article><article class="card"><p class="eyebrow">Met label</p><h3 class="sc-card-h">Met eyebrow</h3><p class="sc-card-p">Teal kleurt het label.</p></article><article class="card"><h3 class="sc-card-h">Met actie</h3><p class="sc-card-p">Card met knop.<div class="actions"><button class="btn btn-primary">Primair</button></div></p></article></div></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">gradient #eff8ef &rarr; #dceee5</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v"><span class="sc-d" style="background:#1a1a2e;"></span>#1a1a2e</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">ink 68%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v">white 72%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#327273;"></span>#327273</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#fff</span></div>
+
+      <div class="sc-cards"><strong>Cards/rij:</strong><div class="sc-cd on">1</div><div class="sc-cd on">2</div><div class="sc-cd on">3</div><div class="sc-cd">4</div></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-mint"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;p</span> <span class="sg-ca">class</span>=<span class="sg-cv">"eyebrow"</span><span class="sg-ct">&gt;</span><span class="sg-cx">Label</span><span class="sg-ct">&lt;/p&gt;</span>  <span class="sg-cc">&#8592; optioneel</span>
+    <span class="sg-ct">&lt;h2&gt;</span><span class="sg-cx">Titel</span><span class="sg-ct">&lt;/h2&gt;</span>
+    <span class="sg-ct">&lt;p&gt;</span><span class="sg-cx">Leadtekst</span><span class="sg-ct">&lt;/p&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"grid cards-3"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;article</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/article&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-sky">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Nu doen</p>
+  <span class="sg-new-banner" data-new-id="sc-sky" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Sky <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; lichtblauw</span></h2>
+  <p class="sg-sub">Lichtblauwe gradient. Blauwe accent. Voor actiegerichte of informatieve secties.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-sky"><p class="eyebrow">Nu</p><h2 class="sc-h2">Nu doen</h2><p class="sc-p">Kleine stappen.</p></div>
+  <div class="sc-g3 theme-sky"><article class="card"><h3 class="sc-card-h">School kiezen</h3><p class="sc-card-p">Lees, bewaar, vergelijk.</p></article><article class="card"><h3 class="sc-card-h">Week checken</h3><p class="sc-card-p">Kijk wat openstaat.</p></article><article class="card"><h3 class="sc-card-h">Vragen opschrijven</h3><p class="sc-card-p">Niet in je hoofd.</p></article></div></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">gradient #edf7ff &rarr; #dfeef8</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v"><span class="sc-d" style="background:#1a1a2e;"></span>#1a1a2e</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">ink 68%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v">white 72%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#2d73c9;"></span>#2d73c9</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#fff</span></div>
+
+      <div class="sc-cards"><strong>Cards/rij:</strong><div class="sc-cd on">1</div><div class="sc-cd on">2</div><div class="sc-cd on">3</div><div class="sc-cd">4</div></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-sky"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;p</span> <span class="sg-ca">class</span>=<span class="sg-cv">"eyebrow"</span><span class="sg-ct">&gt;</span><span class="sg-cx">Label</span><span class="sg-ct">&lt;/p&gt;</span>  <span class="sg-cc">&#8592; optioneel</span>
+    <span class="sg-ct">&lt;h2&gt;</span><span class="sg-cx">Titel</span><span class="sg-ct">&lt;/h2&gt;</span>
+    <span class="sg-ct">&lt;p&gt;</span><span class="sg-cx">Leadtekst</span><span class="sg-ct">&lt;/p&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"grid cards-3"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;article</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/article&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-route">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Alternatieve routes</p>
+  <span class="sg-new-banner" data-new-id="sc-route" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Route <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; lila</span></h2>
+  <p class="sg-sub">Paarse gradient, zelfde accent als Paper maar andere achtergrond. Voor toekomst- of planningsecties.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-route"><p class="eyebrow">Routes</p><h2 class="sc-h2">Alternatieve routes</h2><p class="sc-p">Niet &eacute;&eacute;n route &mdash; een die werkt.</p></div>
+  <div class="sc-g3 theme-route"><article class="card"><h3 class="sc-card-h">Vmbo-t &rarr; havo</h3><p class="sc-card-p">Rustige route.</p></article><article class="card"><h3 class="sc-card-h">Andere school</h3><p class="sc-card-p">Als omgeving beter past.</p></article><article class="card"><h3 class="sc-card-h">Extra vak</h3><p class="sc-card-p">Houdt havo open.</p></article></div></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">gradient #f3f0ff &rarr; #e7e9ff</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v"><span class="sc-d" style="background:#1a1a2e;"></span>#1a1a2e</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">ink 68%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v">white 72%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#6e2be8;"></span>#6e2be8</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#fff</span></div>
+
+      <div class="sc-cards"><strong>Cards/rij:</strong><div class="sc-cd on">1</div><div class="sc-cd on">2</div><div class="sc-cd on">3</div><div class="sc-cd">4</div></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-route"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;p</span> <span class="sg-ca">class</span>=<span class="sg-cv">"eyebrow"</span><span class="sg-ct">&gt;</span><span class="sg-cx">Label</span><span class="sg-ct">&lt;/p&gt;</span>  <span class="sg-cc">&#8592; optioneel</span>
+    <span class="sg-ct">&lt;h2&gt;</span><span class="sg-cx">Titel</span><span class="sg-ct">&lt;/h2&gt;</span>
+    <span class="sg-ct">&lt;p&gt;</span><span class="sg-cx">Leadtekst</span><span class="sg-ct">&lt;/p&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"grid cards-3"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;article</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/article&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-school">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Scholen</p>
+  <span class="sg-new-banner" data-new-id="sc-school" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">School <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; blauw-grijs</span></h2>
+  <p class="sg-sub">Koele blauwe gradient. Bewaar-knop licht paars (unsaved), groen (saved). Border saved-card: subtiel donkergrijs. <em>Alles hieronder pikt automatisch CSS-wijzigingen op.</em></p>
+  <div class="sc-kit">
+    <div class="sc-prev theme-school" style="background:linear-gradient(135deg,#eef4fb 0%,#dfe9f6 100%);padding:20px;border-radius:16px;">
+      <div style="margin-bottom:12px;">
+        <p class="eyebrow">Scholen</p>
+        <h3 style="font-family:var(--font-display);font-weight:400;font-size:1.4rem;letter-spacing:-.04em;margin:0 0 4px;">Dichtbij &amp; logisch</h3>
+        <p style="font-size:.85rem;color:var(--theme-muted,rgba(26,26,46,.68));margin:0 0 12px;">Scholen die bij jou passen.</p>
+      </div>
+      <div class="filters" style="margin-bottom:12px;">
+        <button class="tab is-active" type="button">Alle</button>
+        <button class="tab" type="button">Dichtbij</button>
+        <button class="tab" type="button">Bewaard</button>
+      </div>
+      <div class="sc-g2">
+        <article class="card item-card">
+          <p class="eyebrow">Sterke match</p>
+          <h3 class="sc-card-h">Amstelveen College</h3>
+          <p class="sc-card-p">&#177; 20&ndash;30 min</p>
+          <div class="actions">
+            <button class="btn btn-soft" type="button" data-save-school>Bewaar</button>
+            <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+          </div>
+        </article>
+        <article class="card item-card is-saved">
+          <p class="eyebrow">Sterke match</p>
+          <h3 class="sc-card-h">Hermann Wesselink</h3>
+          <p class="sc-card-p">&#177; 20&ndash;35 min</p>
+          <div class="actions">
+            <button class="btn btn-ghost" type="button" data-open-school>Lees meer</button>
+            <button class="btn is-saved" type="button" data-save-school style="background:#499463;color:#fff;">&#10003; Bewaard</button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">gradient #eef4fb &rarr; #dfe9f6</span></div>
+      <div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#5c39a4;"></span>#5c39a4</span></div>
+      <div class="sc-row"><span class="sc-k">filter actief</span><span class="sc-v"><span class="sc-d" style="background:#5c39a4;"></span>#5c39a4 (uit CSS)</span></div>
+      <div class="sc-row"><span class="sc-k">bewaar unsaved</span><span class="sc-v"><span class="sc-d" style="background:rgba(92,57,164,.13);border:1px solid rgba(92,57,164,.3);"></span>rgba(92,57,164,.13)</span></div>
+      <div class="sc-row"><span class="sc-k">bewaard-knop</span><span class="sc-v"><span class="sc-d" style="background:#499463;"></span>#499463 (semantisch vast)</span></div>
+      <div class="sc-row"><span class="sc-k">is-saved border</span><span class="sc-v">rgba(26,26,46,.28) — donkergrijs</span></div>
+      <div class="sc-cards"><strong>Aanbevolen:</strong><div class="sc-cd on">1</div><div class="sc-cd on">2</div><div class="sc-cd">3</div><div class="sc-cd">4</div></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-school"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"filters"</span><span class="sg-ct">&gt;</span><span class="sg-cx">tabs&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"module-layout"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-week">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Deze week</p>
+  <span class="sg-new-banner" data-new-id="sc-week" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Week <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; donker groen</span></h2>
+  <p class="sg-sub">Geheel eigen kleurset. Card = <strong style='color:var(--ink);'>#D9DAD3</strong> (opaque), tekst = <strong style='color:var(--ink);'>#003A3D</strong>, goud accent. Altijd <code>.work-card</code> + <code>.stack</code>.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-week">
+    <h2 class="sc-h2" style="color:#D9DAD3;">Deze week</h2>
+    <p class="sc-p">Kijk wat er openstaat.</p>
+  </div>
+  <div class="tabs" style="margin-bottom:10px;">
+    <button class="tab is-active" style="--theme-accent:#C9A954;background:#C9A954;color:#003A3D;">Deze week</button>
+    <button class="tab" style="--theme-accent:#C9A954;background:rgba(201,169,84,.18);color:#C9A954;">Volgende week</button>
+  </div>
+  <article class="card work-card theme-week">
+    <div class="card-row"><p class="eyebrow" style="--theme-accent:#C9A954;margin:0;">Frans</p><span class="pill">Nog doen</span></div>
+    <h3>REGARDER</h3><p>Exercices 1+2 p.8.</p>
+    <div class="info-grid" style="border-top-color:rgba(0,58,61,.2);">
+      <p><strong>Huiswerk</strong><span>ma 19:30</span></p>
+      <p><strong>Overhoren</strong><span>wo 19:30</span></p>
+      <p><strong>Notitie</strong><span>Apart opschrijven</span></p>
+    </div>
+  </article></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">#327273&rarr;#003A3D + radials</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v"><span class="sc-d" style="background:#003A3D;"></span>#003A3D</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">rgba(217,218,211,.80)</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v"><span class="sc-d" style="background:#D9DAD3;"></span>#D9DAD3 (opaque!)</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#C9A954;"></span>#C9A954</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#003A3D</span></div>
+<div class="sc-row"><span class="sc-k">h2 kleur</span><span class="sc-v"><span class="sc-d" style="background:#D9DAD3;"></span>#D9DAD3 (apart)</span></div>
+
+      <div class="sc-cards"><strong>Layout:</strong><span style="color:rgba(255,255,255,.4);">.stack + .work-card</span></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-week"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"tabs"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"stack"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;article</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card work-card"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/article&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-night">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Footer</p>
+  <span class="sg-new-banner" data-new-id="sc-night" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Night <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; donker</span></h2>
+  <p class="sg-sub">Donkerpaarse gradient. Witte tekst, lavendel accent. Semi-transparante cards. Gebruik spaarzaam.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-night">
+    <h2 class="sc-h2" style="color:#fff;">Je zit niet vast</h2>
+    <p class="sc-p" style="color:rgba(255,255,255,.72);">Het kan op meerdere manieren.</p>
+  </div>
+  <div class="sc-g2 theme-night" style="margin-top:12px;">
+    <article class="card"><p class="eyebrow" style="--theme-accent:#c6b5ff;">Beroep 01</p><h3 class="sc-card-h" style="color:#fff;">AI Engineer</h3><p class="sc-card-p" style="color:rgba(255,255,255,.72);">De toekomst programmeren.</p><div class="actions"><button class="btn" style="background:#c6b5ff;color:#141024;border-radius:999px;border:0;padding:6px 13px;">Bewaar</button></div></article>
+    <article class="card is-saved" style="--theme-accent:#c6b5ff;"><p class="eyebrow" style="--theme-accent:#c6b5ff;">Beroep 02</p><h3 class="sc-card-h" style="color:#fff;">UX Designer</h3><p class="sc-card-p" style="color:rgba(255,255,255,.72);">Problemen oplossen.</p></article>
+  </div></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">gradient #141024 &rarr; #321434</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v">#fff</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">rgba(255,255,255,.72)</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v">white 10% (semi-transp.)</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#c6b5ff;"></span>#c6b5ff</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#141024</span></div>
+
+      <div class="sc-cards"><strong>Aanbevolen:</strong><div class="sc-cd on">1</div><div class="sc-cd on">2</div><div class="sc-cd">3</div><div class="sc-cd">4</div><span style="color:rgba(255,255,255,.4);">let op contrast</span></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;footer</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-night"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"grid cards-2"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/footer&gt;</span></div></div>
+</section>
+
+<section class="sg-sec" id="sc-practice">
+  <p class="sg-lbl">Sectie-compositie &mdash; gebruikt in: Oefenen</p>
+  <span class="sg-new-banner" data-new-id="sc-practice" style="display:none;">Nieuw of gewijzigd</span>
+  <h2 class="sg-h">Practice <span style="color:var(--muted);font-size:1rem;font-weight:400;">&mdash; cr&egrave;me/groen</span></h2>
+  <p class="sg-sub">Warme cr&egrave;me-naar-groen gradient. Teal accent. Afwijkende layout: <code>.practice-layout</code> + deck-grid 4 + flipcard.</p>
+  <div class="sc-kit">
+    <div class="sc-prev"><div class="sc-sh theme-practice"><p class="eyebrow">Oefenen</p><h2 class="sc-h2">Flipcards</h2><p class="sc-p">Alleen decks die nu nuttig zijn.</p></div>
+  <div class="deck-grid theme-practice" style="margin-bottom:10px;">
+    <button class="card deck-card is-active"><span>Frans</span><small>5 kaarten</small></button>
+    <button class="card deck-card"><span>Duits</span><small>5 kaarten</small></button>
+    <button class="card deck-card"><span>Wiskunde</span><small>3 kaarten</small></button>
+    <button class="card deck-card"><span>Natuur</span><small>3 kaarten</small></button>
+  </div>
+  <article class="card flip-card theme-practice">
+    <div class="card-row"><p class="eyebrow" style="margin:0;">Frans</p><span class="pill">1 / 5</span></div>
+    <button class="flip-face"><span>regarder</span><small>Klik om te draaien</small></button>
+  </article></div>
+    <div class="sc-tok">
+      <div class="sc-row"><span class="sc-k">--theme-bg</span><span class="sc-v">gradient #fff8ef &rarr; #eef7f0</span></div>
+<div class="sc-row"><span class="sc-k">--theme-text</span><span class="sc-v"><span class="sc-d" style="background:#1a1a2e;"></span>#1a1a2e</span></div>
+<div class="sc-row"><span class="sc-k">--theme-muted</span><span class="sc-v">ink 68%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-card</span><span class="sc-v">white 78%</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent</span><span class="sc-v"><span class="sc-d" style="background:#327273;"></span>#327273</span></div>
+<div class="sc-row"><span class="sc-k">--theme-accent-text</span><span class="sc-v">#fff</span></div>
+
+      <div class="sc-cards"><strong>Layout:</strong><span style="color:rgba(255,255,255,.4);">.practice-layout + deck-grid 4</span></div>
+    </div>
+  </div>
+  <div class="sc-code-wrap"><div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-practice"</span><span class="sg-ct">&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"practice-layout"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;aside</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card side-card"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/aside&gt;</span>
+    <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"practice-main"</span><span class="sg-ct">&gt;</span><span class="sg-cx">&#8230;</span><span class="sg-ct">&lt;/div&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+<span class="sg-ct">&lt;/section&gt;</span></div></div>
+</section>
+
+<!-- NIEUWE SECTIE TEMPLATE -->
+<section class="sg-sec" id="sc-new">
+  <p class="sg-lbl">Template &mdash; startpunt voor nieuwe secties</p>
+  <h2 class="sg-h">+ Nieuwe sectie toevoegen</h2>
+  <p class="sg-sub">Definieer een thema via tokens in <code>styles.css</code> blok 05, kies een grid, gebruik bestaande card-varianten. Nooit inline styles.</p>
+  <div class="sg-g2" style="margin-bottom:16px;">
+    <div>
+      <p class="sg-lbl" style="margin-bottom:7px;">Stap 1 &mdash; Thema in styles.css blok 05</p>
+      <div class="sg-code"><span class="sg-cc">/* styles.css &rarr; blok 05 Themes */</span>
+<span class="sg-ct">.theme-mijnthema</span> {
+  --theme-bg:          linear-gradient(135deg, <span class="sg-cv">#start</span> 0%, <span class="sg-cv">#eind</span> 100%);
+  --theme-text:        <span class="sg-cv">#1a1a2e</span>;
+  --theme-muted:       <span class="sg-cv">rgba(26,26,46,.68)</span>;
+  --theme-card:        <span class="sg-cv">rgba(255,255,255,.72)</span>;
+  --theme-accent:      <span class="sg-cv">#accentkleur</span>;
+  --theme-accent-text: <span class="sg-cv">#fff</span>;
+}</div>
+    </div>
+    <div>
+      <p class="sg-lbl" style="margin-bottom:7px;">Stap 2 &mdash; Grid op basis van content</p>
+      <div style="background:rgba(255,255,255,.6);border-radius:12px;padding:13px;font-family:var(--font-body);font-size:.8rem;line-height:2.1;">
+        <div><strong>.cards-3</strong> &mdash; standaard informatieoverzicht</div>
+        <div><strong>.cards-2</strong> &mdash; vergelijking, duo-info</div>
+        <div><strong>fullwidth card</strong> &mdash; intro, samenvatting</div>
+        <div><strong>.stack</strong> &mdash; taakkaarten (altijd fullwidth)</div>
+        <div><strong>.practice-layout</strong> &mdash; side panel + main</div>
+      </div>
+    </div>
+  </div>
+  <p class="sg-lbl" style="margin-bottom:7px;">Stap 3 &mdash; HTML (copy-paste)</p>
+  <div class="sg-code"><span class="sg-ct">&lt;section</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section theme-mijnthema"</span> <span class="sg-ca">id</span>=<span class="sg-cv">"mijn-sectie"</span><span class="sg-ct">&gt;</span>
+
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"section-head"</span><span class="sg-ct">&gt;</span>
+    <span class="sg-ct">&lt;p</span> <span class="sg-ca">class</span>=<span class="sg-cv">"eyebrow"</span><span class="sg-ct">&gt;</span><span class="sg-cx">Label</span><span class="sg-ct">&lt;/p&gt;</span>      <span class="sg-cc">&#8592; optioneel</span>
+    <span class="sg-ct">&lt;h2&gt;</span><span class="sg-cx">Sectietitel</span><span class="sg-ct">&lt;/h2&gt;</span>
+    <span class="sg-ct">&lt;p&gt;</span><span class="sg-cx">Leadtekst.</span><span class="sg-ct">&lt;/p&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+
+  <span class="sg-ct">&lt;div</span> <span class="sg-ca">class</span>=<span class="sg-cv">"grid cards-3"</span><span class="sg-ct">&gt;</span>         <span class="sg-cc">&#8592; of cards-2 / stack</span>
+    <span class="sg-ct">&lt;article</span> <span class="sg-ca">class</span>=<span class="sg-cv">"card"</span><span class="sg-ct">&gt;</span>         <span class="sg-cc">&#8592; + work-card voor Karla-only</span>
+      <span class="sg-ct">&lt;p</span> <span class="sg-ca">class</span>=<span class="sg-cv">"eyebrow"</span><span class="sg-ct">&gt;</span><span class="sg-cx">Label</span><span class="sg-ct">&lt;/p&gt;</span>  <span class="sg-cc">&#8592; optioneel</span>
+      <span class="sg-ct">&lt;h3&gt;</span><span class="sg-cx">Cardtitel</span><span class="sg-ct">&lt;/h3&gt;</span>
+      <span class="sg-ct">&lt;p&gt;</span><span class="sg-cx">Bodytekst.</span><span class="sg-ct">&lt;/p&gt;</span>
+    <span class="sg-ct">&lt;/article&gt;</span>
+  <span class="sg-ct">&lt;/div&gt;</span>
+
+<span class="sg-ct">&lt;/section&gt;</span></div>
+</section>
+
+<!-- COMPONENTEN -->
+
+<!-- ── CARD-CANON ───────────────────────────────────────────── -->
+<section class="sg-sec" id="comp-canon">
+  <p class="sg-lbl">Componenten &mdash; Canonisering</p>
+  <h2 class="sg-h">Offici&euml;le card-varianten</h2>
+  <p class="sg-sub">Gebruik <strong>alleen</strong> deze zeven varianten. Maak geen nieuwe losse card-classes zonder reden.</p>
+
+  <div style="display:grid;gap:0;background:rgba(255,255,255,.62);border-radius:14px;overflow:hidden;font-family:var(--font-body);font-size:.84rem;margin-bottom:20px;">
+    <!-- header -->
+    <div style="display:grid;grid-template-columns:160px 1fr 200px;background:rgba(26,26,46,.05);padding:9px 18px;border-bottom:1px solid var(--line);font-size:.62rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);">
+      <span>Class</span><span>Gebruik</span><span>Element + opmerking</span>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr 200px;padding:10px 18px;border-bottom:1px solid var(--line);align-items:start;">
+      <code style="color:#6e2be8;">.card</code>
+      <span>Basiskaart. Neutrale container voor alle content.</span>
+      <span style="color:var(--muted);">article, div &mdash; basis</span>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr 200px;padding:10px 18px;border-bottom:1px solid var(--line);align-items:start;">
+      <code style="color:#6e2be8;">.card.item-card</code>
+      <span>Lijst-items: schoolcards en beroepcards.</span>
+      <span style="color:var(--muted);">article &mdash; .theme-school</span>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr 200px;padding:10px 18px;border-bottom:1px solid var(--line);align-items:start;">
+      <code style="color:#6e2be8;">.card.side-card</code>
+      <span>Zijpanelen: Mijn selectie, voortgang, bewaard.</span>
+      <span style="color:var(--muted);">aside &mdash; position sticky</span>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr 200px;padding:10px 18px;border-bottom:1px solid var(--line);align-items:start;">
+      <code style="color:#6e2be8;">.card.work-card</code>
+      <span>Dagelijkse taken, huiswerk, planning, checkmomenten.</span>
+      <span style="color:var(--muted);">article &mdash; Karla-only</span>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr 200px;padding:10px 18px;border-bottom:1px solid var(--line);align-items:start;">
+      <code style="color:#6e2be8;">.card.deck-card</code>
+      <span>Oefendecks: selectie en activering.</span>
+      <span style="color:var(--muted);">button &mdash; altijd &lt;button&gt;</span>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr 200px;padding:10px 18px;border-bottom:1px solid var(--line);align-items:start;">
+      <code style="color:#6e2be8;">.card.flip-card</code>
+      <span>Individuele flashcards voor oefenen.</span>
+      <span style="color:var(--muted);">article &mdash; Karla-only</span>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr 200px;padding:10px 18px;align-items:start;">
+      <code style="color:#6e2be8;">.card.modal-card</code>
+      <span>Overlays en detailvensters (school, beroep, flipcard-beloning).</span>
+      <span style="color:var(--muted);">article &mdash; fixed overlay</span>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+    <div style="padding:13px 15px;border-radius:11px;background:#e8f5ec;border-left:3px solid #499463;font-family:var(--font-body);font-size:.82rem;line-height:1.7;">
+      <strong style="display:block;color:#499463;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;">&#10003; Mag wel</strong>
+      <ul style="padding-left:.85rem;margin:0;">
+        <li>Bestaande variant gebruiken voor nieuwe content</li>
+        <li>Varianten combineren: <code>.card.work-card.is-saved</code></li>
+        <li>Nieuwe <em>inhoud</em> in bestaande variant</li>
+        <li><code>.is-saved</code> als staat-modifier toevoegen</li>
+      </ul>
+    </div>
+    <div style="padding:13px 15px;border-radius:11px;background:#faeaea;border-left:3px solid #c0392b;font-family:var(--font-body);font-size:.82rem;line-height:1.7;">
+      <strong style="display:block;color:#c0392b;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;">&#10007; Niet doen</strong>
+      <ul style="padding-left:.85rem;margin:0;">
+        <li><code>.school-card-special</code></li>
+        <li><code>.big-week-card</code></li>
+        <li><code>.green-card-custom</code></li>
+        <li>Inline styles op een card</li>
+        <li>Aparte padding/radius per sectie</li>
+        <li>Nieuwe class voor elk nieuw onderwerp</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── CARD-STATEN ───────────────────────────────────────────── -->
+<section class="sg-sec" id="comp-cards">
+  <p class="sg-lbl">Componenten &mdash; Testgevallen</p>
+  <h2 class="sg-h">Card-staten</h2>
+  <p class="sg-sub">Alle relevante staten per variant. Zo zie je in &eacute;&eacute;n oogopslag of cards nog familie van elkaar zijn.</p>
+
+  <!-- .card basis: alle staten -->
+  <p class="sg-lbl" style="margin-bottom:10px;">.card &mdash; basis (alle staten)</p>
+  <div class="sg-g3" style="margin-bottom:22px;">
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Normaal</p>
+      <article class="card theme-paper"><p class="eyebrow">Label</p><h3>Cardtitel</h3><p>Bodytekst in Karla, kleur --theme-muted.</p><div class="actions"><button class="btn btn-primary">Primair</button><button class="btn btn-ghost">Secundair</button></div></article>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Bewaard (.is-saved)</p>
+      <article class="card is-saved theme-paper"><p class="eyebrow">Bewaard</p><h3>Amstelveen College</h3><p>Accent-ring via box-shadow. Geen extra HTML.</p><span class="count">2</span></article>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Lange titel + lange bodytekst</p>
+      <article class="card theme-paper"><p class="eyebrow">Sterke match</p><h3>Spinoza20first Amsterdam-Oost</h3><p>Inhoudelijk interessant door dalton, onderzoeken en ontwerpen. Kan goed passen bij zelfstandig denken, maar de reistijd is een randgeval.</p></article>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Korte naam</p>
+      <article class="card theme-paper"><p class="eyebrow">Match</p><h3>CSB</h3><p>Amsterdam-Buitenveldert &middot; mavo, havo, vwo</p></article>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Met 1 knop</p>
+      <article class="card theme-paper"><h3>Geen eyebrow</h3><p>Alleen de primaire actie, geen secundaire.</p><div class="actions"><button class="btn btn-primary">Bewaar school</button></div></article>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Leeg / placeholder</p>
+      <article class="card theme-paper" style="min-height:120px;display:flex;align-items:center;justify-content:center;opacity:.45;"><p style="text-align:center;font-size:.84rem;">Geen inhoud beschikbaar</p></article>
+    </div>
+  </div>
+
+  <!-- .work-card: alle staten -->
+  <p class="sg-lbl" style="margin-bottom:10px;">.card.work-card &mdash; taakkaart (alle staten)</p>
+  <div class="sg-g3" style="margin-bottom:22px;">
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Normaal</p>
+      <article class="card work-card theme-paper">
+        <div class="card-row"><p class="eyebrow" style="margin:0;">Frans</p><span class="pill">Nog doen</span></div>
+        <h3>REGARDER en grammaire</h3><p>Exercices 1+2 p.8. Grammaire p.15.</p>
+        <div class="info-grid"><p><strong>Huiswerk</strong><span>ma 19:30 &middot; mama</span></p><p><strong>Overhoren</strong><span>wo 19:30 &middot; mama</span></p><p><strong>Notitie</strong><span>Woorden apart opschrijven</span></p></div>
+      </article>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Urgent (.pill.accent)</p>
+      <article class="card work-card theme-paper">
+        <div class="card-row"><p class="eyebrow" style="margin:0;">Engels</p><span class="pill accent">Belangrijk</span></div>
+        <h3>Toets inhalen</h3><p>Check wat je precies moet leren.</p>
+        <div class="info-grid"><p><strong>Toetsstof</strong><span>zodra in Magister</span></p><p><strong>Overhoren</strong><span>avond ervoor &middot; mama</span></p><p><strong>Notitie</strong><span>Niet gokken</span></p></div>
+      </article>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-bottom:6px;">Lange vakinhoud</p>
+      <article class="card work-card theme-paper">
+        <div class="card-row"><p class="eyebrow" style="margin:0;">Wiskunde</p><span class="pill">Vooruit kijken</span></div>
+        <h3>Als er een toets aankomt: sommen markeren die vastlopen en apart opschrijven</h3>
+        <div class="info-grid"><p><strong>Huiswerk</strong><span>wo 19:30 &middot; papa</span></p><p><strong>Overhoren</strong><span>3 dagen voor toets</span></p><p><strong>Notitie</strong><span>Alleen vastlopers markeren</span></p></div>
+      </article>
+    </div>
+  </div>
+
+  <!-- .deck-card + .flip-card staten -->
+  <div class="sg-g2" style="margin-bottom:22px;">
+    <div>
+      <p class="sg-lbl" style="margin-bottom:10px;">.card.deck-card (normaal / actief / inactief)</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:8px;">
+        <button class="card deck-card is-active theme-practice"><span>Frans</span><small>5 kaarten</small></button>
+        <button class="card deck-card theme-practice"><span>Duits</span><small>5 kaarten</small></button>
+        <button class="card deck-card theme-practice"><span>Wiskunde</span><small>3 kaarten</small></button>
+        <button class="card deck-card theme-practice" disabled style="opacity:.4;cursor:not-allowed;"><span>Scheikunde</span><small>Inactief</small></button>
+      </div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);">is-active = accent border &middot; disabled = opacity .4</p>
+    </div>
+    <div>
+      <p class="sg-lbl" style="margin-bottom:10px;">.card.flip-card (normaal / klaar / leeg)</p>
+      <article class="card flip-card theme-practice" style="margin-bottom:8px;">
+        <div class="card-row"><p class="eyebrow" style="margin:0;">Frans</p><span class="pill">1 / 5</span></div>
+        <button class="flip-face"><span>regarder</span><small>Klik om te draaien</small></button>
+      </article>
+      <article class="card flip-card is-empty theme-practice">
+        <div class="card-row"><p class="eyebrow" style="margin:0;">Frans</p><span class="pill">0 / 0</span></div>
+        <button class="flip-face" style="opacity:.45;pointer-events:none;"><span style="font-size:1.2rem;opacity:.6;">Geen kaarten</span><small>Dit deck is leeg</small></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── KNOPPEN & TABS ────────────────────────────────────────── -->
+<section class="sg-sec" id="comp-btns">
+  <p class="sg-lbl">Componenten &mdash; Testgevallen</p>
+  <h2 class="sg-h">Knoppen &amp; Tabs</h2>
+  <p class="sg-sub">Alle staten naast elkaar. Problemen zaten hier eerder: te zwaar font, verkeerde kleur, selected-state onduidelijk.</p>
+
+  <!-- Alle knopstaten -->
+  <p class="sg-lbl" style="margin-bottom:10px;">Alle knopstaten</p>
+  <div class="sg-g3" style="margin-bottom:22px;">
+    <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;">
+      <p class="sg-lbl">Primaire varianten</p>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-top:8px;">
+        <button class="btn btn-primary">Primair (normaal)</button>
+        <button class="btn btn-soft">Soft (secundair)</button>
+        <button class="btn btn-ghost">Ghost (tertiair)</button>
+        <button class="btn btn-primary" disabled style="opacity:.4;cursor:not-allowed;">Primair (disabled)</button>
+      </div>
+    </div>
+    <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;">
+      <p class="sg-lbl">Bewaard vs. niet bewaard</p>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-top:8px;">
+        <button class="btn" style="background:rgba(92,57,164,.12);color:#5c39a4;">Bewaar school</button>
+        <button class="btn" style="background:#499463;color:#fff;">&#10003; Bewaard</button>
+        <button class="btn" style="background:rgba(92,57,164,.12);color:#5c39a4;">Bewaar beroep</button>
+        <button class="btn" style="background:#499463;color:#fff;">&#10003; Beroep bewaard</button>
+      </div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-top:8px;">Paars = niet bewaard &middot; Groen = bewaard</p>
+    </div>
+    <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;">
+      <p class="sg-lbl">Lange tekst</p>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-top:8px;">
+        <button class="btn btn-primary">Ga naar Jimmy&rsquo;s Kompas</button>
+        <button class="btn btn-soft">Vergelijk geselecteerde scholen</button>
+        <button class="btn btn-ghost">Sluit vergelijking &times;</button>
+      </div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-top:8px;">Knoppen mogen wrappen, niet afkappen</p>
+    </div>
+  </div>
+
+  <!-- Tab-staten -->
+  <p class="sg-lbl" style="margin-bottom:10px;">Tab-staten (alle)</p>
+  <div class="sg-g2" style="margin-bottom:22px;">
+    <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;">
+      <p class="sg-lbl">Normaal gebruik</p>
+      <div class="tabs" style="margin-top:8px;">
+        <button class="tab is-active">Alle</button>
+        <button class="tab">Dichtbij &amp; logisch</button>
+        <button class="tab">Andere route</button>
+        <button class="tab">Bewaard</button>
+      </div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-top:8px;">Karla 800 &middot; 14px &middot; is-active = theme-accent bg</p>
+    </div>
+    <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;">
+      <p class="sg-lbl">Week-tabs (goud accent)</p>
+      <div class="tabs" style="margin-top:8px;">
+        <button class="tab is-active" style="--theme-accent:#C9A954;--theme-accent-text:#003A3D;background:#C9A954;color:#003A3D;">Deze week</button>
+        <button class="tab" style="--theme-accent:#C9A954;background:rgba(201,169,84,.18);color:#C9A954;">Volgende week</button>
+        <button class="tab" style="--theme-accent:#C9A954;background:rgba(201,169,84,.18);color:#C9A954;">Volgende week vastzetten</button>
+      </div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-top:8px;">Goud #C9A954 voor theme-week context</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TYPOGRAFIE-STATEN ──────────────────────────────────────── -->
+<section class="sg-sec" id="comp-typo">
+  <p class="sg-lbl">Componenten &mdash; Testgevallen</p>
+  <h2 class="sg-h">Typografie-staten</h2>
+  <p class="sg-sub">Niet alleen schone voorbeelden. Zo zie je pas in de echte pagina of iets te groot of te vet is.</p>
+
+  <!-- Sectietitels -->
+  <p class="sg-lbl" style="margin-bottom:10px;">h2 sectietitels (Playfair Display)</p>
+  <div style="background:rgba(255,255,255,.6);border-radius:13px;padding:18px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;">
+    <div style="border-bottom:1px solid var(--line);padding-bottom:10px;">
+      <p style="font-family:var(--font-body);font-size:.68rem;color:var(--muted);margin-bottom:4px;">Normaal</p>
+      <h2 style="font-family:var(--font-display);font-weight:400;font-size:clamp(3.8rem,6vw,4.5rem);letter-spacing:-.055em;line-height:.92;margin:0;color:var(--ink);">Scholen &amp; beroepen</h2>
+    </div>
+    <div style="border-bottom:1px solid var(--line);padding-bottom:10px;">
+      <p style="font-family:var(--font-body);font-size:.68rem;color:var(--muted);margin-bottom:4px;">Lange titel</p>
+      <h2 style="font-family:var(--font-display);font-weight:400;font-size:clamp(3.8rem,6vw,4.5rem);letter-spacing:-.055em;line-height:.92;margin:0;color:var(--ink);">Dichtbij &amp; logisch voor jouw situatie</h2>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:.68rem;color:var(--muted);margin-bottom:4px;">Groepstitel (h3, ook Playfair)</p>
+      <h3 style="font-family:var(--font-display);font-weight:400;font-size:clamp(2.4rem,4vw,2.9rem);letter-spacing:-.045em;line-height:.95;margin:0;color:var(--ink);">Dichtbij &amp; logisch</h3>
+    </div>
+  </div>
+
+  <!-- Cardtitels -->
+  <p class="sg-lbl" style="margin-bottom:10px;">Cardtitels in context (Karla 500)</p>
+  <div class="sg-g3" style="margin-bottom:18px;">
+    <article class="card theme-paper"><p class="eyebrow">Sterke match</p><h3>Amstelveen College</h3><p style="font-size:.88rem;color:var(--muted);">Lange schoolnaam &mdash; werkt de h3 nog?</p></article>
+    <article class="card theme-paper"><p class="eyebrow">Match</p><h3>CSB</h3><p style="font-size:.88rem;color:var(--muted);">Drie letters &mdash; voelt dit te klein?</p></article>
+    <article class="card theme-paper"><p class="eyebrow">Andere route</p><h3>Geert Groote College</h3><p style="font-size:.88rem;color:var(--muted);">Middelgrote naam, geen afkorting</p></article>
+  </div>
+
+  <!-- Filtertekst -->
+  <p class="sg-lbl" style="margin-bottom:10px;">Filtertekst op 14px</p>
+  <div style="padding:15px;background:rgba(255,255,255,.6);border-radius:12px;margin-bottom:18px;">
+    <p style="font-family:var(--font-body);font-size:.7rem;color:var(--muted);margin-bottom:8px;">Tabs op 14px (Karla 800) &mdash; leesbaar bij alle namen?</p>
+    <div class="tabs">
+      <button class="tab is-active">Alle scholen</button>
+      <button class="tab">Dichtbij &amp; logisch</button>
+      <button class="tab">Andere route</button>
+      <button class="tab">Niet eerste keuze</button>
+      <button class="tab">Bewaard (3)</button>
+    </div>
+  </div>
+
+  <!-- Eyebrow-lengtes -->
+  <p class="sg-lbl" style="margin-bottom:10px;">Eyebrow bij verschillende lengtes</p>
+  <div class="sg-g3">
+    <article class="card theme-paper"><p class="eyebrow">01</p><h3>Kort nummer</h3><p style="font-size:.88rem;color:var(--muted);">Eyebrow van 2 tekens</p></article>
+    <article class="card theme-paper"><p class="eyebrow">Sterke match</p><h3>Middellang label</h3><p style="font-size:.88rem;color:var(--muted);">Eyebrow van 13 tekens</p></article>
+    <article class="card theme-paper"><p class="eyebrow">5 jaar &middot; WPPSI-III</p><h3>Lang samengesteld label</h3><p style="font-size:.88rem;color:var(--muted);">Eyebrow met middenpunt-separator</p></article>
+  </div>
+</section>
+
+<!-- ── MODAL / OVERLAY ───────────────────────────────────────── -->
+<section class="sg-sec" id="comp-modal">
+  <p class="sg-lbl">Componenten &mdash; Testgevallen</p>
+  <h2 class="sg-h">Modal / overlay</h2>
+  <p class="sg-sub">Drie varianten die in de echte site voorkomen. De modal-structuur is: titel, korte tekst, blokken, save-knop.</p>
+
+  <div class="sg-g3">
+
+    <!-- School modal -->
+    <div>
+      <p class="sg-lbl" style="margin-bottom:8px;">School-modal</p>
+      <article class="card modal-card" style="background:#faf8f4;color:var(--ink);max-height:420px;overflow:auto;">
+        <button class="btn btn-soft" style="float:right;font-size:.8rem;padding:6px 11px;">Sluit &times;</button>
+        <h2 style="font-family:var(--font-display);font-weight:400;font-size:2.2rem;letter-spacing:-.055em;line-height:.92;margin:0 0 10px;color:var(--ink);">Amstelveen College</h2>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:0;">Dichtbij en breed. Je kunt vmbo-t starten en havo openhouden.</p>
+        <div class="modal-block">
+          <h3 style="font-family:var(--font-body);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">Wat is dit?</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin:0;">Grote school met vmbo-t, havo en vwo op &eacute;&eacute;n locatie.</p>
+        </div>
+        <div class="modal-block">
+          <h3 style="font-family:var(--font-body);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">Waarom misschien interessant?</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin:0;">Havo-route echt openhouden zonder later opnieuw van school te wisselen.</p>
+        </div>
+        <div class="modal-block">
+          <h3 style="font-family:var(--font-body);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">Hoe kom je er?</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin:0;">Bus 171/178/357. Ca. 20&ndash;30 min. Daarna 5 min lopen.</p>
+        </div>
+        <div class="actions" style="clear:both;margin-top:16px;">
+          <button class="btn" style="background:rgba(92,57,164,.12);color:#5c39a4;">&#9734; Bewaar school</button>
+        </div>
+      </article>
+    </div>
+
+    <!-- Beroep modal -->
+    <div>
+      <p class="sg-lbl" style="margin-bottom:8px;">Beroep-modal</p>
+      <article class="card modal-card" style="background:#faf8f4;color:var(--ink);max-height:420px;overflow:auto;">
+        <button class="btn btn-soft" style="float:right;font-size:.8rem;padding:6px 11px;">Sluit &times;</button>
+        <h2 style="font-family:var(--font-display);font-weight:400;font-size:2.2rem;letter-spacing:-.055em;line-height:.92;margin:0 0 10px;color:var(--ink);">AI Engineer</h2>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:0;">De toekomst programmeren.</p>
+        <div class="modal-block">
+          <h3 style="font-family:var(--font-body);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">Wat is dit?</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin:0;">Je bouwt systemen die kunnen leren, voorspellen of helpen beslissen.</p>
+        </div>
+        <div class="modal-block">
+          <h3 style="font-family:var(--font-body);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">Waarom misschien interessant?</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin:0;">Past bij denken in patronen, techniek en toekomst.</p>
+        </div>
+        <div class="modal-block">
+          <h3 style="font-family:var(--font-body);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">Hoe kom je er?</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin:0;">vmbo-t &rarr; havo &rarr; hbo ICT / software engineering &rarr; AI</p>
+        </div>
+        <div class="actions" style="clear:both;margin-top:16px;">
+          <button class="btn" style="background:rgba(92,57,164,.12);color:#5c39a4;">&#9734; Bewaar beroep</button>
+        </div>
+      </article>
+    </div>
+
+    <!-- Flipcard beloning -->
+    <div>
+      <p class="sg-lbl" style="margin-bottom:8px;">Flipcard-beloning modal</p>
+      <article class="card modal-card" style="background:#faf8f4;color:var(--ink);max-height:420px;overflow:auto;">
+        <button class="btn btn-soft" style="float:right;font-size:.8rem;padding:6px 11px;">Sluit &times;</button>
+        <h2 style="font-family:var(--font-display);font-weight:400;font-size:2.2rem;letter-spacing:-.055em;line-height:.92;margin:0 0 10px;color:var(--ink);">Deck klaar!</h2>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:0;">Je hebt alle 5 Franse woorden geoefend.</p>
+        <div class="modal-block">
+          <h3 style="font-family:var(--font-body);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">Resultaat</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin:0;">4 van 5 geweten. 1 nog onzeker.</p>
+        </div>
+        <div class="modal-block">
+          <h3 style="font-family:var(--font-body);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">Beloning</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin:0;">Je bent halverwege naar een kleine beloning.</p>
+        </div>
+        <div class="actions" style="clear:both;margin-top:16px;">
+          <button class="btn btn-primary">Opnieuw oefenen</button>
+          <button class="btn btn-ghost">Terug naar decks</button>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section class="sg-sec" id="comp-pills">
+  <p class="sg-lbl">Componenten</p>
+  <h2 class="sg-h">Pills &amp; Eyebrows</h2>
+  <p class="sg-sub">Pills = statusindicatoren op cards. Eyebrows = sectielabels, altijd in accent-kleur van het thema.</p>
+  <div class="sg-row">
+    <div><p class="sg-lbl">Pills</p>
+      <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:8px;">
+        <span class="pill">Nog doen</span>
+        <span class="pill">1 / 5</span>
+        <span class="pill">Checken</span>
+        <span class="pill accent">Belangrijk</span>
+      </div>
+      <p style="font-family:var(--font-body);font-size:.72rem;color:var(--muted);margin-top:6px;">Standaard #B5CBE3 &middot; Accent #FDAAC2</p>
+    </div>
+    <div><p class="sg-lbl">Eyebrows per thema</p>
+      <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px;">
+        <p class="eyebrow" style="--theme-accent:#6e2be8;margin:0;">01 &mdash; Sectienaam (paars)</p>
+        <p class="eyebrow" style="--theme-accent:#327273;margin:0;">Sterke match (teal)</p>
+        <p class="eyebrow" style="--theme-accent:#C9A954;margin:0;">Frans (goud)</p>
+        <p class="eyebrow" style="--theme-accent:#2d73c9;margin:0;">Nu (blauw)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sg-sec" id="comp-form">
+  <p class="sg-lbl">Componenten</p>
+  <h2 class="sg-h">Formulier (login)</h2>
+  <p class="sg-sub">Alleen in het login-scherm. Gebruikt <code>.gate-card</code> uit styles.css. HTML over SVG gepositioneerd.</p>
+  <div style="max-width:280px;">
+    <div class="gate-card">
+      <h1 style="font-size:1.55rem;margin-bottom:12px;">Inloggen</h1>
+      <label for="sg-pw">Wachtwoord</label>
+      <input id="sg-pw" type="password" placeholder="&#x2027;&#x2027;&#x2027;&#x2027;&#x2027;&#x2027;&#x2027;&#x2027;">
+      <button class="btn btn-primary" style="margin-top:8px;width:100%;background:#499463;color:#fff;">Open kompas</button>
+    </div>
+  </div>
+  <p style="font-family:var(--font-body);font-size:.76rem;color:var(--muted);margin-top:10px;">Input border-radius: 14px &middot; Knop: #499463 &middot; Label font-weight: 500</p>
+</section>
+
+<!-- REGELS -->
+<section class="sg-sec" id="reg-hier">
+  <p class="sg-lbl">Regels</p>
+  <h2 class="sg-h">Hi&euml;rarchie</h2>
+  <p class="sg-sub">5 lagen. Elke laag heeft &eacute;&eacute;n verantwoordelijkheid. Nooit overslaan of mengen.</p>
+  <div style="background:rgba(255,255,255,.6);border-radius:13px;overflow:hidden;font-family:var(--font-body);font-size:.8rem;margin-bottom:18px;">
+    <div style="display:grid;grid-template-columns:24px 110px 1fr 1fr;font-weight:800;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;border-bottom:1px solid var(--line);background:rgba(26,26,46,.04);color:var(--muted);"><span>#</span><span>Laag</span><span>Verantwoordelijkheid</span><span>Class</span></div>
+    <div style="display:grid;grid-template-columns:24px 110px 1fr 1fr;padding:9px 14px;border-bottom:1px solid var(--line);"><span style="font-weight:800;color:#6e2be8;">1</span><span style="font-weight:700;">Sectie</span><span>Achtergrond, kleurthema</span><span><code>.section.theme-*</code></span></div>
+    <div style="display:grid;grid-template-columns:24px 110px 1fr 1fr;padding:9px 14px;border-bottom:1px solid var(--line);"><span style="font-weight:800;color:#327273;">2</span><span style="font-weight:700;">Section head</span><span>Eyebrow, h2, leadtekst</span><span><code>.section-head</code></span></div>
+    <div style="display:grid;grid-template-columns:24px 110px 1fr 1fr;padding:9px 14px;border-bottom:1px solid var(--line);"><span style="font-weight:800;color:#2d73c9;">3</span><span style="font-weight:700;">Grid</span><span>Rasterindeling</span><span><code>.grid.cards-2/3 / .stack</code></span></div>
+    <div style="display:grid;grid-template-columns:24px 110px 1fr 1fr;padding:9px 14px;border-bottom:1px solid var(--line);"><span style="font-weight:800;color:#0f6b4a;">4</span><span style="font-weight:700;">Card</span><span>Inhoud van &eacute;&eacute;n item</span><span><code>.card [.work-card]</code></span></div>
+    <div style="display:grid;grid-template-columns:24px 110px 1fr 1fr;padding:9px 14px;"><span style="font-weight:800;color:#b16825;">5</span><span style="font-weight:700;">Interactie</span><span>Knoppen, pills, tabs</span><span><code>.btn .pill .tab</code></span></div>
+  </div>
+  <p class="sg-lbl" style="margin-bottom:7px;">Typografie-lock</p>
+  <div style="background:rgba(255,255,255,.6);border-radius:13px;overflow:hidden;font-family:var(--font-body);font-size:.8rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-weight:800;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;border-bottom:1px solid var(--line);background:rgba(26,26,46,.04);color:var(--muted);"><span>Rol</span><span>Font</span><span>Gebruikt voor</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:9px 14px;border-bottom:1px solid var(--line);"><span style="font-family:var(--font-logo);font-weight:700;">Logo</span><span>Instrument Serif</span><span><code>.hero-title</code></span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:9px 14px;border-bottom:1px solid var(--line);"><span style="font-family:var(--font-display);">Sectietitel</span><span>Playfair Display</span><span><code>h2, .section-head h2</code></span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:9px 14px;"><span style="font-weight:700;">Cards &amp; UI</span><span>Karla</span><span><code>.card h3, .btn, .pill</code></span></div>
+  </div>
+</section>
+
+<section class="sg-sec" id="reg-check">
+  <p class="sg-lbl">Regels</p>
+  <h2 class="sg-h">Checklist</h2>
+  <p class="sg-sub">Controleer dit voordat je iets toevoegt of aanpast.</p>
+  <div class="sg-dd">
+    <div class="sg-do"><strong>&#10003; Mag wel</strong><ul>
+      <li>Nieuwe inhoud of tekst</li>
+      <li>Nieuw .theme-* in styles.css blok 05</li>
+      <li>Nieuwe JSON-data</li>
+      <li>Bestaande .card voor nieuwe content</li>
+      <li>Tweede class op .card (.work-card, .is-saved)</li>
+      <li>Nieuwe sectie met bestaand thema</li>
+    </ul></div>
+    <div class="sg-dn"><strong>&#10007; Niet doen</strong><ul>
+      <li>Inline style="&hellip;" op section of card</li>
+      <li>Nieuwe card-class buiten .card basis</li>
+      <li>Per sectie andere fontgroottes</li>
+      <li>Dezelfde selector meerdere keren</li>
+      <li>Instrument Serif buiten .hero-title</li>
+      <li>Meer dan 3 cards per rij</li>
+      <li>h2 inside een card</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="sg-sec" id="reg-css">
+  <p class="sg-lbl">Regels</p>
+  <h2 class="sg-h">CSS-problemen</h2>
+  <p class="sg-sub">Deze problemen zijn opgelost in de meegeleverde <code>styles.css</code>. Hieronder staat gedocumenteerd wat er was en hoe het opgelost is &mdash; als referentie.</p>
+  <div class="sg-notice" style="margin-bottom:13px;">
+    <strong>&#10003; Opgelost &mdash; ter referentie gedocumenteerd</strong>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:5px;font-size:.78rem;">
+      <div><code>.hero-grid--title-only</code><br><span style="color:var(--muted);">4&times; gedefinieerd (~409, ~446, ~487, ~801)</span></div>
+      <div><code>.topnav</code><br><span style="color:var(--muted);">2&times; &mdash; basis + scoped override</span></div>
+      <div><code>.scroll-hint</code><br><span style="color:var(--muted);">2&times; (~450 en ~492)</span></div>
+      <div><code>.section-intro</code><br><span style="color:var(--muted);">2&times; (~439 en ~496)</span></div>
+      <div><code>.hero border</code><br><span style="color:var(--muted);">2 aparte blokken voor border-top/bottom</span></div>
+      <div><code>@media (max-width:900px)</code><br><span style="color:var(--muted);">4 losse blokken &mdash; samenvoegen tot 1</span></div>
+    </div>
+  </div>
+  <p class="sg-lbl" style="margin-bottom:7px;">Gewenste structuur styles.css</p>
+  <div class="sg-code"><span class="sg-cc">/* 01. Tokens       &mdash; :root variabelen                   */
+/* 02. Reset/base    &mdash; *, html, body, a, img              */
+/* 03. Typografie    &mdash; h1/h2/h3, p, .eyebrow, .lead      */
+/* 04. Layout        &mdash; .section, .hero, .section-head     */
+/* 05. Themes        &mdash; .theme-* (alle bij elkaar)         */
+/* 06. Components    &mdash; .card, .btn, .pill, .tab           */
+/* 07. Modules       &mdash; .topnav, .hero-grid, .modal        */
+/* 08. Specials      &mdash; .work-card, .flip-*, .deck-*       */
+/* 09. Login/gate    &mdash; .gate, .gate-card, .error          */
+/* 10. Responsive    &mdash; @media (max-width:900px) &times; 1 */</span></div>
+</section>
+
+<!-- ── RESPONSIVE PREVIEW ───────────────────────────────────── -->
+<section class="sg-sec" id="comp-responsive">
+  <p class="sg-lbl">Componenten &mdash; Responsive</p>
+  <h2 class="sg-h">Responsive preview</h2>
+  <p class="sg-sub">Desktop, iPad en mobiel naast elkaar. Scroll in elk venster om de card-stacking te zien.</p>
+
+  <div style="display:flex;gap:18px;align-items:flex-start;overflow-x:auto;padding-bottom:8px;">
+
+    <!-- Desktop 1200px -->
+    <div style="flex-shrink:0;">
+      <p class="sg-lbl" style="margin-bottom:8px;">Desktop &mdash; 1200px</p>
+      <div style="width:380px;background:#f7f3ea;border-radius:14px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.12);max-height:320px;overflow-y:auto;">
+        <div style="padding:16px;border-bottom:2px solid #fff;">
+          <p style="font-family:var(--font-body);font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#6e2be8;margin:0 0 4px;">Scholen</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+            <article class="card theme-paper" style="padding:12px;"><p class="eyebrow" style="font-size:.65rem;margin-bottom:3px;">Sterke match</p><h3 style="font-size:.9rem;margin:0 0 3px;">Amstelveen</h3><p style="font-size:.78rem;color:var(--muted);margin:0;">vmbo-t, havo</p></article>
+            <article class="card is-saved theme-paper" style="padding:12px;"><p class="eyebrow" style="font-size:.65rem;margin-bottom:3px;">Sterke match</p><h3 style="font-size:.9rem;margin:0 0 3px;">HWC</h3><p style="font-size:.78rem;color:var(--muted);margin:0;">vmbo-t, havo</p></article>
+            <article class="card theme-paper" style="padding:12px;"><p class="eyebrow" style="font-size:.65rem;margin-bottom:3px;">Sterke match</p><h3 style="font-size:.9rem;margin:0 0 3px;">CSB</h3><p style="font-size:.78rem;color:var(--muted);margin:0;">mavo, havo</p></article>
+          </div>
+        </div>
+        <div style="padding:16px;">
+          <article class="card work-card theme-paper" style="padding:12px;">
+            <div class="card-row"><p class="eyebrow" style="font-size:.65rem;margin:0;">Frans</p><span class="pill" style="font-size:.72rem;padding:3px 7px;">Nog doen</span></div>
+            <h3 style="font-size:.9rem;margin-bottom:3px;">REGARDER</h3>
+            <p style="font-size:.78rem;color:var(--muted);margin:0;">Exercices 1+2 p.8</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- iPad 768px -->
+    <div style="flex-shrink:0;">
+      <p class="sg-lbl" style="margin-bottom:8px;">iPad &mdash; 768px</p>
+      <div style="width:260px;background:#f7f3ea;border-radius:14px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.12);max-height:320px;overflow-y:auto;">
+        <div style="padding:14px;border-bottom:2px solid #fff;">
+          <p style="font-family:var(--font-body);font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#6e2be8;margin:0 0 6px;">Scholen</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <article class="card theme-paper" style="padding:11px;"><p class="eyebrow" style="font-size:.62rem;margin-bottom:3px;">Sterke match</p><h3 style="font-size:.85rem;margin:0 0 3px;">Amstelveen College</h3><p style="font-size:.74rem;color:var(--muted);margin:0;">vmbo-t, havo, vwo</p></article>
+            <article class="card is-saved theme-paper" style="padding:11px;"><p class="eyebrow" style="font-size:.62rem;margin-bottom:3px;">Sterke match</p><h3 style="font-size:.85rem;margin:0 0 3px;">HWC</h3><p style="font-size:.74rem;color:var(--muted);margin:0;">vmbo-t, havo</p></article>
+          </div>
+        </div>
+        <div style="padding:14px;">
+          <article class="card work-card theme-paper" style="padding:11px;">
+            <div class="card-row"><p class="eyebrow" style="font-size:.62rem;margin:0;">Frans</p><span class="pill" style="font-size:.68rem;padding:3px 6px;">Nog doen</span></div>
+            <h3 style="font-size:.85rem;margin-bottom:3px;">REGARDER</h3>
+            <p style="font-size:.74rem;color:var(--muted);margin:0;">Exercices 1+2 p.8</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobiel 375px -->
+    <div style="flex-shrink:0;">
+      <p class="sg-lbl" style="margin-bottom:8px;">Mobiel &mdash; 375px</p>
+      <div style="width:180px;background:#f7f3ea;border-radius:14px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.12);max-height:320px;overflow-y:auto;">
+        <div style="padding:12px;border-bottom:2px solid #fff;">
+          <p style="font-family:var(--font-body);font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#6e2be8;margin:0 0 6px;">Scholen</p>
+          <article class="card theme-paper" style="padding:10px;margin-bottom:7px;"><p class="eyebrow" style="font-size:.6rem;margin-bottom:2px;">Sterke match</p><h3 style="font-size:.82rem;margin:0 0 2px;">Amstelveen College</h3><p style="font-size:.7rem;color:var(--muted);margin:0;">vmbo-t, havo, vwo</p></article>
+          <article class="card is-saved theme-paper" style="padding:10px;"><p class="eyebrow" style="font-size:.6rem;margin-bottom:2px;">Sterke match</p><h3 style="font-size:.82rem;margin:0 0 2px;">HWC</h3><p style="font-size:.7rem;color:var(--muted);margin:0;">vmbo-t, havo</p></article>
+        </div>
+        <div style="padding:12px;">
+          <article class="card work-card theme-paper" style="padding:10px;">
+            <p class="eyebrow" style="font-size:.6rem;margin-bottom:3px;">Frans</p>
+            <h3 style="font-size:.82rem;margin-bottom:2px;">REGARDER</h3>
+            <p style="font-size:.7rem;color:var(--muted);margin:0;">Exercices 1+2 p.8</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p style="font-family:var(--font-body);font-size:.76rem;color:var(--muted);margin-top:12px;">Let op: dit zijn schaalmodellen in de styleguide &mdash; open de echte site om het precies te zien.</p>
+</section>
+
+<!-- ── BREAKPOINTS & CHECKS ─────────────────────────────────── -->
+<section class="sg-sec" id="comp-breaks">
+  <p class="sg-lbl">Componenten &mdash; Breakpoints &amp; checks</p>
+  <h2 class="sg-h">Breakpoints &amp; checks</h2>
+  <p class="sg-sub">Alle staten visueel naast elkaar. Hover/active/focus zijn gesimuleerd als losse elementen &mdash; je ziet direct wat breekt zonder te hoeven klikken.</p>
+
+  <!-- BUTTON STATES -->
+  <p class="sg-lbl" style="margin-bottom:12px;">Knoppen &mdash; alle staten</p>
+  <div style="background:rgba(255,255,255,.6);border-radius:14px;padding:20px;margin-bottom:20px;">
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;align-items:start;">
+
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Default</p>
+        <button class="btn btn-primary" style="width:100%;">Bewaar</button>
+        <button class="btn btn-soft" style="width:100%;margin-top:6px;">Lees meer</button>
+        <button class="btn btn-ghost" style="width:100%;margin-top:6px;">Sluit</button>
+      </div>
+
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Hover (sim.)</p>
+        <button class="btn btn-primary" style="width:100%;filter:brightness(1.1);">Bewaar</button>
+        <button class="btn btn-soft" style="width:100%;margin-top:6px;filter:brightness(.96);">Lees meer</button>
+        <button class="btn btn-ghost" style="width:100%;margin-top:6px;background:rgba(26,26,46,.13);">Sluit</button>
+      </div>
+
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Active (sim.)</p>
+        <button class="btn btn-primary" style="width:100%;filter:brightness(.92);transform:scale(.98);">Bewaar</button>
+        <button class="btn btn-soft" style="width:100%;margin-top:6px;filter:brightness(.92);transform:scale(.98);">Lees meer</button>
+        <button class="btn btn-ghost" style="width:100%;margin-top:6px;background:rgba(26,26,46,.16);transform:scale(.98);">Sluit</button>
+      </div>
+
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Bewaard</p>
+        <button class="btn" style="width:100%;background:#499463;color:#fff;">&#10003; Bewaard</button>
+        <button class="btn" style="width:100%;margin-top:6px;background:#499463;color:#fff;opacity:.85;">&#10003; Bewaard</button>
+      </div>
+
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Disabled</p>
+        <button class="btn btn-primary" style="width:100%;opacity:.38;cursor:not-allowed;" disabled>Bewaar</button>
+        <button class="btn btn-soft" style="width:100%;margin-top:6px;opacity:.38;cursor:not-allowed;" disabled>Lees meer</button>
+        <button class="btn btn-ghost" style="width:100%;margin-top:6px;opacity:.38;cursor:not-allowed;" disabled>Sluit</button>
+      </div>
+
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Focus (sim.)</p>
+        <button class="btn btn-primary" style="width:100%;outline:2px solid var(--theme-accent);outline-offset:2px;">Bewaar</button>
+        <button class="btn btn-soft" style="width:100%;margin-top:6px;outline:2px solid var(--theme-accent);outline-offset:2px;">Lees meer</button>
+        <button class="btn btn-ghost" style="width:100%;margin-top:6px;outline:2px solid var(--ink);outline-offset:2px;">Sluit</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CARD STATES all variants -->
+  <p class="sg-lbl" style="margin-bottom:12px;">Cards &mdash; alle varianten &times; alle staten</p>
+  <div style="overflow-x:auto;padding-bottom:8px;">
+    <div style="display:grid;grid-template-columns:repeat(7,minmax(180px,1fr));gap:12px;min-width:1260px;">
+
+      <!-- Header row -->
+      <div></div>
+      <div style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:4px 0;">Default</div>
+      <div style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:4px 0;">Bewaard</div>
+      <div style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:4px 0;">Lange titel</div>
+      <div style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:4px 0;">Korte naam</div>
+      <div style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:4px 0;">Leeg</div>
+      <div style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:4px 0;">Met actie</div>
+
+      <!-- .card -->
+      <div style="font-family:var(--font-body);font-size:.72rem;font-weight:800;color:var(--muted);display:flex;align-items:center;"><code>.card</code></div>
+      <article class="card theme-paper"><p class="eyebrow">Label</p><h3>Cardtitel</h3><p style="font-size:.84rem;">Bodytekst.</p></article>
+      <article class="card is-saved theme-paper"><p class="eyebrow">Bewaard</p><h3>Cardtitel</h3><p style="font-size:.84rem;">Bewaard staat.</p><span class="count">1</span></article>
+      <article class="card theme-paper"><p class="eyebrow">Sterke match</p><h3>Spinoza20first Amsterdam-Oost</h3><p style="font-size:.84rem;">Dalton, eigen tempo.</p></article>
+      <article class="card theme-paper"><p class="eyebrow">Match</p><h3>CSB</h3><p style="font-size:.84rem;">Amsterdam-Zuid.</p></article>
+      <article class="card theme-paper" style="min-height:100px;display:flex;align-items:center;justify-content:center;opacity:.4;"><p style="text-align:center;font-size:.82rem;margin:0;">Geen inhoud</p></article>
+      <article class="card theme-paper"><h3>Met knop</h3><p style="font-size:.84rem;">Primaire actie.</p><div class="actions"><button class="btn btn-primary">Bewaar</button></div></article>
+
+      <!-- .work-card -->
+      <div style="font-family:var(--font-body);font-size:.72rem;font-weight:800;color:var(--muted);display:flex;align-items:center;"><code>.work-card</code></div>
+      <article class="card work-card theme-paper"><div class="card-row"><p class="eyebrow" style="margin:0;">Frans</p><span class="pill">Nog doen</span></div><h3>REGARDER</h3><p style="font-size:.84rem;">Exercices 1+2.</p></article>
+      <article class="card work-card is-saved theme-paper"><div class="card-row"><p class="eyebrow" style="margin:0;">Duits</p><span class="pill">Checken</span></div><h3>Neue Kontakte</h3><p style="font-size:.84rem;">Bewaard staat.</p></article>
+      <article class="card work-card theme-paper"><div class="card-row"><p class="eyebrow" style="margin:0;">Wiskunde</p><span class="pill">Vooruit</span></div><h3>Als er een toets aankomt: markeer sommen die vastlopen</h3><p style="font-size:.84rem;">Lang label.</p></article>
+      <article class="card work-card theme-paper"><div class="card-row"><p class="eyebrow" style="margin:0;">BI</p><span class="pill">Nu</span></div><h3>SO</h3><p style="font-size:.84rem;">Kort.</p></article>
+      <article class="card work-card theme-paper" style="min-height:100px;display:flex;align-items:center;justify-content:center;opacity:.4;"><p style="text-align:center;font-size:.82rem;margin:0;">Leeg</p></article>
+      <article class="card work-card theme-paper"><div class="card-row"><p class="eyebrow" style="margin:0;">Engels</p><span class="pill accent">Belangrijk</span></div><h3>Toets inhalen</h3><div class="actions" style="margin-top:10px;"><button class="btn btn-primary" style="font-size:.8rem;padding:7px 12px;">Check Magister</button></div></article>
+
+      <!-- .deck-card -->
+      <div style="font-family:var(--font-body);font-size:.72rem;font-weight:800;color:var(--muted);display:flex;align-items:center;"><code>.deck-card</code></div>
+      <button class="card deck-card theme-practice"><span>Frans</span><small>5 kaarten</small></button>
+      <button class="card deck-card is-active theme-practice"><span>Frans</span><small>5 kaarten &mdash; actief</small></button>
+      <button class="card deck-card theme-practice"><span>Geschiedenis van de moderne tijd</span><small>12 kaarten</small></button>
+      <button class="card deck-card theme-practice"><span>BI</span><small>3 kaarten</small></button>
+      <button class="card deck-card theme-practice" disabled style="opacity:.38;cursor:not-allowed;"><span>Scheikunde</span><small>Inactief</small></button>
+      <button class="card deck-card theme-practice"><span>Frans</span><small>5 kaarten</small></button>
+
+    </div>
+  </div>
+
+  <!-- TAB STATES -->
+  <p class="sg-lbl" style="margin-bottom:12px;margin-top:20px;">Tabs &mdash; alle staten</p>
+  <div style="background:rgba(255,255,255,.6);border-radius:14px;padding:20px;margin-bottom:20px;">
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:start;">
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Default</p>
+        <button class="tab" style="width:100%;">Alle</button>
+      </div>
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Active</p>
+        <button class="tab is-active" style="width:100%;">Alle</button>
+      </div>
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Hover (sim.)</p>
+        <button class="tab" style="width:100%;filter:brightness(.96);">Alle</button>
+      </div>
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Lange naam</p>
+        <button class="tab" style="width:100%;">Dichtbij &amp; logisch</button>
+      </div>
+      <div style="text-align:center;">
+        <p style="font-family:var(--font-body);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Disabled</p>
+        <button class="tab" style="width:100%;opacity:.38;cursor:not-allowed;" disabled>Bewaard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PILL STATES -->
+  <p class="sg-lbl" style="margin-bottom:12px;">Pills &mdash; alle staten</p>
+  <div style="background:rgba(255,255,255,.6);border-radius:14px;padding:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+    <div style="text-align:center;"><span class="pill">Nog doen</span><p style="font-family:var(--font-body);font-size:.62rem;color:var(--muted);margin:4px 0 0;text-align:center;">default</p></div>
+    <div style="text-align:center;"><span class="pill accent">Belangrijk</span><p style="font-family:var(--font-body);font-size:.62rem;color:var(--muted);margin:4px 0 0;text-align:center;">accent</p></div>
+    <div style="text-align:center;"><span class="pill">1 / 5</span><p style="font-family:var(--font-body);font-size:.62rem;color:var(--muted);margin:4px 0 0;text-align:center;">teller</p></div>
+    <div style="text-align:center;"><span class="pill">Checken</span><p style="font-family:var(--font-body);font-size:.62rem;color:var(--muted);margin:4px 0 0;text-align:center;">status</p></div>
+    <div style="text-align:center;"><span class="pill">Vooruit kijken</span><p style="font-family:var(--font-body);font-size:.62rem;color:var(--muted);margin:4px 0 0;text-align:center;">lang label</p></div>
+  </div>
+
+</section>
+
+
+<!-- STYLES.CSS LIVE PREVIEW -->
+<section class="sg-sec" id="comp-live-preview">
+  <p class="sg-lbl">Componenten &mdash; Live styles.css</p>
+  <h2 class="sg-h">Styles.css preview</h2>
+  <p class="sg-sub">
+    Dit blok gebruikt alleen echte website-classes uit <code>styles.css</code>.
+    Wijzig je cards, buttons, tabs, pills, grids of theme-tokens, dan zie je dat hier bij refresh terug.
+  </p>
+
+  <div class="theme-paper" style="background:var(--theme-bg);padding:clamp(28px,4vw,48px);border-radius:18px;">
+    <div class="section-head" style="margin-bottom:clamp(22px,3vw,34px);">
+      <p class="eyebrow">Live preview</p>
+      <h2>Een echte styles.css sectie</h2>
+      <p>Geen <code>sg-</code> of <code>sc-</code> classes in dit voorbeeld. Alleen site-classes.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab is-active" type="button">Actief</button>
+      <button class="tab" type="button">Tab</button>
+      <button class="tab" type="button">Langere tabnaam</button>
+    </div>
+
+    <div class="grid cards-3">
+      <article class="card">
+        <div class="card-row">
+          <p class="eyebrow">Card</p>
+          <span class="pill">Default</span>
+        </div>
+        <h3>Standaard kaart</h3>
+        <p>Deze kaart volgt direct de huidige styling van <code>.card</code>, <code>.eyebrow</code> en bodytekst.</p>
+        <div class="actions">
+          <button class="btn btn-primary" type="button">Primair</button>
+          <button class="btn btn-soft" type="button">Soft</button>
+        </div>
+      </article>
+
+      <article class="card is-saved">
+        <div class="card-row">
+          <p class="eyebrow">Bewaard</p>
+          <span class="pill accent">Accent</span>
+        </div>
+        <h3>Bewaarde staat</h3>
+        <p>Hier zie je de combinatie van <code>.card.is-saved</code>, accent-pill en acties.</p>
+        <span class="count">1</span>
+      </article>
+
+      <article class="card work-card">
+        <div class="card-row">
+          <p class="eyebrow">Werkkaart</p>
+          <span class="pill">Check</span>
+        </div>
+        <h3>Info-grid</h3>
+        <p>Handig om spacing, labels en compacte tekst tegelijk te controleren.</p>
+        <div class="info-grid">
+          <p><strong>Label</strong><span>Waarde in de eerste kolom</span></p>
+          <p><strong>Status</strong><span>Rustig en scanbaar</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── REAL COMPONENTS — geen lab overrides ─────────────────── -->
+<section class="sg-sec" id="comp-real">
+  <p class="sg-lbl">Componenten &mdash; Zonder lab-overrides</p>
+  <h2 class="sg-h">Real components</h2>
+  <p class="sg-sub">
+    Puur <code>styles.css</code>. Geen <code>.sc-card-h</code>, geen <code>.sc-h2</code>, geen lab-classes.
+    Wat je hier ziet is wat de echte site toont.
+  </p>
+
+  <!-- Waarschuwing over lab-overrides -->
+  <div style="padding:12px 16px;border-radius:11px;background:rgba(110,43,232,.07);border-left:3px solid #6e2be8;font-family:var(--font-body);font-size:.82rem;line-height:1.7;margin-bottom:22px;">
+    <strong style="display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#6e2be8;margin-bottom:4px;">Let op bij de sectie-composities hierboven</strong>
+    De miniatuur-previews in de sectie-composities gebruiken <code>.sc-card-h</code> en <code>.sc-h2</code> voor compacte weergave.
+    Die zijn gescooped binnen <code>.sc-prev</code> en raken de echte site niet — maar toon je ze als bewijs van hoe iets eruitziet, kijk dan hier.
+  </div>
+
+  <!-- Real section with theme — exact as in index.html -->
+  <div class="theme-paper" style="background:var(--theme-bg);padding:clamp(32px,4vw,52px) clamp(20px,3vw,40px);border-radius:18px;margin-bottom:18px;">
+    <div class="section-head" style="margin-bottom:clamp(20px,3vw,36px);">
+      <p class="eyebrow">Sectienaam</p>
+      <h2>Dit is een echte sectietitel</h2>
+      <p class="lead">Leadtekst zoals die in index.html staat. Geen overrides, puur styles.css.</p>
+    </div>
+    <div class="grid cards-3">
+      <article class="card">
+        <p class="eyebrow">De Denker</p>
+        <h3>Je wilt snappen hoe dingen werken</h3>
+        <p>Als iets niet klopt, blijf je erover nadenken. Je neemt niet zomaar iets aan.</p>
+      </article>
+      <article class="card is-saved">
+        <p class="eyebrow">De Voeler</p>
+        <h3>Je voelt snel of iets klopt</h3>
+        <p>Soms heb je even tijd nodig om dat te checken.</p>
+        <span class="count">1</span>
+      </article>
+      <article class="card">
+        <p class="eyebrow">De Maker</p>
+        <h3>Je laat dingen zien door te maken</h3>
+        <p>Je hoeft niet altijd te praten om iets te laten zien.</p>
+        <div class="actions">
+          <button class="btn btn-primary">Primair</button>
+          <button class="btn btn-ghost">Secundair</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Real week theme -->
+  <div class="theme-week" style="background:var(--theme-bg);padding:clamp(32px,4vw,52px) clamp(20px,3vw,40px);border-radius:18px;margin-bottom:18px;">
+    <div class="section-head" style="margin-bottom:clamp(20px,3vw,36px);">
+      <h2>Deze week</h2>
+      <p>Kijk wat er nu openstaat, wanneer iemand meekijkt.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab is-active">Deze week</button>
+      <button class="tab">Volgende week</button>
+    </div>
+    <article class="card work-card">
+      <div class="card-row">
+        <p class="eyebrow">Frans</p>
+        <span class="pill">Nog doen</span>
+      </div>
+      <h3>REGARDER en grammaire</h3>
+      <p>REGARDER boek B, exercices 1 + 2 p.8.</p>
+      <div class="info-grid">
+        <p><strong>Huiswerk laten zien</strong><span>maandag 19:30 &middot; mama</span></p>
+        <p><strong>Overhoren</strong><span>woensdag 19:30 &middot; mama</span></p>
+        <p><strong>Notitie</strong><span>Woorden apart opschrijven</span></p>
+      </div>
+    </article>
+  </div>
+
+  <!-- Real school theme -->
+  <div class="theme-school" style="background:var(--theme-bg);padding:clamp(32px,4vw,52px) clamp(20px,3vw,40px);border-radius:18px;">
+    <div class="section-head" style="margin-bottom:clamp(20px,3vw,36px);">
+      <p class="eyebrow">Scholen</p>
+      <h2>Dichtbij &amp; logisch</h2>
+      <p>Scholen die bij jouw situatie passen.</p>
+    </div>
+    <div class="filters">
+      <button class="tab is-active" style="--theme-accent:#5c39a4;background:#5c39a4;color:#fff;">Alle</button>
+      <button class="tab" style="--theme-accent:#5c39a4;background:rgba(92,57,164,.12);color:#5c39a4;">Dichtbij</button>
+      <button class="tab" style="--theme-accent:#5c39a4;background:rgba(92,57,164,.12);color:#5c39a4;">Bewaard</button>
+    </div>
+    <div class="grid cards-2">
+      <article class="card">
+        <p class="eyebrow" style="--theme-accent:#1a1a2e;">Sterke match</p>
+        <h3>Amstelveen College</h3>
+        <p>&plusmn; 20&ndash;30 min &middot; vmbo-t/mavo, havo, vwo</p>
+        <p>Dichtbij en breed. Havo-route openhouden zonder later opnieuw te wisselen.</p>
+        <div class="actions">
+          <button class="btn" style="background:rgba(92,57,164,.12);color:#5c39a4;">Bewaar school</button>
+        </div>
+      </article>
+      <article class="card is-saved">
+        <p class="eyebrow" style="--theme-accent:#1a1a2e;">Sterke match</p>
+        <h3>Hermann Wesselink College</h3>
+        <p>&plusmn; 20&ndash;35 min &middot; vmbo-t, havo, vwo</p>
+        <p>Dichtbij en bekend. Geen nieuw wennen.</p>
+        <div class="actions">
+          <button class="btn" style="background:#499463;color:#fff;">&#10003; Bewaard</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── TYPOGRAFIE NIVEAUS ─────────────────────────────────────── -->
+<section class="sg-sec" id="comp-typo-levels">
+  <p class="sg-lbl">Componenten &mdash; Typografie</p>
+  <h2 class="sg-h">Typografie-niveaus</h2>
+  <p class="sg-sub">Max 3 niveaus per scherm. Elk niveau heeft een eigen functie. Nooit mengen.</p>
+
+  <!-- Diagram -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px;">
+
+    <div style="padding:22px;background:#12102a;border-radius:14px;color:#fff;">
+      <p style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin:0 0 12px;">Level 1 &mdash; Hero</p>
+      <div style="font-family:var(--font-logo);font-weight:700;font-size:2.6rem;line-height:.95;letter-spacing:-.025em;margin-bottom:12px;color:#fff;">Jimmy's<br>Kompas</div>
+      <div style="font-family:var(--font-body);font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.6;">
+        <div>Font: <strong style="color:#c6b5ff;">Instrument Serif</strong></div>
+        <div>Gebruik: logo &amp; hero-titel</div>
+        <div>Locatie: alleen <code style="background:rgba(255,255,255,.1);padding:1px 5px;border-radius:3px;">.hero-title</code></div>
+        <div style="margin-top:8px;color:rgba(255,255,255,.3);">Mag dramatisch. Nooit in cards.</div>
+      </div>
+    </div>
+
+    <div style="padding:22px;background:#f0ece3;border-radius:14px;">
+      <p style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;">Level 2 &mdash; Sectie</p>
+      <div style="font-family:var(--font-display);font-weight:400;font-size:2.2rem;line-height:.92;letter-spacing:-.055em;margin-bottom:12px;color:var(--ink);">Scholen &amp;<br>beroepen</div>
+      <div style="font-family:var(--font-body);font-size:.78rem;color:var(--muted);line-height:1.6;">
+        <div>Font: <strong style="color:var(--ink);">Playfair Display</strong></div>
+        <div>Gebruik: sectietitels, groepstitels</div>
+        <div>Locatie: <code>h2</code>, <code>.group-title</code></div>
+        <div style="margin-top:8px;color:rgba(26,26,46,.35);">Rustig, editorial. Niet te vet.</div>
+      </div>
+    </div>
+
+    <div style="padding:22px;background:rgba(255,255,255,.72);border-radius:14px;box-shadow:0 4px 18px rgba(26,26,46,.08);">
+      <p style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;">Level 3 &mdash; Content</p>
+      <div style="font-family:var(--font-body);font-weight:500;font-size:1.2rem;letter-spacing:-.025em;margin-bottom:4px;color:var(--ink);">Amstelveen College</div>
+      <p style="font-family:var(--font-body);font-size:.9rem;color:var(--muted);margin:0 0 10px;">Dichtbij en breed. Havo openhouden.</p>
+      <button class="btn btn-primary" style="font-size:.84rem;padding:7px 13px;">Bewaar school</button>
+      <div style="font-family:var(--font-body);font-size:.78rem;color:var(--muted);line-height:1.6;margin-top:12px;">
+        <div>Font: <strong style="color:var(--ink);">Karla</strong></div>
+        <div>Gebruik: cards, knoppen, body, labels</div>
+        <div>Locatie: alles functioneel</div>
+        <div style="margin-top:8px;color:rgba(26,26,46,.35);">Leesbaarheid &gt; expressie.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Wat wel / niet -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px;">
+    <div style="padding:13px 16px;border-radius:11px;background:#e8f5ec;border-left:3px solid #499463;font-family:var(--font-body);font-size:.82rem;line-height:1.8;">
+      <strong style="display:block;color:#499463;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;">&#10003; Correct</strong>
+      <ul style="padding-left:.85rem;margin:0;">
+        <li>Hero-titel in Instrument Serif</li>
+        <li>Sectie h2 in Playfair Display</li>
+        <li>Card h3, body, knoppen in Karla</li>
+        <li>Max 3 niveaus per scherm</li>
+        <li>Eyebrow als 4e niveau (micro-label, altijd Karla)</li>
+      </ul>
+    </div>
+    <div style="padding:13px 16px;border-radius:11px;background:#faeaea;border-left:3px solid #c0392b;font-family:var(--font-body);font-size:.82rem;line-height:1.8;">
+      <strong style="display:block;color:#c0392b;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;">&#10007; Nooit doen</strong>
+      <ul style="padding-left:.85rem;margin:0;">
+        <li>Instrument Serif in een card</li>
+        <li>Playfair Display op knoppen of labels</li>
+        <li>h2 inside een card (dat is een sectie-ding)</li>
+        <li>Meer dan 3 typografische rollen op één scherm</li>
+        <li>font-weight 700+ op bodytekst</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Live contrast check: de drie niveaus op één scherm -->
+  <p class="sg-lbl" style="margin-bottom:12px;">Live: drie niveaus samen op één scherm</p>
+  <div style="background:#f7f3ea;border-radius:14px;padding:28px 32px;position:relative;overflow:hidden;">
+    <!-- Level 1 hint (hero context) -->
+    <p style="font-family:var(--font-body);font-size:.62rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(26,26,46,.3);margin:0 0 4px;">↑ Level 1 zou hier de hero zijn (Instrument Serif, buiten dit kader)</p>
+    <!-- Level 2 -->
+    <h2 style="color:var(--ink);margin-bottom:8px;">Scholen &amp; beroepen</h2>
+    <p class="lead" style="margin-bottom:20px;">Hieronder vind je scholen die bij jouw situatie passen, gerangschikt op reistijd en niveau.</p>
+    <!-- Level 3 -->
+    <div class="grid cards-3">
+      <article class="card">
+        <p class="eyebrow">Sterke match</p>
+        <h3>Amstelveen College</h3>
+        <p>&plusmn; 20&ndash;30 min &middot; vmbo-t, havo, vwo</p>
+        <div class="actions"><button class="btn btn-primary">Bewaar</button></div>
+      </article>
+      <article class="card is-saved">
+        <p class="eyebrow">Sterke match</p>
+        <h3>Hermann Wesselink</h3>
+        <p>&plusmn; 20&ndash;35 min &middot; vmbo-t, havo</p>
+        <div class="actions"><button class="btn" style="background:#499463;color:#fff;">&#10003; Bewaard</button></div>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Andere route</p>
+        <h3>CSB</h3>
+        <p>&plusmn; 25&ndash;40 min &middot; mavo, havo, vwo</p>
+        <div class="actions"><button class="btn btn-soft">Lees meer</button></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- NIEUW-SYSTEEM JAVASCRIPT
+
+     Hoe het werkt:
+     1. component-lab.html leest bij laden styles.css en script.js
+     2. De inhoudsopgave wordt vergeleken met de laatst geziene versie
+     3. Nieuwe secties krijgen automatisch "nieuw"
+     4. Bij CSS/JS-wijzigingen krijgt de hele inhoudsopgave "nieuw"
+     5. Klik "Nieuwe items gezien" om de huidige staat vast te zetten
+-->
+<script>
+  const SG_STORAGE_KEY = "sg_seen_signature_v2";
+  const SG_BASELINE_KEY = "sg_seen_sections_v2";
+  const SG_WATCHED_FILES = ["styles.css", "script.js"];
+  let sgCurrentSignature = "";
+  let sgRenderedSignature = "";
+  let sgCurrentNewItems = [];
+
+  async function sgHash(text) {
+    if (window.crypto?.subtle) {
+      const bytes = new TextEncoder().encode(text);
+      const buffer = await crypto.subtle.digest("SHA-256", bytes);
+      return Array.from(new Uint8Array(buffer), byte => byte.toString(16).padStart(2, "0")).join("").slice(0, 12);
+    }
+
+    let hash = 0;
+    for (let i = 0; i < text.length; i += 1) {
+      hash = ((hash << 5) - hash + text.charCodeAt(i)) | 0;
+    }
+    return Math.abs(hash).toString(16);
+  }
+
+  async function sgReadFileSignature(file) {
+    try {
+      const response = await fetch(file + "?sg=" + Date.now(), { cache: "no-store" });
+      if (!response.ok) return file + ":unavailable";
+      return file + ":" + await sgHash(await response.text());
+    } catch {
+      return file + ":unavailable";
+    }
+  }
+
+  function sgSections() {
+    return Array.from(document.querySelectorAll(".sg-sec[id]")).map(section => section.id);
+  }
+
+  function sgLinkId(link) {
+    return link.getAttribute("data-sg-id") || (link.getAttribute("href") || "").replace(/^#/, "");
+  }
+
+  function sgSectionTitle(id) {
+    const section = document.getElementById(id);
+    return section?.querySelector(".sg-h, h2")?.textContent?.trim() || id;
+  }
+
+  function sgEnsureSectionLinks() {
+    const nav = document.getElementById("sg-nav");
+    if (!nav) return;
+
+    const linked = new Set(Array.from(nav.querySelectorAll('a[href^="#"]')).map(sgLinkId));
+    const missing = sgSections().filter(id => !linked.has(id));
+    if (!missing.length) return;
+
+    let group = document.getElementById("sg-auto-links");
+    if (!group) {
+      const label = document.createElement("p");
+      label.className = "sg-nav-group";
+      label.textContent = "Automatisch";
+
+      group = document.createElement("ul");
+      group.id = "sg-auto-links";
+      nav.append(label, group);
+    }
+
+    missing.forEach(id => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = "#" + id;
+      link.dataset.sgId = id;
+      link.textContent = sgSectionTitle(id);
+      li.appendChild(link);
+      group.appendChild(li);
+    });
+  }
+
+  function sgNavLinks() {
+    return Array.from(document.querySelectorAll('.sg-nav a[href^="#"]'));
+  }
+
+  function sgNavIds() {
+    return sgNavLinks().map(sgLinkId).filter(Boolean);
+  }
+
+  async function sgBuildSignature() {
+    const fileSignatures = await Promise.all(SG_WATCHED_FILES.map(sgReadFileSignature));
+    const sections = sgSections().join(",");
+    return fileSignatures.concat("sections:" + sections).join("|");
+  }
+
+  function sgRefreshStylesheet() {
+    const stylesheet = document.querySelector('link[rel="stylesheet"][href^="styles.css"]');
+    if (stylesheet) stylesheet.href = "styles.css?sg=" + Date.now();
+  }
+
+  function sgApplyBadges(newItems, unseen) {
+    document.querySelectorAll("[data-new-id]").forEach(el => {
+      const show = unseen && newItems.includes(el.getAttribute("data-new-id"));
+      el.style.display = show ? "inline-flex" : "none";
+    });
+
+    sgNavLinks().forEach(link => {
+      link.querySelector(".sg-new-badge")?.remove();
+      if (unseen && newItems.includes(sgLinkId(link))) {
+        const badge = document.createElement("span");
+        badge.className = "sg-new-badge";
+        badge.textContent = "nieuw";
+        badge.style.display = "inline-block";
+        link.appendChild(badge);
+      }
+    });
+
+    const btn = document.getElementById("sg-seen-btn");
+    if (btn) btn.classList.toggle("visible", unseen);
+
+    const ver = document.getElementById("sg-version");
+    if (ver) {
+      const shortSignature = sgCurrentSignature ? sgCurrentSignature.slice(0, 12) : "laden";
+      ver.textContent = "styles.css + script.js · " + shortSignature;
+      if (unseen) {
+        ver.textContent += " — nieuw!";
+        ver.style.color = "#c6b5ff";
+        ver.style.background = "rgba(110,43,232,.22)";
+      } else {
+        ver.style.color = "";
+        ver.style.background = "";
+      }
+    }
+  }
+
+  async function applyBadges() {
+    sgEnsureSectionLinks();
+    sgCurrentSignature = await sgBuildSignature();
+    const changedSinceRender = Boolean(sgRenderedSignature) && sgRenderedSignature !== sgCurrentSignature;
+    if (changedSinceRender) sgRefreshStylesheet();
+    sgRenderedSignature = sgCurrentSignature;
+
+    const seenSignature = localStorage.getItem(SG_STORAGE_KEY) || "";
+    const oldSections = JSON.parse(localStorage.getItem(SG_BASELINE_KEY) || "[]");
+    const sectionIds = sgSections();
+    const newSections = sectionIds.filter(id => !oldSections.includes(id));
+    const filesChanged = Boolean(seenSignature) && seenSignature !== sgCurrentSignature;
+    const firstRun = !seenSignature;
+
+    sgCurrentNewItems = filesChanged
+      ? Array.from(new Set(sgNavIds().concat(newSections)))
+      : newSections;
+
+    sgApplyBadges(sgCurrentNewItems, !firstRun && sgCurrentNewItems.length > 0);
+
+    if (firstRun) {
+      localStorage.setItem(SG_STORAGE_KEY, sgCurrentSignature);
+      localStorage.setItem(SG_BASELINE_KEY, JSON.stringify(sectionIds));
+      sgApplyBadges([], false);
+    }
+  }
+
+  function markAllSeen() {
+    localStorage.setItem(SG_STORAGE_KEY, sgCurrentSignature);
+    localStorage.setItem(SG_BASELINE_KEY, JSON.stringify(sgSections()));
+    sgCurrentNewItems = [];
+    sgApplyBadges([], false);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("sg-seen-btn")?.addEventListener("click", markAllSeen);
+    applyBadges();
+    setInterval(applyBadges, 5000);
+  });
+</script>
+
+<!-- ── KLEURPALETTEN ──────────────────────────────────────────── -->
+<section class="sg-sec" id="sc-paletten">
+  <p class="sg-lbl">Kleurpaletten — interactief</p>
+  <h2 class="sg-h">Sectie-paletten</h2>
+  <p class="sg-sub">
+    Klik een palet aan of stel je eigen kleur in. De preview rechts toont hoe alle elementen erin uitvallen.
+    Tekst in de preview is <strong style="color:var(--ink);">bewerkbaar</strong> — klik erop en typ.
+    De bewaar-knop is altijd groen (#499463) — dat is semantisch, niet themegevoelig.
+  </p>
+
+  <div id="pal-root" style="display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start;">
+
+    <!-- Linkerpaneel: paletselectie + custom -->
+    <div style="display:grid;gap:10px;">
+      <span class="sg-lbl" style="margin:0 0 4px;">Kies een palet</span>
+
+      <!-- 5 preset paletten -->
+      <button class="sg-pal-swatch is-active" data-pal="paper" type="button" style="background:linear-gradient(135deg,#f7f3ea,#ede8de);">
+        <span class="sg-pal-name">Paper — warm</span>
+        <span class="sg-pal-acc" style="background:#6e2be8;"></span>
+      </button>
+      <button class="sg-pal-swatch" data-pal="beroepen" type="button" style="background:linear-gradient(135deg,#eef5fb,#dfeaf4);">
+        <span class="sg-pal-name">Beroepen — lichtblauw</span>
+        <span class="sg-pal-acc" style="background:#2f73c9;"></span>
+      </button>
+      <button class="sg-pal-swatch" data-pal="green" type="button" style="background:linear-gradient(135deg,#dfeee6,#cfe5db);">
+        <span class="sg-pal-name">Groen — mint</span>
+        <span class="sg-pal-acc" style="background:#0f6b4a;"></span>
+      </button>
+      <button class="sg-pal-swatch" data-pal="school" type="button" style="background:linear-gradient(135deg,#eef4fb,#dfe9f6);">
+        <span class="sg-pal-name">School — koel blauw</span>
+        <span class="sg-pal-acc" style="background:#5c39a4;"></span>
+      </button>
+      <button class="sg-pal-swatch" data-pal="night" type="button" style="background:linear-gradient(135deg,#141024,#321434);">
+        <span class="sg-pal-name" style="color:rgba(255,255,255,.82);">Night — donker</span>
+        <span class="sg-pal-acc" style="background:#c6b5ff;"></span>
+      </button>
+
+      <div class="sg-div"></div>
+
+      <!-- Custom kleur -->
+      <span class="sg-lbl" style="margin:0 0 4px;">Of kies eigen kleur</span>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:8px;align-items:center;">
+        <input id="pal-custom-color" type="color" value="#f0ebe0"
+          style="width:44px;height:44px;border:0;border-radius:10px;cursor:pointer;padding:2px;">
+        <input id="pal-custom-accent" type="color" value="#6e2be8"
+          style="width:44px;height:44px;border:0;border-radius:10px;cursor:pointer;padding:2px;">
+      </div>
+      <p style="font-size:.72rem;color:var(--muted);margin:0;">Links: achtergrondkleur &nbsp;·&nbsp; Rechts: accentkleur</p>
+      <button id="pal-apply-custom" type="button"
+        style="border:1px solid var(--line);border-radius:var(--pill);padding:9px 14px;font-family:var(--font-body);font-size:.8rem;cursor:pointer;background:rgba(255,255,255,.7);">
+        Eigen kleuren toepassen
+      </button>
+
+      <div class="sg-div"></div>
+
+      <!-- Tokentabel van actief palet -->
+      <span class="sg-lbl" style="margin:0 0 4px;">Actieve tokens</span>
+      <div id="pal-tokens" style="display:grid;gap:4px;font-size:.74rem;font-family:var(--font-body);">
+        <!-- wordt gevuld via JS -->
+      </div>
+    </div>
+
+    <!-- Rechterpaneel: live preview -->
+    <div id="pal-preview"
+      style="border-radius:24px;padding:36px 32px;transition:background .3s;">
+
+      <!-- Eyebrow + titel — bewerkbaar -->
+      <p id="prev-eyebrow"
+        contenteditable="true" spellcheck="false"
+        style="margin:0 0 14px;font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;outline:none;cursor:text;"
+        title="Klik om te bewerken">EYEBROW</p>
+
+      <h2 id="prev-h2"
+        contenteditable="true" spellcheck="false"
+        style="font-family:var(--font-display);font-weight:400;font-size:clamp(2.2rem,4vw,3rem);line-height:.95;letter-spacing:-.055em;margin:0 0 16px;outline:none;cursor:text;"
+        title="Klik om te bewerken">Sectietitel</h2>
+
+      <p id="prev-p"
+        contenteditable="true" spellcheck="false"
+        style="font-size:1.05rem;line-height:1.65;margin:0 0 28px;outline:none;cursor:text;max-width:600px;"
+        title="Klik om te bewerken">Leadtekst — klik om te bewerken. Zo zie je hoe lang tekst uitvalt in dit palet.</p>
+
+      <!-- Card met alle componenten erin -->
+      <div id="prev-card" style="border-radius:24px;padding:26px 28px;margin-bottom:18px;box-shadow:0 16px 44px rgba(26,26,46,.08);">
+
+        <p style="margin:0 0 4px;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;" id="prev-card-eyebrow">Card label</p>
+
+        <h3 id="prev-h3"
+          contenteditable="true" spellcheck="false"
+          style="font-family:var(--font-body);font-weight:500;font-size:1.25rem;letter-spacing:-.025em;line-height:1.2;margin:0 0 8px;outline:none;cursor:text;"
+          title="Klik om te bewerken">Cardtitel</h3>
+
+        <p id="prev-card-p"
+          contenteditable="true" spellcheck="false"
+          style="font-size:.95rem;line-height:1.6;margin:0 0 18px;outline:none;cursor:text;"
+          title="Klik om te bewerken">Bodytekst op de kaart. Karla 400, rustig gewicht.</p>
+
+        <!-- Buttons -->
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+          <button id="prev-btn-primary" type="button"
+            style="border:0;border-radius:999px;padding:11px 18px;font-family:var(--font-body);font-size:.9rem;font-weight:400;cursor:pointer;">
+            Lees meer
+          </button>
+          <button id="prev-btn-soft" type="button"
+            style="border:0;border-radius:999px;padding:11px 18px;font-family:var(--font-body);font-size:.9rem;font-weight:400;cursor:pointer;">
+            Bewaar
+          </button>
+          <button type="button"
+            style="border:0;border-radius:999px;padding:11px 18px;font-family:var(--font-body);font-size:.9rem;font-weight:400;cursor:pointer;background:#499463;color:#fff;"
+            title="Bewaard-state: altijd #499463 groen — semantisch, niet themegevoelig">
+            ✓ Bewaard
+          </button>
+          <span id="prev-pill"
+            style="display:inline-flex;align-items:center;border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:700;">
+            Status
+          </span>
+        </div>
+      </div>
+
+      <!-- Mini-notitie -->
+      <p style="font-size:.72rem;margin:0;opacity:.6;font-family:var(--font-body);">
+        ✎ Klik op titels en tekst om te bewerken &nbsp;·&nbsp;
+        Bewaard-knop (groen) is altijd semantisch vast
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<script>
+(function() {
+  const PALETTEN = {
+    paper: {
+      bg: 'linear-gradient(135deg,#f7f3ea 0%,#ede8de 100%)',
+      card: 'rgba(255,255,255,.76)',
+      text: '#1a1a2e',
+      muted: 'rgba(26,26,46,.68)',
+      accent: '#6e2be8',
+      accentText: '#fff',
+      pill: { bg: 'rgba(110,43,232,.13)', color: '#6e2be8' },
+      label: 'Paper — warm crème'
+    },
+    beroepen: {
+      bg: 'linear-gradient(135deg,#eef5fb 0%,#dfeaf4 100%)',
+      card: 'rgba(255,255,255,.88)',
+      text: '#17172d',
+      muted: 'rgba(23,23,45,.64)',
+      accent: '#2f73c9',
+      accentText: '#fff',
+      pill: { bg: 'rgba(47,115,201,.13)', color: '#2f73c9' },
+      label: 'Beroepen — lichtblauw'
+    },
+    green: {
+      bg: 'linear-gradient(135deg,#dfeee6 0%,#cfe5db 100%)',
+      card: 'rgba(255,255,255,.80)',
+      text: '#1a1a2e',
+      muted: 'rgba(26,26,46,.65)',
+      accent: '#0f6b4a',
+      accentText: '#fff',
+      pill: { bg: 'rgba(15,107,74,.13)', color: '#0f6b4a' },
+      label: 'Groen — mint'
+    },
+    school: {
+      bg: 'linear-gradient(135deg,#eef4fb 0%,#dfe9f6 100%)',
+      card: 'rgba(255,255,255,.74)',
+      text: '#1a1a2e',
+      muted: 'rgba(26,26,46,.68)',
+      accent: '#5c39a4',
+      accentText: '#fff',
+      pill: { bg: 'rgba(92,57,164,.13)', color: '#5c39a4' },
+      label: 'School — koel blauw'
+    },
+    night: {
+      bg: 'linear-gradient(135deg,#141024 0%,#321434 100%)',
+      card: 'rgba(255,255,255,.10)',
+      text: '#ffffff',
+      muted: 'rgba(255,255,255,.72)',
+      accent: '#c6b5ff',
+      accentText: '#141024',
+      pill: { bg: 'rgba(198,181,255,.18)', color: '#c6b5ff' },
+      label: 'Night — donker'
+    }
+  };
+
+  let currentPal = 'paper';
+
+  function hexToRgb(hex) {
+    const r = parseInt(hex.slice(1,3),16);
+    const g = parseInt(hex.slice(3,5),16);
+    const b = parseInt(hex.slice(5,7),16);
+    return { r, g, b };
+  }
+  function luminance(hex) {
+    const { r,g,b } = hexToRgb(hex);
+    return 0.299*r + 0.587*g + 0.114*b;
+  }
+
+  function applyPalette(pal) {
+    const preview  = document.getElementById('pal-preview');
+    const card     = document.getElementById('prev-card');
+    const eyebrow  = document.getElementById('prev-eyebrow');
+    const cardEyebrow = document.getElementById('prev-card-eyebrow');
+    const h2       = document.getElementById('prev-h2');
+    const p        = document.getElementById('prev-p');
+    const h3       = document.getElementById('prev-h3');
+    const cardP    = document.getElementById('prev-card-p');
+    const btnP     = document.getElementById('prev-btn-primary');
+    const btnS     = document.getElementById('prev-btn-soft');
+    const pill     = document.getElementById('prev-pill');
+    const tokens   = document.getElementById('pal-tokens');
+
+    // Sectie bg
+    preview.style.background = pal.bg;
+
+    // Teksten
+    eyebrow.style.color  = pal.accent;
+    cardEyebrow.style.color = pal.accent;
+    h2.style.color       = pal.text;
+    p.style.color        = pal.muted;
+    h3.style.color       = pal.text;
+    cardP.style.color    = pal.muted;
+
+    // Card
+    card.style.background = pal.card;
+    card.style.border = '1px solid rgba(26,26,46,.07)';
+
+    // Knoppen
+    btnP.style.background = pal.accent;
+    btnP.style.color      = pal.accentText;
+    btnS.style.background = pal.pill.bg;
+    btnS.style.color      = pal.accent;
+
+    // Pill
+    pill.style.background = pal.pill.bg;
+    pill.style.color      = pal.accent;
+
+    // Tokentabel
+    tokens.innerHTML = [
+      ['--theme-bg',    `<span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:${pal.bg.includes('linear') ? pal.accent : pal.bg};opacity:.6;margin-right:4px;vertical-align:middle;"></span> gradient`],
+      ['--theme-text',  `<span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:${pal.text};margin-right:4px;vertical-align:middle;"></span>${pal.text}`],
+      ['--theme-muted', `${pal.muted}`],
+      ['--theme-card',  `${pal.card}`],
+      ['--theme-accent',`<span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:${pal.accent};margin-right:4px;vertical-align:middle;"></span>${pal.accent}`],
+      ['saved-state',   `<span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#499463;margin-right:4px;vertical-align:middle;"></span>#499463 (vast)`],
+    ].map(([k,v]) => `<div style="display:grid;grid-template-columns:120px 1fr;gap:6px;padding:5px 0;border-bottom:1px solid rgba(26,26,46,.08);">
+      <code style="font-size:.68rem;color:rgba(26,26,46,.55);">${k}</code>
+      <span style="font-size:.72rem;color:#1a1a2e;">${v}</span>
+    </div>`).join('');
+  }
+
+  // Preset knoppen
+  document.querySelectorAll('.sg-pal-swatch').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.sg-pal-swatch').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      currentPal = btn.dataset.pal;
+      applyPalette(PALETTEN[currentPal]);
+    });
+  });
+
+  // Custom kleuren
+  document.getElementById('pal-apply-custom').addEventListener('click', () => {
+    const bgHex  = document.getElementById('pal-custom-color').value;
+    const accHex = document.getElementById('pal-custom-accent').value;
+    const lum    = luminance(bgHex);
+    const isDark = lum < 100;
+    const textColor  = isDark ? '#ffffff' : '#1a1a2e';
+    const mutedColor = isDark ? 'rgba(255,255,255,.70)' : 'rgba(26,26,46,.65)';
+    const { r,g,b } = hexToRgb(accHex);
+
+    document.querySelectorAll('.sg-pal-swatch').forEach(b => b.classList.remove('is-active'));
+
+    applyPalette({
+      bg:         bgHex,
+      card:       isDark ? 'rgba(255,255,255,.10)' : 'rgba(255,255,255,.82)',
+      text:       textColor,
+      muted:      mutedColor,
+      accent:     accHex,
+      accentText: luminance(accHex) > 140 ? '#17172d' : '#fff',
+      pill:       { bg: `rgba(${r},${g},${b},.14)`, color: accHex },
+      label:      'Custom'
+    });
+  });
+
+  // Init
+  applyPalette(PALETTEN['paper']);
+})();
+</script>
+
+</main>
+</div>
+
+  <!-- Modal — zelfde structuur als index.html zodat script.js hem vindt -->
+  <div class="modal" data-modal hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-card card" role="dialog" aria-modal="true">
+      <button class="btn btn-soft modal-close" type="button" data-close-modal aria-label="Sluit venster">Sluit ×</button>
+      <p class="eyebrow" data-modal-kicker></p>
+      <h2 data-modal-title></h2>
+      <p data-modal-short></p>
+      <div class="modal-block"><h3 data-modal-label-1>Wat is dit?</h3><p data-modal-body-1></p></div>
+      <div class="modal-block"><h3 data-modal-label-2>Waarom misschien interessant?</h3><p data-modal-body-2></p></div>
+      <div class="modal-block"><h3 data-modal-label-3>Hoe kom je er?</h3><p data-modal-body-3></p></div>
+      <div class="actions"><button class="btn btn-primary" type="button" data-modal-save>☆ Bewaar</button></div>
+    </article>
+  </div>
+
+  <!-- JSON-data — zelfde als index.html zodat script.js de data kan lezen -->
+  <script type="application/json" id="jobs-data">[{"id":"ai-engineer","nr":"01","title":"AI Engineer","short":"De toekomst programmeren","what":"Je bouwt systemen die kunnen leren, voorspellen of helpen beslissen.","why":"Past bij denken in patronen, techniek en toekomst.","route":"vmbo-t → havo → hbo ICT / software engineering → AI, data of machine learning"},{"id":"ethical-hacker","nr":"02","title":"Ethical Hacker","short":"Fouten vinden in systemen","what":"Je zoekt zwakke plekken in websites, apps of systemen zodat ze veiliger worden.","why":"Past bij iemand die graag uitzoekt waar iets niet klopt.","route":"vmbo-t → havo/mbo ICT → cybersecurity → ethical hacking"},{"id":"game-developer","nr":"03","title":"Game Developer","short":"Werelden bouwen die anderen spelen","what":"Je maakt games: regels, levels, interacties, techniek en gevoel.","why":"Past bij maken, testen en opnieuw proberen.","route":"vmbo-t → havo/mbo game development → hbo creative media / ICT"},{"id":"front-end-developer","nr":"04","title":"Front-end Developer","short":"Websites en apps bouwen","what":"Je bouwt wat mensen zien en gebruiken: websites, schermen, knoppen, animaties en interacties.","why":"Past bij techniek én gevoel voor hoe iets eruitziet.","route":"vmbo-t → havo/mbo software → hbo ICT / CMD"},{"id":"ux-designer","nr":"05","title":"UX Designer","short":"Snappen hoe mensen iets gebruiken","what":"Je onderzoekt hoe mensen denken, klikken, zoeken en vastlopen.","why":"Past bij voelen én denken.","route":"vmbo-t → havo → hbo CMD / Communication & Multimedia Design"},{"id":"ondernemer","nr":"06","title":"Ondernemer","short":"Eigen regels. Eigen wereld.","what":"Je bedenkt iets, maakt het echt en probeert of mensen het willen gebruiken of kopen.","why":"Past bij iemand die niet altijd in bestaande hokjes denkt.","route":"vmbo-t → havo/mbo/hbo → eigen project starten naast school"},{"id":"data-analist","nr":"07","title":"Data Analist","short":"Patronen vinden in informatie","what":"Je kijkt naar cijfers, gedrag of informatie en zoekt wat erin verborgen zit.","why":"Past bij iemand die verbanden ziet en graag wil weten waarom iets gebeurt.","route":"vmbo-t → havo → hbo ICT / data / business analytics"},{"id":"technisch-maker","nr":"08","title":"Technisch Maker","short":"Bouwen, testen, verbeteren","what":"Je maakt dingen met techniek: digitaal, fysiek of allebei.","why":"Past bij leren door doen.","route":"vmbo-t → mbo/havo → techniek, ICT, engineering of maker-opleiding"}]</script>
+  <script type="application/json" id="schools-data">[]</script>
+  <script type="application/json" id="flipcards-data">[]</script>
+
+  <!-- script.js laden — werkt nu zonder crashes dankzij null-checks in openModal -->
+  <script src="script.js"></script>
+
+</body>
+</html>
